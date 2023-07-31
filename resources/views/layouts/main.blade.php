@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{ url('') }}/assets/css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="{{ url('') }}/assets/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url('') }}/assets/css/style.css" type="text/css">
+    @livewireStyles
 </head>
 
 <body>
@@ -117,6 +118,7 @@
     <script src="{{ url('') }}/assets/js/jquery.slicknav.js"></script>
     <script src="{{ url('') }}/assets/js/owl.carousel.min.js"></script>
     <script src="{{ url('') }}/assets/js/main.js"></script>
+    @livewireScripts
 </body>
 
 </html>
