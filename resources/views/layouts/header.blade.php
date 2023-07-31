@@ -19,7 +19,7 @@
                     </li>
                     <li class="{{ $title == 'About' ? 'active' : '' }}"><a href="./speaker.html">About</a>
                         <ul class="dropdown">
-                            <li><a href="#">About Conference</a></li>
+                            <li><a href="/about-conference">About Conference</a></li>
                             <li><a href="#">Contacts</a></li>
                         </ul>
                     </li>

@@ -18,3 +18,9 @@ Route::get('/', function () {
         'title' => 'Home'
     ]);
 });
+
+Route::get('/about-conference', function () {
+    return view('homepage.about', [
+        'title' => 'About'
+    ]);
+});
