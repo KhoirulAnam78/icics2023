@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Participant;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +15,28 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        User::create([
+            'email' => 'indratarigan@unja.ac.id',
+            'password' => bcrypt('12345678'),
+            'role' => 'administrator'
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $user =
+            User::create([
+                'email' => 'khoirulanam@unja.ac.id',
+                'password' => bcrypt('12345678'),
+                'role' => 'participant'
+            ]);
+
+        Participant::create([
+            'full_name1' => 'Khoirul Anam',
+            'full_name2' => 'Khoirul Anam S.Kom',
+            'gender' => 'male',
+            'participant_type' => 'student participant',
+            'institution' => 'Universitas Jambi',
+            'address' => 'Jambi',
+            'phone' => '085788787427',
+            'user_id' => $user->id
+        ]);
     }
 }

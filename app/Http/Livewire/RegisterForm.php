@@ -6,20 +6,20 @@ use Livewire\Component;
 
 class RegisterForm extends Component
 {
-    public $fullName1, $fullName2, $gender, $participant_type, $institution, $address, $phone, $hki_id, $fax, $email, $password, $confirmPassword;
+    public $full_name1, $full_name2, $gender, $participant_type, $institution, $address, $phone, $hki_id, $fax, $email, $password, $confirmPassword;
 
     public function rules()
     {
         return
             [
-                'fullName1' => 'required',
-                'fullName2' => 'required',
+                'full_name1' => 'required',
+                'full_name2' => 'required',
                 'gender' => 'required|in:male,female',
                 'participant_type' => 'required|in:professional presenter,student presenter,student participant',
                 'institution' => 'required',
                 'address' => 'required',
                 'phone' => 'required|regex:/^([0-9\s\+]*)$/',
-                'email' => 'required|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix',
+                'email' => 'required|unique:users|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix',
                 'password' => 'required|min:8',
                 'confirmPassword' => 'required|same:password'
             ];
@@ -27,8 +27,8 @@ class RegisterForm extends Component
 
     //Custom Errror messages for validation
     protected $messages = [
-        'fullName1.required' => 'Full name without academic title is required !',
-        'fullName2.required' => 'Full name with academic title is required !',
+        'full_name1.required' => 'Full name without academic title is required !',
+        'full_name2.required' => 'Full name with academic title is required !',
         'gender.required' => 'Gender is required !',
         'gender.in' => 'Gender can only contain male or female !',
         'phone.required' => 'Phone number is required !',
@@ -38,6 +38,7 @@ class RegisterForm extends Component
         'institution.required' => 'Institution is required !',
         'address.required' => 'Address is required !',
         'email.required' => 'Email is required !',
+        'email.unique' => 'Email has been registered',
         'email.regex' => 'The field must have email format ',
         'password.required' => 'Password is required !',
         'password.min' => 'Password must consist of at least 8 characters',
@@ -49,6 +50,11 @@ class RegisterForm extends Component
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
+    }
+
+    public function save()
+    {
+        $this->validate();
     }
     public function render()
     {

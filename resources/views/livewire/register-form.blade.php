@@ -1,18 +1,18 @@
 <div>
     <form>
         <div class="form-group">
-            <label for="fullName">Full Name</label>
-            <input type="text" class="form-control @error('fullName1') is-invalid @enderror" wire:model="fullName1"
-                id="fullName1" name="fullName1" placeholder="Full Name (without academic title)">
-            @error('fullName1')
+            <label for="full_name1">Full Name</label>
+            <input type="text" class="form-control @error('full_name1') is-invalid @enderror" wire:model="full_name1"
+                id="full_name1" name="full_name1" placeholder="Full Name (without academic title)">
+            @error('full_name1')
                 <span class="invalid-feedback">
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-            <small id="fullName" class="form-text text-muted mb-2">Example: Muhammad Ridho</small>
-            <input type="text" class="form-control @error('fullName2') is-invalid @enderror" wire:model="fullName2"
-                id="fullName2" name="fullName2" placeholder="Full Name (with academic title)">
-            @error('fullName2')
+            <small id="full_name2" class="form-text text-muted mb-2">Example: Muhammad Ridho</small>
+            <input type="text" class="form-control @error('full_name2') is-invalid @enderror" wire:model="full_name2"
+                id="full_name2" name="full_name2" placeholder="Full Name (with academic title)">
+            @error('full_name2')
                 <span class="invalid-feedback">
                     <strong>{{ $message }}</strong>
                 </span>
