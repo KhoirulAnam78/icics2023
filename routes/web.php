@@ -24,3 +24,9 @@ Route::get('/about-conference', function () {
         'title' => 'About'
     ]);
 });
+
+Route::get('/register', function () {
+    return view('homepage.register', [
+        'title' => 'Registration'
+    ]);
+});

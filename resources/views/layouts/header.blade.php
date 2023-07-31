@@ -10,11 +10,11 @@
         <div class="nav-menu">
             <nav class="mainmenu mobile-menu">
                 <ul>
-                    <li class="{{ $title == 'Home' ? 'active' : '' }}"><a href="./index.html">Home</a></li>
-                    <li class="{{ $title == 'Registration' ? 'active' : '' }}"><a href="./speaker.html">Registration</a>
+                    <li class="{{ $title == 'Home' ? 'active' : '' }}"><a href="/">Home</a></li>
+                    <li class="{{ $title == 'Registration' ? 'active' : '' }}"><a href="/register">Registration</a>
                         <ul class="dropdown">
                             <li><a href="#">Registration Information</a></li>
-                            <li><a href="#">Registration Conference</a></li>
+                            <li><a href="/register">Registration Conference</a></li>
                         </ul>
                     </li>
                     <li class="{{ $title == 'About' ? 'active' : '' }}"><a href="./speaker.html">About</a>
@@ -31,7 +31,7 @@
                     <li class="{{ $title == 'Download' ? 'active' : '' }}"><a href="./about-us.html">Download</a></li>
                 </ul>
             </nav>
-            <a href="#" class="primary-btn top-btn"><i class="fa fa-ticket"></i>Registration</a>
+            <a href="/register" class="primary-btn top-btn"><i class="fa fa-ticket"></i>Registration</a>
         </div>
         <div id="mobile-menu-wrap"></div>
     </div>
