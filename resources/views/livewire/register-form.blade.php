@@ -3,22 +3,21 @@
         <div class="form-group">
             <label for="full_name1">Full Name</label>
             <input type="text" class="form-control @error('full_name1') is-invalid @enderror" wire:model="full_name1"
-                id="full_name1" name="full_name1" placeholder="Full Name (without academic title)">
+                id="full_name1" name="full_name1" placeholder="Full Name (without academic title) Ex: Muhammad Ridho">
             @error('full_name1')
                 <span class="invalid-feedback">
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-            <small id="full_name2" class="form-text text-muted mb-2">Example: Muhammad Ridho</small>
+            <small id="fullName" class="form-text text-muted"></small>
             <input type="text" class="form-control @error('full_name2') is-invalid @enderror" wire:model="full_name2"
-                id="full_name2" name="full_name2" placeholder="Full Name (with academic title)">
+                id="full_name2" name="full_name2"
+                placeholder="Full Name (with academic title) Ex: Dr. Muhammad Ridho, M.Sc">
             @error('full_name2')
                 <span class="invalid-feedback">
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-            <small id="fullName" class="form-text text-muted">Example: Dr. Muhammad Ridho,
-                M.Sc</small>
         </div>
 
         <div class="form-group">
