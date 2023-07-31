@@ -19,7 +19,7 @@ class RegisterForm extends Component
                 'institution' => 'required',
                 'address' => 'required',
                 'phone' => 'required|regex:/^([0-9\s\+]*)$/',
-                'email' => 'required|unique:users|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix',
+                'email' => 'required|unique:users|email:rfc',
                 'password' => 'required|min:8',
                 'confirmPassword' => 'required|same:password'
             ];
@@ -39,7 +39,7 @@ class RegisterForm extends Component
         'address.required' => 'Address is required !',
         'email.required' => 'Email is required !',
         'email.unique' => 'Email has been registered',
-        'email.regex' => 'The field must have email format ',
+        'email.email' => 'The field must have email format ',
         'password.required' => 'Password is required !',
         'password.min' => 'Password must consist of at least 8 characters',
         'confirmPassword.required' => 'Confirmation password is required!',
