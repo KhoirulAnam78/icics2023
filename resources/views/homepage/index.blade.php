@@ -7,8 +7,11 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="hero-text">
-                        <span>5 to 9 may 2019, mardavall hotel, New York</span>
-                        <h2>Change Your Mind<br /> To Become Sucess</h2>
+                        <span>16 November 2023, Jambi</span>
+                        <h3 style="color: white">Strengthening the Role of Chemistry as Basic Science in Supporting the
+                            Downstreaming of
+                            Agro-Industrial Products</h3>
+                        <br>
                         <a href="#" class="primary-btn">Buy Ticket</a>
                     </div>
                 </div>
@@ -92,150 +95,179 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Who’s speaking</h2>
+                        <h2>FGD Speaker</h2>
                         <p>These are our communicators, you can see each person information</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/member-1.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
+        <div class="row justify-content-center">
+            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/fgd-1.jpg">
+                <div class="mi-social">
+                    <div class="mi-social-inner bg-gradient">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="mi-text">
+                    <h5>Prof. Drs. Roto, M.Eng, Ph.D</h5>
+                    <span>Gadjah Mada University</span>
                 </div>
             </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
+
+            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/fgd-2.jpg">
+                <div class="mi-social">
+                    <div class="mi-social-inner bg-gradient">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="mi-text">
+                    <h5>Prof. Anang WM Diah, M.Si., Ph.D</h5>
+                    <span>Tadulako University</span>
+                </div>
             </div>
         </div>
-        <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/member-2.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Keynote Speaker</h2>
+                        <p>These are our communicators, you can see each person information</p>
+                    </div>
                 </div>
-            </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
             </div>
         </div>
-        <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/member-3.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
+        <div class="row justify-content-center">
+            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/keynote-1.jpg">
+                <div class="mi-social">
+                    <div class="mi-social-inner bg-gradient">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="mi-text">
+                    <h5>Prof. Sedat Ballikaya, Ph.D</h5>
+                    <span>Istanbul University, Cerrapasha Turkey</span>
                 </div>
             </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
+            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/keynote-2.jpg">
+                <div class="mi-social">
+                    <div class="mi-social-inner bg-gradient">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="mi-text">
+                    <h5>Prof. Teruna Siahaan, Ph.D</h5>
+                    <span>Kansas University</span>
+                </div>
+            </div>
+            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/keynote-3.jpg">
+                <div class="mi-social">
+                    <div class="mi-social-inner bg-gradient">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="mi-text">
+                    <h5>Prof. Dr. Ir. Muh. Nurdin, M.Sc., IPU., ASEAN Eng.</h5>
+                    <span>Halu Oleo University & Muhammadiyah University of Kendari</span>
+                </div>
+            </div>
+            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/keynote-4.jpg">
+                <div class="mi-social">
+                    <div class="mi-social-inner bg-gradient">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="mi-text">
+                    <h5>Dr. Agus Haryono</h5>
+                    <span>Indonesian National Research and Innovation Agency</span>
+                </div>
             </div>
         </div>
-        <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/member-4.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Invited Speaker</h2>
+                        <p>These are our communicators, you can see each person information</p>
+                    </div>
                 </div>
-            </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
             </div>
         </div>
-        <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/member-5.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
+        <div class="row justify-content-center">
+            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/invited-1.jpg">
+                <div class="mi-social">
+                    <div class="mi-social-inner bg-gradient">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="mi-text">
+                    <h5>Prof. Dr. Dyah Iswantini</h5>
+                    <span>IPB University</span>
                 </div>
             </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
-            </div>
-        </div>
-        <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/member-6.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
+            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/invited-2.jpg">
+                <div class="mi-social">
+                    <div class="mi-social-inner bg-gradient">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="mi-text">
+                    <h5>Nazarudin, S.Si., M.Si., Ph.D</h5>
+                    <span>Universitas Jambi</span>
                 </div>
             </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
-            </div>
-        </div>
-        <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/member-7.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
+            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/invited-3.jpg">
+                <div class="mi-social">
+                    <div class="mi-social-inner bg-gradient">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="mi-text">
+                    <h5>Prof. Yuli Rahmawati, Ph.D</h5>
+                    <span>Jakarta State University</span>
                 </div>
             </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
-            </div>
-        </div>
-        <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/member-8.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
+            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/invited-4.jpg">
+                <div class="mi-social">
+                    <div class="mi-social-inner bg-gradient">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
                 </div>
-            </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
-            </div>
-        </div>
-        <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/member-9.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                <div class="mi-text">
+                    <h5>Prof. Indriana Kartini, Ph.D</h5>
+                    <span>Gadjah Mada University</span>
                 </div>
-            </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
-            </div>
-        </div>
-        <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/member-10.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
             </div>
         </div>
     </section>
