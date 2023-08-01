@@ -1,5 +1,5 @@
 <div>
-    <form>
+    <form wire:submit.prevent="save">
         <div class="form-group">
             <label for="full_name1">Full Name</label>
             <input type="text" class="form-control @error('full_name1') is-invalid @enderror" wire:model="full_name1"
@@ -23,10 +23,12 @@
         <div class="form-group">
             <label for="gender" class="d-block">Gender</label>
             <label class="form-text text-muted d-inline">
-                <input type="radio" name="options" id="gender" autocomplete="off" value="male"> Male
+                <input type="radio" name="options" wire:model='gender' id="gender" autocomplete="off"
+                    value="male"> Male
             </label>
             <label class="form-text text-muted d-inline">
-                <input type="radio" name="options" id="gender" autocomplete="off" value="female">
+                <input type="radio" name="options" wire:model='gender' id="gender" autocomplete="off"
+                    value="female">
                 Female
             </label>
             @error('gender')
@@ -120,7 +122,7 @@
         <div class="form-group">
             <label for="password">Confirm Password</label>
             <input id="password" type="password" class="form-control @error('confirmPassword') is-invalid @enderror"
-                name="confirmPassword" wire:model='confirmPassword' required autocomplete="current-password">
+                name="confirmPassword" wire:model='confirmPassword' autocomplete="current-password">
             @error('confirmPassword')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>

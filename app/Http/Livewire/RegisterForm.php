@@ -2,7 +2,12 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Participant;
+use App\Models\User;
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Events\Registered;
+use App\Providers\RouteServiceProvider;
 
 class RegisterForm extends Component
 {
@@ -55,6 +60,26 @@ class RegisterForm extends Component
     public function save()
     {
         $this->validate();
+        $user = User::create([
+            'email' => $this->email,
+            'password' => bcrypt($this->password),
+            'role' => 'participant',
+        ]);
+        Participant::create([
+            'full_name1' => $this->full_name1,
+            'full_name2' => $this->full_name2,
+            'gender' => $this->gender,
+            'participant_type' => $this->participant_type,
+            'institution' => $this->institution,
+            'address' => $this->address,
+            'phone' => $this->phone,
+            'user_id' => $user->id
+        ]);
+        event(new Registered($user));
+
+        Auth::login($user);
+
+        return redirect(RouteServiceProvider::HOME);
     }
     public function render()
     {
