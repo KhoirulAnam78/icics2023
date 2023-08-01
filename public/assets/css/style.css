@@ -179,9 +179,9 @@ ol {
 
 .primary-btn {
 	display: inline-block;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 600;
-	padding: 12px 40px;
+	padding: 10px 20px;
 	color: #ffffff;
 	text-align: center;
 	border-radius: 50px;
@@ -355,7 +355,7 @@ ol {
 }
 
 .nav-menu .mainmenu ul li a {
-	font-size: 12px;
+	font-size: 16px;
 	color: #171822;
 	text-transform: uppercase;
 	font-weight: 600;
