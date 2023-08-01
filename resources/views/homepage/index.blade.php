@@ -2,15 +2,15 @@
 
 @section('content')
     <!-- Hero Section Begin -->
-    <section class="hero-section set-bg" data-setbg="{{ url('') }}/assets/img/hero.jpg">
+    <section class="hero-section set-bg" data-setbg="{{ url('') }}/assets/img/home-gentala.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
                     <div class="hero-text">
-                        <span>16 November 2023, Jambi</span>
-                        <h3 style="color: white">Strengthening the Role of Chemistry as Basic Science in Supporting the
-                            Downstreaming of
-                            Agro-Industrial Products</h3>
+                        <span style="font-size: 30px">16 November 2023, Jambi</span>
+                        <h3 style="color: white; font-size: 50px">Strengthening the Role of Chemistry as Basic
+                            Science in Supporting the
+                            Downstreaming of Agro-Industrial Products</h3>
                         <br>
                         <a href="#" class="primary-btn">Buy Ticket</a>
                     </div>
@@ -61,30 +61,26 @@
     <!-- Home About Section Begin -->
     <section class="home-about-section spad">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
+            {{-- <div class="row"> --}}
+            {{-- <div class="col-lg-6">
                     <div class="ha-pic">
                         <img src="{{ url('') }}/assets/img/h-about.jpg" alt="">
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="ha-text">
-                        <h2>About Conference</h2>
-                        <p>When I first got into the online advertising business, I was looking for the magical
-                            combination that would put my website into the top search engine rankings, catapult me to
-                            the forefront of the minds or individuals looking to buy my product, and generally make me
-                            rich beyond my wildest dreams! After succeeding in the business for this long, I’m able to
-                            look back on my old self with this kind of thinking and shake my head.</p>
-                        <ul>
-                            <li><span class="icon_check"></span> Write On Your Business Card</li>
-                            <li><span class="icon_check"></span> Advertising Outdoors</li>
-                            <li><span class="icon_check"></span> Effective Advertising Pointers</li>
-                            <li><span class="icon_check"></span> Kook 2 Directory Add Url Free</li>
-                        </ul>
-                        <a href="#" class="ha-btn">Discover Now</a>
-                    </div>
+                </div> --}}
+            <div class="col-lg-6">
+                <div class="ha-text">
+                    <h2>ICICS Scopes</h2>
+                    <ul>
+                        <li><span class="icon_check"></span> Organic and Bio Chemistry</li>
+                        <li><span class="icon_check"></span> Analytical and Enviromental Chemistry</li>
+                        <li><span class="icon_check"></span> Inorganic and Material Chemistry</li>
+                        <li><span class="icon_check"></span> Physical and Computation Chemistry</li>
+                        <li><span class="icon_check"></span> Chemical Education</li>
+                    </ul>
+                    <a href="#" class="ha-btn">Discover Now</a>
                 </div>
             </div>
+            {{-- </div> --}}
         </div>
     </section>
     <!-- Home About Section End -->
@@ -102,7 +98,8 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/fgd-1.jpg">
+            <div class="member-item set-bg" style="margin: 10px; border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/fgd-1.jpg">
                 <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -117,7 +114,8 @@
                 </div>
             </div>
 
-            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/fgd-2.jpg">
+            <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/fgd-2.jpg">
                 <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -144,7 +142,8 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/keynote-1.jpg">
+            <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/keynote-1.jpg">
                 <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -158,7 +157,8 @@
                     <span>Istanbul University, Cerrapasha Turkey</span>
                 </div>
             </div>
-            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/keynote-2.jpg">
+            <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/keynote-2.jpg">
                 <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -172,7 +172,8 @@
                     <span>Kansas University</span>
                 </div>
             </div>
-            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/keynote-3.jpg">
+            <div margin: 20px class="member-item set-bg" style="margin: 10px;border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/keynote-3.jpg">
                 <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -186,7 +187,8 @@
                     <span>Halu Oleo University & Muhammadiyah University of Kendari</span>
                 </div>
             </div>
-            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/keynote-4.jpg">
+            <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/keynote-4.jpg">
                 <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -213,7 +215,8 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/invited-1.jpg">
+            <div class="member-item set-bg" style="margin: 10px; border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/invited-1.jpg">
                 <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -227,7 +230,8 @@
                     <span>IPB University</span>
                 </div>
             </div>
-            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/invited-2.jpg">
+            <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/invited-2.jpg">
                 <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -241,7 +245,8 @@
                     <span>Universitas Jambi</span>
                 </div>
             </div>
-            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/invited-3.jpg">
+            <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/invited-3.jpg">
                 <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -255,7 +260,8 @@
                     <span>Jakarta State University</span>
                 </div>
             </div>
-            <div class="member-item set-bg" data-setbg="{{ url('') }}/assets/img/team-member/invited-4.jpg">
+            <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/invited-4.jpg">
                 <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
