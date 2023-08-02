@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class UploadAbstract extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
+    public function participant()
+    {
+        return $this->belongsTo(Participant::class);
+    }
 }

@@ -65,6 +65,10 @@ class RegisterForm extends Component
             'password' => bcrypt($this->password),
             'role' => 'participant',
         ]);
+        $status = 'not a member';
+        if ($this->hki_id) {
+            $status = 'not yet validated';
+        }
         Participant::create([
             'full_name1' => $this->full_name1,
             'full_name2' => $this->full_name2,
@@ -73,8 +77,12 @@ class RegisterForm extends Component
             'institution' => $this->institution,
             'address' => $this->address,
             'phone' => $this->phone,
+            'fax' => $this->fax,
+            'hki_id' => $this->hki_id,
+            'hki_status' => $status,
             'user_id' => $user->id
         ]);
+
         event(new Registered($user));
 
         Auth::login($user);

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('abstract');
             $table->string('keywords');
             $table->string('presenter');
-            $table->foreignId('participant_id')->constrained('participant');
+            $table->foreignId('participant_id')->constrained('participants');
             $table->enum('status', ['not yet reviewed', 'accepted', 'rejected'])->default('not yet reviewed');
             $table->string('reviewed_by')->nullable();
             $table->timestamps();

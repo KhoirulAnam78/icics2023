@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('phone');
             $table->string('fax')->nullable();
             $table->string('hki_id')->nullable();
+            $table->enum('hki_status', ['not a member', 'not yet validated', 'valid', 'invalid'])->default('not a member');
+            $table->string('hki_validated_by')->nullable();
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });

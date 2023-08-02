@@ -13,4 +13,10 @@ class Participant extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+
+    public function uploadAbstracts()
+    {
+        return $this->hasMany(UploadAbstract::class);
+    }
 }

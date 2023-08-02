@@ -2,11 +2,13 @@
 
 @section('content-dashboard')
     <div class="row mx-3">
-        <p><strong>Information : </strong>Thanks for signing up! Before getting started,
-            could you verify your email
-            address by
-            clicking on the link we just emailed to you? If you didn\'t receive the email,
-            we will
-            gladly send you another.</p>
+        @if (Auth::user()->participant->uploadAbstracts->first())
+            <p><strong>Information : </strong>Your abstract status is
+                <strong>{{ Auth::user()->participant->uploadAbstracts->first()->status }}</strong>
+            </p>
+        @else
+            <p><strong>Information : </strong>You haven't added abstract yet, add abstract in abstract menu</p>
+        @endif
+
     </div>
 @endsection
