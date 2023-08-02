@@ -39,4 +39,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/abstrak', function () {
+        return view('participant.abstrak', [
+            'title' => 'My Abstrak'
+        ]);
+    });
+});
+
 require __DIR__ . '/auth.php';
