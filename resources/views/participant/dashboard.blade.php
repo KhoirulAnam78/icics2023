@@ -12,10 +12,10 @@
                     </div>
                 </div>
             </div>
+
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
-
-                <button type="submit" class="btn">Logout</button>
+                <button type="submit" class="btn btn-primary">Logout</button>
             </form>
             {{-- <div class="row justify-content-center">
                 <div class="col-lg-8">

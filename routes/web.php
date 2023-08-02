@@ -27,7 +27,9 @@ Route::get('/dashboard', function () {
             'title' => 'Dashboard'
         ]);
     } else {
-        return view('dashboard');
+        return view('participant.dashboard', [
+            'title' => 'Dashboard'
+        ]);
     }
 })->middleware(['auth', 'verified'])->name('dashboard');
 
