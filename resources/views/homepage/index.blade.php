@@ -626,21 +626,24 @@
                     <div class="cs-text">
                         <div class="ct-address">
                             <span>Address:</span>
-                            <p>01 Pascale Springs Apt. 339, NY City <br />United State</p>
+                            <p>Swissbell-Hotel, Jambi <br /> Indonesia</p>
                         </div>
                         <ul>
                             <li>
                                 <span>Phone:</span>
-                                (+12)-345-67-8910
+                                Indra (+6282142265676)<br />
+                                Aulia (+6285266180861) <br />
+                                Yusnaidar (+628127866961) <br />
                             </li>
+
                             <li>
                                 <span>Email:</span>
-                                info.colorlib@gmail.com
+                                icics2023@.unja.ac.id
                             </li>
                         </ul>
                         <div class="ct-links">
                             <span>Website:</span>
-                            <p>https://conference.colorlib.com</p>
+                            <p>https://icics2023unja.ac.id</p>
                         </div>
                     </div>
                 </div>

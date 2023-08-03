@@ -18,8 +18,8 @@
         <div class="container">
             <div class="logo">
                 <a href="./index.html">
-                    <h2>ICICS2023</h2>
-                    {{-- <img src="{{ url('') }}/assets/img/logo.png" alt=""> --}}
+                    {{-- <h2>ICICS2023</h2> --}}
+                    <img src="{{ url('') }}/assets/img/logo-icics2023.png" alt="">
                 </a>
             </div>
             <div class="nav-menu">
