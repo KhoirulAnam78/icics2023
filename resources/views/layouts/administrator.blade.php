@@ -14,7 +14,7 @@
                                     style="font-size:16px">Dashboard</a>
                             </li>
                             <li class="nav-item" style="width:100%">
-                                <a class="nav-link {{ $title == 'Participant' ? 'active' : '' }}"
+                                <a class="nav-link {{ $title == 'Registered Participant' ? 'active' : '' }}"
                                     href="/registered-participant" style="font-size:16px">Registered
                                     Participant</a>
                             </li>
@@ -39,13 +39,13 @@
                                 <a class="nav-link {{ $title == 'My Profile' ? 'active' : '' }}" href="profile"
                                     style="font-size:16px;">Profile</a>
                             </li>
-                            <li class="nav-item" style="width:100%">
+                            <li class="nav-item" style="width:100%;">
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-
-                                    <a class="nav-link {{ $title == 'My Profile' ? 'active' : '' }}" href="profile"
-                                        style="font-size:16px; ">
-                                        <button type="submit" class="btn btn-primary">Logout</button></a>
+                                    <button type="submit" class="btn btn-primary"
+                                        style="width:100%;background-color: transparent !important; border-color: transparent !important;">
+                                        <a class="nav-link"style="font-size:16px;">Logout </a>
+                                    </button>
                                 </form>
                             </li>
                         </ul><!-- Tab panes -->

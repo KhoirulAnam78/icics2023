@@ -1,11 +1,15 @@
     @if (Auth::user())
-        <div class="row justify-content-end p-3" style="background-color: #0366fc">
-            <a href="/dashboard" class="primary-btn">{{ Auth::user()->email }}</a>
+        <div class="container-fluid">
+            <div class="row justify-content-end p-3" style="background-color: #0366fc">
+                <a href="/dashboard" class="primary-btn">{{ Auth::user()->email }}</a>
+            </div>
         </div>
     @else
-        <div class="row justify-content-end p-3" style="background-color: #0366fc">
-            <a href="/login" class="primary-btn">Login</a>
-            <a href="/register" class="primary-btn mx-3">Registration</a>
+        <div class="container-fluid">
+            <div class="row justify-content-end p-3" style="background-color: #0366fc">
+                <a href="/login" class="primary-btn">Login</a>
+                <a href="/register" class="primary-btn mx-3">Registration</a>
+            </div>
         </div>
     @endif
     <!-- Header Section Begin -->

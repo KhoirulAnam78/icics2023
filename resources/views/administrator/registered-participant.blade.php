@@ -1,5 +1,12 @@
 @extends('layouts.administrator')
 
 @section('content-dashboard')
-    <h5>Selamat Datang {{ Auth::user()->email }} !</h5>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="section-title">
+                <h4>Registered Participant</h4>
+            </div>
+        </div>
+    </div>
+    <livewire:registered-participant />
 @endsection
