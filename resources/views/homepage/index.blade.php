@@ -63,20 +63,26 @@
     <!-- Home About Section Begin -->
     <section class="home-about-section spad" style="padding-top:0px">
         <div class="container">
-            <div class="col-lg-6">
-                <div class="ha-text">
-                    <h2>ICICS Scopes</h2>
-                    <ul>
-                        <li><span class="icon_check"></span> Organic and Bio Chemistry</li>
-                        <li><span class="icon_check"></span> Analytical and Enviromental Chemistry</li>
-                        <li><span class="icon_check"></span> Inorganic and Material Chemistry</li>
-                        <li><span class="icon_check"></span> Physical and Computation Chemistry</li>
-                        <li><span class="icon_check"></span> Chemical Education</li>
-                    </ul>
-                    {{-- <a href="#" class="ha-btn">Discover Now</a> --}}
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ha-text">
+                        <h2>ICICS Scopes</h2>
+                        <ul>
+                            <li><span class="icon_check"></span> Organic and Bio Chemistry</li>
+                            <li><span class="icon_check"></span> Analytical and Enviromental Chemistry</li>
+                            <li><span class="icon_check"></span> Inorganic and Material Chemistry</li>
+                            <li><span class="icon_check"></span> Physical and Computation Chemistry</li>
+                            <li><span class="icon_check"></span> Chemical Education</li>
+                        </ul>
+                        {{-- <a href="#" class="ha-btn">Discover Now</a> --}}
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ha-text">
+                        <img src="{{ url('') }}/assets/img/home-icics.png" alt="">
+                    </div>
                 </div>
             </div>
-            {{-- </div> --}}
         </div>
     </section>
     <!-- Home About Section End -->
