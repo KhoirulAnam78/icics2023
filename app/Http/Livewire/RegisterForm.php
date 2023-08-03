@@ -2,17 +2,20 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Participant;
 use App\Models\User;
 use Livewire\Component;
+use App\Models\Participant;
+use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
 use App\Providers\RouteServiceProvider;
 
 class RegisterForm extends Component
 {
-    public $full_name1, $full_name2, $gender, $participant_type, $institution, $address, $phone, $hki_id, $fax, $email, $password, $confirmPassword;
+    public $full_name1, $full_name2, $gender, $participant_type, $institution, $address, $phone, $member_card, $fax, $email, $password, $confirmPassword;
 
+
+    use WithFileUploads;
     public function rules()
     {
         return
@@ -59,16 +62,35 @@ class RegisterForm extends Component
 
     public function save()
     {
-        $this->validate();
+        $imagePath = null;
+        $status = 'not a member';
+
+        if ($this->member_card) {
+            $this->validate([
+                'full_name1' => 'required',
+                'full_name2' => 'required',
+                'gender' => 'required|in:male,female',
+                'participant_type' => 'required|in:professional presenter,student presenter,student participant',
+                'institution' => 'required',
+                'address' => 'required',
+                'phone' => 'required|regex:/^([0-9\s\+]*)$/',
+                'email' => 'required|unique:users|email:rfc',
+                'password' => 'required|min:8',
+                'confirmPassword' => 'required|same:password',
+                'member_card' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            ]);
+            $imagePath = $this->member_card->store('images');
+            $status = 'not yet validated';
+        } else {
+            $this->validate();
+        }
+
         $user = User::create([
             'email' => $this->email,
             'password' => bcrypt($this->password),
             'role' => 'participant',
         ]);
-        $status = 'not a member';
-        if ($this->hki_id) {
-            $status = 'not yet validated';
-        }
+
         Participant::create([
             'full_name1' => $this->full_name1,
             'full_name2' => $this->full_name2,
@@ -78,7 +100,7 @@ class RegisterForm extends Component
             'address' => $this->address,
             'phone' => $this->phone,
             'fax' => $this->fax,
-            'hki_id' => $this->hki_id,
+            'member_card' => $imagePath,
             'hki_status' => $status,
             'user_id' => $user->id
         ]);

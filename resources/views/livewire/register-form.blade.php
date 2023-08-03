@@ -85,12 +85,33 @@
             @enderror
         </div>
         <div class="form-group">
-            <label for="hki_id">HKI ID Member</label>
+            <label for="image">HKI Member Card</label>
+            <div class="input-group">
+                <div class="custom-file">
+                    <input type="file" accept=".jpg,.png,.jpeg,.gif,.svg"
+                        class="custom-file-input @error('member_card') is-invalid @enderror" id="member_card"
+                        wire:model='member_card'>
+                    <label class="custom-file-label" for="member_card">
+                        {{ $member_card == null ? 'Pilih' : $member_card->getClientOriginalName() }}
+                    </label>
+                </div>
+                <div class="input-group-append">
+                    <span class="input-group-text" id="">Upload</span>
+                </div>
+            </div>
+            <small id="emailHelp" class="form-text text-muted">Not required, if you are HKI member,
+                you will get 25% discount.</small>
+            @error('image')
+                <span class="invalid-feedback" style="display:block">{{ $message }}</span>
+            @enderror
+        </div>
+        {{-- <div class="form-group">
+            <label for="hki_id">HKI Member Card</label>
             <input type="text" class="form-control" id="hki_id" aria-describedby="emailHelp"
                 placeholder="Enter HKI Number ID" wire:model='hki_id' name="hki_id">
             <small id="emailHelp" class="form-text text-muted">Not required, if you are HKI member,
                 you will get 25% discount.</small>
-        </div>
+        </div> --}}
         <div class="form-group">
             <label for="fax">Fax Number</label>
             <input type="text" class="form-control" id="fax" placeholder="Fax Number" wire:model='fax'

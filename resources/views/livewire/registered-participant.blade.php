@@ -1,6 +1,6 @@
 <div>
     <div class="row mb-2">
-        <div class="col-lg-12">
+        <div class="col-lg-6">
             <a class="btn btn-success">Export</a>
         </div>
     </div>
@@ -18,6 +18,7 @@
                             <th scope="col">Participant Type</th>
                             <th scope="col">Institution</th>
                             <th scope="col">Address</th>
+                            <th scope="col">HKI Member</th>
                             <th scope="col">Phone</th>
                             <th scope="col">Fax</th>
                         </tr>
@@ -34,6 +35,7 @@
                                 <td>{{ $item->participant_type }}</td>
                                 <td>{{ $item->institution }}</td>
                                 <td>{{ $item->address }}</td>
+                                <td>{{ $item->hki_status }}</td>
                                 <td>{{ $item->phone }}</td>
                                 <td>{{ $item->fax }}</td>
                             </tr>
@@ -41,6 +43,11 @@
                     </tbody>
                 </table>
             </div>
+            <ul class="pagination pagination-sm mt-3 float-right ">
+                @if (count($participants) != 0)
+                    {{ $participants->links() }}
+                @endif
+            </ul>
         </div>
     </div>
 </div>

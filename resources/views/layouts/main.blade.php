@@ -40,74 +40,69 @@
     <footer class="footer-section">
         <div class="container">
             <div class="partner-logo owl-carousel">
-                <a href="https://www.scientific.net/" class="pl-table">
+                <a href="https://www.scientific.net/" class="pl-table" style="width:150px">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/partner-1.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-1.png" alt=""
+                            style="height: 100px;">
                     </div>
                 </a>
-                <a href="https://jkk.unjani.ac.id/index.php/jkk" class="pl-table">
+                <a href="https://jkk.unjani.ac.id/index.php/jkk" class="pl-table" style="width:150px">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/partner-2.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-2.png" alt=""
+                            style="height: 100px;">
                     </div>
                 </a>
-                <a href="https://journal.uinsgd.ac.id/index.php/tadris-kimiya/index" class="pl-table">
+                <a href="https://journal.uinsgd.ac.id/index.php/tadris-kimiya/index" class="pl-table"
+                    style="width:150px">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/partner-3.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-3.png" alt=""
+                            style="height: 100px;">
                     </div>
                 </a>
-                <a href="https://jurnal.untirta.ac.id/index.php/EduChemia" class="pl-table">
+                <a href="https://jurnal.untirta.ac.id/index.php/EduChemia" class="pl-table" style="width:150px">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/partner-4.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-4.png" alt=""
+                            style="height: 100px;">
                     </div>
                 </a>
-                <a href="https://jurnal.unpad.ac.id/jcena" class="pl-table">
+                <a href="https://jurnal.unpad.ac.id/jcena" class="pl-table" style="width:150px">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/partner-5.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-5.png" alt=""
+                            style="height: 100px;">
                     </div>
                 </a>
-                <a href="https://journal.uinsgd.ac.id/index.php/ak/index" class="pl-table">
+                <a href="https://journal.uinsgd.ac.id/index.php/ak/index" class="pl-table" style="width:150px">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/partner-6.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-6.png" alt=""
+                            style="height: 100px;">
                     </div>
                 </a>
-                <a href="https://online-journal.unja.ac.id/jisic" class="pl-table">
+                <a href="https://online-journal.unja.ac.id/jisic" class="pl-table" style="width:150px">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/partner-7.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-7.png" alt=""
+                            style="height: 100px;">
                     </div>
                 </a>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer-text">
-                        <div class="ft-logo">
-                            <a href="#" class="footer-logo"><img
-                                    src="{{ url('') }}/assets/img/footer-logo.png" alt=""></a>
-                        </div>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Speakers</a></li>
-                            <li><a href="#">Schedule</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
                         <div class="copyright-text">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
-                                </script> All rights reserved | This template is made with <i
-                                    class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                                    target="_blank">Colorlib</a>
+                                </script> All rights reserved | ICICS 2023
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
-                        <div class="ft-social">
+                        {{-- <div class="ft-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-linkedin"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-youtube-play"></i></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -123,13 +118,14 @@
     <script src="{{ url('') }}/assets/js/jquery.slicknav.js"></script>
     <script src="{{ url('') }}/assets/js/owl.carousel.min.js"></script>
     <script src="{{ url('') }}/assets/js/main.js"></script>
+    @livewireScripts
     <script>
         window.addEventListener('to-top', (event) => {
             event.preventDefault();
             window.scrollTo(0, 0);
         });
     </script>
-    @livewireScripts
+    @yield('script')
 </body>
 
 </html>
