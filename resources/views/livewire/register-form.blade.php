@@ -9,7 +9,7 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-            <small id="fullName" class="form-text text-muted"></small>
+            <small id="fullName" class="form-text text-muted my-2"></small>
             <input type="text" class="form-control @error('full_name2') is-invalid @enderror" wire:model="full_name2"
                 id="full_name2" name="full_name2"
                 placeholder="Full Name (with academic title) Ex: Dr. Muhammad Ridho, M.Sc">
