@@ -14,8 +14,8 @@
                                     style="font-size:16px">Dashboard</a>
                             </li>
                             <li class="nav-item" style="width:100%">
-                                <a class="nav-link {{ $title == 'Participant' ? 'active' : '' }}" href="/abstrak"
-                                    style="font-size:16px">Registered
+                                <a class="nav-link {{ $title == 'Participant' ? 'active' : '' }}"
+                                    href="/registered-participant" style="font-size:16px">Registered
                                     Participant</a>
                             </li>
                             <li class="nav-item" style="width:100%">

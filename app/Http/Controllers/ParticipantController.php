@@ -13,7 +13,9 @@ class ParticipantController extends Controller
      */
     public function index()
     {
-        //
+        return view('administrator.registered-participant', [
+            'title' => 'Registered Participant'
+        ]);
     }
 
     /**

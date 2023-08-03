@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ParticipantController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
@@ -46,6 +47,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
             'title' => 'My Abstrak'
         ]);
     });
+
+    Route::get('/registered-participant', [ParticipantController::class, 'index']);
 });
 
 require __DIR__ . '/auth.php';
