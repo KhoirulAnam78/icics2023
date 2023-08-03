@@ -61,12 +61,6 @@
     <!-- Home About Section Begin -->
     <section class="home-about-section spad" style="padding-top:0px">
         <div class="container">
-            {{-- <div class="row"> --}}
-            {{-- <div class="col-lg-6">
-                    <div class="ha-pic">
-                        <img src="{{ url('') }}/assets/img/h-about.jpg" alt="">
-                    </div>
-                </div> --}}
             <div class="col-lg-6">
                 <div class="ha-text">
                     <h2>ICICS Scopes</h2>
@@ -293,38 +287,6 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="schedule-tab">
-                        {{-- <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">
-                                    <h5>Day 1</h5>
-                                    <p>May 04, 2019</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">
-                                    <h5>Day 2</h5>
-                                    <p>May 05, 2019</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">
-                                    <h5>Day 3</h5>
-                                    <p>May 06, 2019</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab">
-                                    <h5>Day 4</h5>
-                                    <p>May 07, 2019</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-5" role="tab">
-                                    <h5>Day 5</h5>
-                                    <p>May 08, 2019</p>
-                                </a>
-                            </li>
-                        </ul><!-- Tab panes --> --}}
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="st-content">
@@ -499,28 +461,6 @@
                         <a href="#" class="price-btn">Get Ticket <span class="arrow_right"></span></a>
                     </div>
                 </div>
-                {{-- <div class="col-lg-4 col-md-8">
-                    <div class="price-item">
-                        <h4>Profesional Presenter</h4>
-                        <div class="pi-price">
-                            <ul>
-                                <li>
-                                    <h3 style="color: white">OFFLINE</h3>
-                                </li>
-                            </ul>
-                        </div>
-                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">750K IDR/49,38 USD</h4>
-                        <div class="pi-price">
-                            <ul>
-                                <li>
-                                    <h3 style="color: white">ONLINE</h3>
-                                </li>
-                            </ul>
-                        </div>
-                        <h4 style="color: black;font-weight: 400">250K IDR/16,46 USD</h4>
-                        <a href="#" class="price-btn">Get Ticket <span class="arrow_right"></span></a>
-                    </div>
-                </div> --}}
                 <div class="col-lg-4 col-md-8">
                     <div class="price-item">
                         <h4>Student Participant</h4>
@@ -548,72 +488,6 @@
             </div>
         </div>
     </section>
-    <!-- Pricing Section End -->
-
-    <!-- latest BLog Section Begin -->
-    {{-- <section class="latest-blog spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Latest News</h2>
-                        <p>Do not miss anything topic abput the event</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="latest-item set-bg large-item"
-                        data-setbg="{{ url('') }}/assets/img/blog/latest-b/latest-1.jpg">
-                        <div class="li-tag">Marketing</div>
-                        <div class="li-text">
-                            <h4><a href="./blog-details.html">Improve You Business Cards And Enchan Your Sales</a></h4>
-                            <span><i class="fa fa-clock-o"></i> 19th May, 2019</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="latest-item set-bg"
-                        data-setbg="{{ url('') }}/assets/img/blog/latest-b/latest-2.jpg">
-                        <div class="li-tag">Experience</div>
-                        <div class="li-text">
-                            <h5><a href="./blog-details.html">All users on MySpace will know that there are millions of
-                                    people out there.</a></h5>
-                            <span><i class="fa fa-clock-o"></i> 19th May, 2019</span>
-                        </div>
-                    </div>
-                    <div class="latest-item set-bg"
-                        data-setbg="{{ url('') }}/assets/img/blog/latest-b/latest-3.jpg">
-                        <div class="li-tag">Marketing</div>
-                        <div class="li-text">
-                            <h5><a href="./blog-details.html">A Pocket PC is a handheld computer, which features many
-                                    of the same capabilities.</a></h5>
-                            <span><i class="fa fa-clock-o"></i> 19th May, 2019</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- latest BLog Section End -->
-
-    <!-- Newslatter Section Begin -->
-    {{-- <section class="newslatter-section">
-        <div class="container">
-            <div class="newslatter-inner set-bg" data-setbg="{{ url('') }}/assets/img/newslatter-bg.jpg">
-                <div class="ni-text">
-                    <h3>Subscribe Newsletter</h3>
-                    <p>Subscribe to our newsletter and don’t miss anything</p>
-                </div>
-                <form action="#" class="ni-form">
-                    <input type="text" placeholder="Your email">
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Newslatter Section End -->
-
     <!-- Contact Section Begin -->
     <section class="contact-section spad">
         <div class="container">
@@ -649,8 +523,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="cs-map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52901.38789495531!2d-118.19465514866786!3d34.03523211493029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cf71ad83ff9f%3A0x518b28657f4543b7!2sEast%20Los%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1579763856144!5m2!1sen!2sbd"
+
+                        <iframe src="https://maps.google.com/maps?q=swissbell jambi&t=&z=10&ie=UTF8&iwloc=&output=embed"
                             height="400" style="border:0;" allowfullscreen=""></iframe>
                     </div>
                 </div>
