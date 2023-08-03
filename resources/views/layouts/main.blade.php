@@ -123,13 +123,14 @@
     <script src="{{ url('') }}/assets/js/jquery.slicknav.js"></script>
     <script src="{{ url('') }}/assets/js/owl.carousel.min.js"></script>
     <script src="{{ url('') }}/assets/js/main.js"></script>
+    @livewireScripts
     <script>
         window.addEventListener('to-top', (event) => {
             event.preventDefault();
             window.scrollTo(0, 0);
         });
     </script>
-    @livewireScripts
+    @yield('script')
 </body>
 
 </html>
