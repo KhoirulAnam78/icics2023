@@ -39,13 +39,23 @@
     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
+            <div class="row  justify-content-center">
+                <h4 class="text-white mb-3">PUBLISHER</h4>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="mb-3">
+                    <a href="https://www.scientific.net/" class="pl-table" style="width:150px">
+                        <div class="pl-tablecell">
+                            <img src="{{ url('') }}/assets/img/partner-logo/partner-1.png" alt=""
+                                style="height: 100px;">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row  justify-content-center">
+                <h4 class="text-white mb-3">OTHER PUBLISHER PARTNERS</h4>
+            </div>
             <div class="partner-logo owl-carousel">
-                <a href="https://www.scientific.net/" class="pl-table" style="width:150px">
-                    <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/partner-1.png" alt=""
-                            style="height: 100px;">
-                    </div>
-                </a>
                 <a href="https://jkk.unjani.ac.id/index.php/jkk" class="pl-table" style="width:150px">
                     <div class="pl-tablecell">
                         <img src="{{ url('') }}/assets/img/partner-logo/partner-2.png" alt=""
