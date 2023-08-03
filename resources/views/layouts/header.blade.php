@@ -43,7 +43,7 @@
                         {{-- <li class="{{ $title == 'Presentations' ? 'active' : '' }}"><a
                             href="./about-us.html">Presentations</a></li> --}}
                         <li class="{{ $title == 'ICICS2023 Rundown' ? 'active' : '' }}"><a
-                                href="./about-us.html">ICICS2023
+                                href="/rundown-icics2023">ICICS2023
                                 Rundown</a></li>
                         <li class="{{ $title == 'Download' ? 'active' : '' }}"><a href="./about-us.html">Download</a>
                         </li>

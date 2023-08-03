@@ -22,6 +22,10 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/rundown-icics2023', function () {
+    return view('homepage.rundown', ['title' => 'Rundown ICICS 2023']);
+});
+
 Route::get('/dashboard', function () {
     if (Auth::user()->role === 'administrator') {
         return view('administrator.dashboard', [
