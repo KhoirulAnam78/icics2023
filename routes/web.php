@@ -49,6 +49,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
 
     Route::get('/registered-participant', [ParticipantController::class, 'index']);
+
+    Route::get('/validation-hki-member', [ParticipantController::class, 'validateMember']);
 });
 
 require __DIR__ . '/auth.php';

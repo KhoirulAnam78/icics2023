@@ -41,6 +41,11 @@
                     </tbody>
                 </table>
             </div>
+            <ul class="pagination pagination-sm mt-3 float-right ">
+                @if (count($participants) != 0)
+                    {{ $participants->links() }}
+                @endif
+            </ul>
         </div>
     </div>
 </div>
