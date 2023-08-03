@@ -40,34 +40,39 @@
     <footer class="footer-section">
         <div class="container">
             <div class="partner-logo owl-carousel">
-                <a href="#" class="pl-table">
+                <a href="https://www.scientific.net/" class="pl-table">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/logo-1.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-1.png" alt="">
                     </div>
                 </a>
-                <a href="#" class="pl-table">
+                <a href="https://jkk.unjani.ac.id/index.php/jkk" class="pl-table">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/logo-2.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-2.png" alt="">
                     </div>
                 </a>
-                <a href="#" class="pl-table">
+                <a href="https://journal.uinsgd.ac.id/index.php/tadris-kimiya/index" class="pl-table">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/logo-3.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-3.png" alt="">
                     </div>
                 </a>
-                <a href="#" class="pl-table">
+                <a href="https://jurnal.untirta.ac.id/index.php/EduChemia" class="pl-table">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/logo-4.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-4.png" alt="">
                     </div>
                 </a>
-                <a href="#" class="pl-table">
+                <a href="https://jurnal.unpad.ac.id/jcena" class="pl-table">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/logo-5.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-5.png" alt="">
                     </div>
                 </a>
-                <a href="#" class="pl-table">
+                <a href="https://journal.uinsgd.ac.id/index.php/ak/index" class="pl-table">
                     <div class="pl-tablecell">
-                        <img src="{{ url('') }}/assets/img/partner-logo/logo-6.png" alt="">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-6.png" alt="">
+                    </div>
+                </a>
+                <a href="https://online-journal.unja.ac.id/jisic" class="pl-table">
+                    <div class="pl-tablecell">
+                        <img src="{{ url('') }}/assets/img/partner-logo/partner-7.png" alt="">
                     </div>
                 </a>
             </div>
