@@ -18,9 +18,9 @@
                             <th scope="col">Participant Type</th>
                             <th scope="col">Institution</th>
                             <th scope="col">Address</th>
+                            <th scope="col">HKI ID</th>
                             <th scope="col">HKI Member</th>
                             <th scope="col">Phone</th>
-                            <th scope="col">Fax</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,9 +35,9 @@
                                 <td>{{ $item->participant_type }}</td>
                                 <td>{{ $item->institution }}</td>
                                 <td>{{ $item->address }}</td>
+                                <td>{{ $item->hki_id }}</td>
                                 <td>{{ $item->hki_status }}</td>
                                 <td>{{ $item->phone }}</td>
-                                <td>{{ $item->fax }}</td>
                             </tr>
                         @endforeach
                     </tbody>

@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string('full_name1');
             $table->string('full_name2');
             $table->enum('gender', ['male', 'female']);
-            $table->enum('participant_type', ['professional presenter', 'student presenter', 'student participant']);
+            $table->enum('participant_type', ['professional presenter', 'student presenter', 'participant']);
             $table->text('institution');
             $table->text('address');
             $table->string('phone');
-            $table->string('fax')->nullable();
+            $table->string('hki_id')->nullable();
             $table->string('member_card')->nullable();
             $table->enum('hki_status', ['not a member', 'not yet validated', 'valid', 'invalid'])->default('not a member');
             $table->string('hki_validated_by')->nullable();

@@ -16,7 +16,7 @@
                             <li class="nav-item" style="width:100%">
                                 <a class="nav-link {{ $title == 'Registered Participant' ? 'active' : '' }}"
                                     href="/registered-participant" style="font-size:16px">Registered
-                                    Participant</a>
+                                    User</a>
                             </li>
                             <li class="nav-item" style="width:100%">
                                 <a class="nav-link {{ $title == 'Validation HKI Member' ? 'active' : '' }}"
@@ -29,6 +29,14 @@
                             <li class="nav-item" style="width:100%">
                                 <a class="nav-link {{ $title == 'Payment Validation' ? 'active' : '' }}" href="payment"
                                     style="font-size:16px">Payment Validation</a>
+                            </li>
+                            <li class="nav-item" style="width:100%">
+                                <a class="nav-link {{ $title == 'Presenter' ? 'active' : '' }}" href="/presenter"
+                                    style="font-size:16px">Presenter</a>
+                            </li>
+                            <li class="nav-item" style="width:100%">
+                                <a class="nav-link {{ $title == 'Participant' ? 'active' : '' }}" href="/participant"
+                                    style="font-size:16px">Participant</a>
                             </li>
                             <li class="nav-item" style="width:100%">
                                 <a class="nav-link {{ $title == 'Full Paper' ? 'active' : '' }}" href="/upload-paper"

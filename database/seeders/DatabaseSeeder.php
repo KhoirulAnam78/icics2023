@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
             'full_name1' => 'Khoirul Anam',
             'full_name2' => 'Khoirul Anam S.Kom',
             'gender' => 'male',
-            'participant_type' => 'student participant',
+            'participant_type' => 'participant',
             'institution' => 'Universitas Jambi',
             'address' => 'Jambi',
             'phone' => '085788787427',

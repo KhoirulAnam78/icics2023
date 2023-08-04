@@ -41,6 +41,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Email</th>
                             <th scope="col">Full Name</th>
+                            <th scope="col">HKI ID</th>
                             <th scope="col">Status</th>
                             <th scope="col">Validated By</th>
                             <th scope="col">Action</th>
@@ -53,6 +54,7 @@
                                 </td>
                                 <td>{{ $item->user->email }}</td>
                                 <td>{{ $item->full_name1 }}</td>
+                                <td>{{ $item->hki_id }}</td>
                                 <td>{{ $item->hki_status }}</td>
                                 <td>{{ $item->hki_validated_by }}</td>
                                 <td><button class="btn btn-primary"
@@ -89,6 +91,15 @@
                             <span class="invalid-feedback">{{ $message }}</span>
                         @enderror
                     </div>
+                    <div class="form-group">
+                        <label for="hki_id">HKI ID</label>
+                        <input type="text" disabled class="form-control @error('hki_id') is-invalid @enderror"
+                            id="hki_id" name="hki_id" wire:model="hki_id" placeholder="judul">
+                        @error('hki_id')
+                            <span class="invalid-feedback">{{ $message }}</span>
+                        @enderror
+                    </div>
+
                     <div class="form-group">
                         <label for="">Member Card HKI :</label>
                         <div class="row mx-3 card">

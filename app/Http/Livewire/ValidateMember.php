@@ -12,7 +12,7 @@ class ValidateMember extends Component
 
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
-    public $full_name1, $member_card, $memberValidate;
+    public $full_name1, $hki_id, $member_card, $memberValidate;
     public $search = '';
 
     public function empty()
@@ -20,12 +20,14 @@ class ValidateMember extends Component
         $this->full_name1 = null;
         $this->member_card = null;
         $this->memberValidate = null;
+        $this->hki_id = null;
     }
     public function showValidate($id)
     {
         $this->memberValidate = $id;
         $participant = Participant::find($id);
         $this->full_name1 = $participant->full_name1;
+        $this->hki_id = $participant->hki_id;
         $this->member_card = $participant->member_card;
         $this->dispatchBrowserEvent('show-modal');
     }

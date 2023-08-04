@@ -12,7 +12,7 @@ use App\Providers\RouteServiceProvider;
 
 class RegisterForm extends Component
 {
-    public $full_name1, $full_name2, $gender, $participant_type, $institution, $address, $phone, $member_card, $fax, $email, $password, $confirmPassword;
+    public $full_name1, $full_name2, $gender, $participant_type, $institution, $address, $phone, $member_card, $hki_id, $email, $password, $confirmPassword;
 
 
     use WithFileUploads;
@@ -23,7 +23,7 @@ class RegisterForm extends Component
                 'full_name1' => 'required',
                 'full_name2' => 'required',
                 'gender' => 'required|in:male,female',
-                'participant_type' => 'required|in:professional presenter,student presenter,student participant',
+                'participant_type' => 'required|in:professional presenter,student presenter,participant',
                 'institution' => 'required',
                 'address' => 'required',
                 'phone' => 'required|regex:/^([0-9\s\+]*)$/',
@@ -42,7 +42,7 @@ class RegisterForm extends Component
         'phone.required' => 'Phone number is required !',
         'phone.regex' => 'The phone number must be a number and the + character is allowed !',
         'participant_type.required' => 'Participant type is required !',
-        'participant_type.in' => 'Participan can only contain (Professional Presenter, Student Presenter and Student Participant) !',
+        'participant_type.in' => 'Participan can only contain (Professional Presenter, Student Presenter and Participant) !',
         'institution.required' => 'Institution is required !',
         'address.required' => 'Address is required !',
         'email.required' => 'Email is required !',
@@ -65,12 +65,12 @@ class RegisterForm extends Component
         $imagePath = null;
         $status = 'not a member';
 
-        if ($this->member_card) {
+        if ($this->member_card or $this->hki_id) {
             $this->validate([
                 'full_name1' => 'required',
                 'full_name2' => 'required',
                 'gender' => 'required|in:male,female',
-                'participant_type' => 'required|in:professional presenter,student presenter,student participant',
+                'participant_type' => 'required|in:professional presenter,student presenter,participant',
                 'institution' => 'required',
                 'address' => 'required',
                 'phone' => 'required|regex:/^([0-9\s\+]*)$/',
@@ -99,7 +99,7 @@ class RegisterForm extends Component
             'institution' => $this->institution,
             'address' => $this->address,
             'phone' => $this->phone,
-            'fax' => $this->fax,
+            'hki_id' => $this->hki_id,
             'member_card' => $imagePath,
             'hki_status' => $status,
             'user_id' => $user->id
