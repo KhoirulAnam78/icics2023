@@ -5,13 +5,13 @@ namespace App\Http\Livewire;
 use App\Mail\SendMail;
 use Livewire\Component;
 use App\Models\Participant;
+use App\Models\UploadAbstract;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
-class ValidateMember extends Component
+class ReviewAbstract extends Component
 {
-
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
     public $full_name1, $hki_id, $member_card, $memberValidate;
@@ -62,8 +62,8 @@ class ValidateMember extends Component
 
     public function render()
     {
-        return view('livewire.validate-member', [
-            'participants' => Participant::where('hki_status', 'like', '%' . $this->search)->where('member_card', '!=', null)->orderBy('full_name1')->paginate(10)
+        return view('livewire.review-abstract', [
+            'abstracts' => UploadAbstract::where('status', 'like', '%' . $this->search)->orderBy('topic')->paginate(10)
         ]);
     }
 }
