@@ -246,7 +246,7 @@
                             <td>{{ $item->title }}</td>
                             <td>{{ $item->status }}</td>
                             <td>
-                                @if ($item->status !== 'not yet reviewed')
+                                @if ($item->status == 'not yet reviewed')
                                     <button class="btn btn-info"
                                         wire:click='editAbstract({{ $item->id }})'>edit</button>
                                 @else

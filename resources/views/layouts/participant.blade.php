@@ -8,28 +8,39 @@
                 <div class="col-lg-9">
                     <div class="schedule-table-tab">
                         <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item ">
-                                <a class="nav-link {{ $title == 'Dashboard' ? 'active' : '' }}"
-                                    href="/dashboard">Dashboard</a>
-                            </li>
                             @can('presenter')
+                                <li class="nav-item ">
+                                    <a class="nav-link {{ $title == 'Dashboard' ? 'active' : '' }}"
+                                        href="/dashboard">Dashboard</a>
+                                </li>
                                 <li class="nav-item" style="white-space:nowrap;">
                                     <a class="nav-link {{ $title == 'My Abstrak' ? 'active' : '' }}"
                                         href="/abstrak">Abstract</a>
                                 </li>
-                            @endcan
-                            <li class="nav-item" style="white-space:nowrap;">
-                                <a class="nav-link {{ $title == 'Payment' ? 'active' : '' }}" href="payment">Payment</a>
-                            </li>
-                            @can('presenter')
+                                <li class="nav-item" style="white-space:nowrap;">
+                                    <a class="nav-link {{ $title == 'Payment' ? 'active' : '' }}" href="payment">Payment</a>
+                                </li>
                                 <li class="nav-item" style="white-space:nowrap;">
                                     <a class="nav-link {{ $title == 'Full Paper' ? 'active' : '' }}" href="/upload-paper">Upload
                                         Paper</a>
                                 </li>
+                                <li class="nav-item" style="white-space:nowrap;">
+                                    <a class="nav-link {{ $title == 'My Profile' ? 'active' : '' }}" href="profile">Profile</a>
+                                </li>
                             @endcan
-                            <li class="nav-item" style="white-space:nowrap;">
-                                <a class="nav-link {{ $title == 'My Profile' ? 'active' : '' }}" href="profile">Profile</a>
-                            </li>
+                            @can('participant')
+                                <li class="nav-item col-4" style="padding:0px;margin:0px">
+                                    <a class="nav-link {{ $title == 'Dashboard' ? 'active' : '' }}"
+                                        href="/dashboard">Dashboard</a>
+                                </li>
+                                <li class="nav-item col-4" style="white-space:nowrap;">
+                                    <a class="nav-link {{ $title == 'Payment' ? 'active' : '' }}" href="payment">Payment</a>
+                                </li>
+
+                                <li class="nav-item col-4" style="white-space:nowrap;">
+                                    <a class="nav-link {{ $title == 'My Profile' ? 'active' : '' }}" href="profile">Profile</a>
+                                </li>
+                            @endcan
                         </ul><!-- Tab panes -->
                         <div class="tab-content">
                             <div class="card">

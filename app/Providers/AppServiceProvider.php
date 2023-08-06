@@ -35,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         Gate::define('participant', function (User $user) {
-            return ($user->participant->participant_type !== 'participant');
+            return ($user->participant->participant_type === 'participant');
         });
     }
 }

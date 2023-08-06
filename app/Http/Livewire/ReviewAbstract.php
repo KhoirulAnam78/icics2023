@@ -14,49 +14,73 @@ class ReviewAbstract extends Component
 {
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
-    public $full_name1, $hki_id, $member_card, $memberValidate;
-    public $search = '';
+    public $topic, $type, $title, $authors, $institutions, $abstract, $keywords, $presenter;
+    public $search = '', $abstract_review;
 
     public function empty()
     {
-        $this->full_name1 = null;
-        $this->member_card = null;
-        $this->memberValidate = null;
-        $this->hki_id = null;
+        $this->topic = null;
+        $this->type = null;
+        $this->title = null;
+        $this->keywords = null;
+        $this->authors = null;
+        $this->abstract = null;
+        $this->institutions = null;
+        $this->presenter = null;
+        $this->abstract_review = null;
     }
     public function showValidate($id)
     {
-        $this->memberValidate = $id;
-        $participant = Participant::find($id);
-        $this->full_name1 = $participant->full_name1;
-        $this->hki_id = $participant->hki_id;
-        $this->member_card = $participant->member_card;
+        $this->abstract_review = $id;
+        $abstract = UploadAbstract::find($id);
+        $this->topic = $abstract->topic;
+        $this->type = $abstract->type;
+        $this->title = $abstract->title;
+        $this->keywords = $abstract->keywords;
+        $this->authors = $abstract->authors;
+        $this->abstract = $abstract->abstract;
+        $this->institutions = $abstract->institutions;
+        $this->presenter = $abstract->presenter;
         $this->dispatchBrowserEvent('show-modal');
     }
 
-    public function valid()
+    public function accept()
     {
-        $email = Participant::find($this->memberValidate)->user->email;
-        Participant::where('id', $this->memberValidate)->update([
-            'hki_status' => 'valid',
-            'hki_validated_by' => Auth::user()->email
+        $email = UploadAbstract::find($this->abstract_review)->participant->user->email;
+        UploadAbstract::where('id', $this->abstract_review)->update([
+            'status' => 'accepted',
+            'reviewed_by' => Auth::user()->email
         ]);
-        Mail::to($email)->send(new SendMail('Validation HKI Member', 'Your hki member status has been validated, now you get a 25% discount'));
+        Mail::to($email)->send(new SendMail('Reviewed Abstract', 'Dear Author,
+        Congratulations, your article has been accepted to be presented at the 2nd ITAPS Conference. Herewith we attach
+        your Acceptance Letter. On this note, we would like to confirm whether you want to publish your article in Scopus-
+        indexed Proceeding. Please reply to this email with your answer.
+        On another note, we have a tour program after the conference which will be held on November 24, 2019. We would like
+        you to confirm your attendance by filling this form:
+        Bokori Island Tour Form
+        See you at the conference.'));
         $this->empty();
-        session()->flash('message', 'Validation succesfully !');
+        session()->flash('message', 'Review succesfully !');
         $this->dispatchBrowserEvent('close-modal');
     }
 
-    public function invalid()
+    public function reject()
     {
-        $email = Participant::find($this->memberValidate)->user->email;
-        Participant::where('id', $this->memberValidate)->update([
-            'hki_status' => 'invalid',
-            'hki_validated_by' => Auth::user()->email
+        $email = UploadAbstract::find($this->abstract_review)->participant->user->email;
+        UploadAbstract::where('id', $this->abstract_review)->update([
+            'status' => 'rejected',
+            'reviewed_by' => Auth::user()->email
         ]);
         $this->empty();
-        Mail::to($email)->send(new SendMail('Validation HKI Member', "Your hki member status is invalid, you don't get 25% discount."));
-        session()->flash('message', 'Validation succesfully !');
+        Mail::to($email)->send(new SendMail('Reviewed Abstract', "Dear Author,
+        Congratulations, your article has been accepted to be presented at the 2nd ITAPS Conference. Herewith we attach
+        your Acceptance Letter. On this note, we would like to confirm whether you want to publish your article in Scopus-
+        indexed Proceeding. Please reply to this email with your answer.
+        On another note, we have a tour program after the conference which will be held on November 24, 2019. We would like
+        you to confirm your attendance by filling this form:
+        Bokori Island Tour Form
+        See you at the conference."));
+        session()->flash('message', 'Review succesfully !');
         $this->dispatchBrowserEvent('close-modal');
     }
 
