@@ -22,35 +22,29 @@
                                         <div class="col-lg-12">
                                             <div class="schedule-tab">
                                                 <ul class="nav nav-tabs" role="tablist">
-                                                    <li class="nav-item">
+                                                    <li class="nav-item col-3" style="padding:0px; margin:0px">
                                                         <a class="nav-link active" data-toggle="tab" href="#tabs-1"
                                                             role="tab">
                                                             <h5>Day 1</h5>
                                                             <p>November 14, 2023</p>
                                                         </a>
                                                     </li>
-                                                    <li class="nav-item">
+                                                    <li class="nav-item col-3" style="padding:0px; margin:0px">
                                                         <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">
                                                             <h5>Day 2</h5>
                                                             <p>November 15, 2023</p>
                                                         </a>
                                                     </li>
-                                                    <li class="nav-item">
+                                                    <li class="nav-item col-3" style="padding:0px; margin:0px">
                                                         <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">
                                                             <h5>Day 3</h5>
                                                             <p>November 16, 2023</p>
                                                         </a>
                                                     </li>
-                                                    <li class="nav-item">
+                                                    <li class="nav-item col-3" style="padding:0px; margin:0px">
                                                         <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab">
                                                             <h5>Day 4</h5>
                                                             <p>November 17, 2023</p>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" data-toggle="tab" href="#tabs-5" role="tab">
-                                                            <h5>Day 5</h5>
-                                                            <p>November 08, 2019</p>
                                                         </a>
                                                     </li>
                                                 </ul><!-- Tab panes -->
