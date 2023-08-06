@@ -4,6 +4,9 @@ use App\Http\Controllers\ParticipantController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UploadAbstractController;
+use App\Mail\SendMail;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +58,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/registered-participant', [ParticipantController::class, 'index']);
 
     Route::get('/validation-hki-member', [ParticipantController::class, 'validateMember']);
+    Route::get('/review-abstract', [UploadAbstractController::class, 'review']);
 });
 
 require __DIR__ . '/auth.php';

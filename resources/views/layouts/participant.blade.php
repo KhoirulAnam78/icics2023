@@ -5,7 +5,7 @@
     <section class="schedule-table-section spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                     <div class="schedule-table-tab">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item ">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="card">
                         <div class="card-body">
                             <div class="ha-text" style="padding-left:5px;padding-top:0px">
