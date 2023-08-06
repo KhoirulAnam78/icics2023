@@ -72,53 +72,131 @@
         </div>
     </div>
 
-    {{-- <div class="modal fade" id="modalValidate" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="modalValidate" data-backdrop="static" data-keyboard="false" tabindex="-1"
         role="dialog" wire:ignore.self aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalEditTitle">Validate HKI</h5>
+                    <h5 class="modal-title" id="modalEditTitle">Review Abstract</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" wire:click="empty()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group">
-                        <label for="full_name1">Full Name</label>
-                        <input type="text" disabled class="form-control @error('full_name1') is-invalid @enderror"
-                            id="full_name1" name="full_name1" wire:model="full_name1" placeholder="judul">
-                        @error('full_name1')
-                            <span class="invalid-feedback">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="hki_id">HKI ID</label>
-                        <input type="text" disabled class="form-control @error('hki_id') is-invalid @enderror"
-                            id="hki_id" name="hki_id" wire:model="hki_id" placeholder="judul">
-                        @error('hki_id')
-                            <span class="invalid-feedback">{{ $message }}</span>
-                        @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Member Card HKI :</label>
-                        <div class="row mx-3 card">
-                            @if ($member_card)
-                                <img src="{{ asset('storage/' . $member_card) }}" style="max-width:100%">
-                            @endif
+                    <div class="row">
+                        <div class="form-group mx-3">
+                            <label for="topic">
+                                Topic
+                            </label>
+                            <select disabled class="custom-select @error('topic') is-invalid @enderror" id="topic"
+                                name="topic" wire:model='topic'>
+                                <option value="">Choose One</option>
+                                <option value="organic and bio chemistry">Organic and Bio Chemistry</option>
+                                <option value="analytical and enviromental chemistry">Analytical and Enviromental
+                                    Chemistry
+                                </option>
+                                <option value="inorganic and material chemistry">Inorganic and Material Chemistry
+                                </option>
+                                <option value="physical and computation chemistry">Physical and Computation Chemistry
+                                </option>
+                                <option value="chemical education">Chemical Education</option>
+                            </select>
+                            @error('topic')
+                                <span class="invalid-feedback">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
+
+                        <div class="form-group">
+                            <label for="type">
+                                Type
+                            </label>
+                            <select disabled class="custom-select @error('type') is-invalid @enderror" id="type"
+                                name="type" wire:model='type'>
+                                <option value="">Choose One</option>
+                                <option value="oral presentation">Oral Presentation</option>
+                            </select>
+                            @error('type')
+                                <span class="invalid-feedback">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
                     </div>
 
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <textarea disabled class="form-control @error('title') is-invalid @enderror" id="title" rows="3"
+                            placeholder="All Authors" name="title" wire:model='title'></textarea>
+                        @error('title')
+                            <span class="invalid-feedback">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="authors">All Authors</label>
+                        <textarea disabled class="form-control @error('authors') is-invalid @enderror" id="authors" rows="3"
+                            placeholder="All Authors" name="authors" wire:model='authors'></textarea>
+                        @error('authors')
+                            <span class="invalid-feedback">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="institutions">Institutions</label>
+                        <textarea disabled class="form-control @error('institutions') is-invalid @enderror" id="institutions"
+                            placeholder="Institutions" rows="3" name="institutions" wire:model='institutions'></textarea>
+                        @error('institutions')
+                            <span class="invalid-feedback">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="abstract">Content of Abstract</label>
+                        <textarea disabled class="form-control @error('abstract') is-invalid @enderror" id="abstract" rows="15"
+                            placeholder="Content of abstract" name="abstract" wire:model='abstract'></textarea>
+                        @error('abstract')
+                            <span class="invalid-feedback">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="keywords">Keywords</label>
+                        <textarea disabled class="form-control @error('keywords') is-invalid @enderror" id="keywords"
+                            placeholder="Institutions" rows="3" name="keywords" wire:model='keywords'></textarea>
+                        @error('keywords')
+                            <span class="invalid-feedback">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="presenter">Presenter</label>
+                        <input disabled type="text" class="form-control @error('presenter') is-invalid @enderror"
+                            id="presenter" aria-describedby="emailHelp" placeholder="Presenter" name="presenter"
+                            wire:model='presenter'>
+                        @error('presenter')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-danger" wire:click='invalid()'>Invalid</button>
-                    <button class="btn btn-primary" wire:click='valid()'>Valid</button>
+                    <button class="btn btn-danger" wire:click='reject()'>Reject</button>
+                    <button class="btn btn-primary" wire:click='accept()'>Accept</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"
                         wire:click="empty()">Cancel</button>
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 
     @section('script')
         <script>
