@@ -3,7 +3,7 @@
 @section('content')
     <!-- Schedule Table Section Begin -->
     <section class="schedule-table-section spad">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="schedule-table-tab">

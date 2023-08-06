@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class AbstractForm extends Component
 {
     public $topic, $type, $title, $authors, $institutions, $abstract, $keywords, $presenter;
-    public $add = false;
+    public $add = false, $edit = false, $abstract_edit_id, $abstract_delete_id;
 
     public function mount()
     {
@@ -57,9 +57,59 @@ class AbstractForm extends Component
         $this->resetValidation();
     }
 
+
+    public function empty()
+    {
+        $this->abstract_edit_id = null;
+        $this->topic = null;
+        $this->type = null;
+        $this->title = null;
+        $this->keywords = null;
+        $this->authors = null;
+        $this->abstract = null;
+        $this->institutions = null;
+        $this->presenter = null;
+        $this->edit = false;
+    }
+
+    public function editAbstract($id)
+    {
+        $abstract = UploadAbstract::find($id);
+        $this->abstract_edit_id = $id;
+        $this->topic = $abstract->topic;
+        $this->type = $abstract->type;
+        $this->title = $abstract->title;
+        $this->keywords = $abstract->keywords;
+        $this->authors = $abstract->authors;
+        $this->abstract = $abstract->abstract;
+        $this->institutions = $abstract->institutions;
+        $this->presenter = $abstract->presenter;
+        $this->edit = true;
+    }
+
+    public function update()
+    {
+        $this->validate();
+        UploadAbstract::where('id', $this->abstract_edit_id)->update([
+            'topic' => $this->topic,
+            'type' => $this->type,
+            'title' => $this->title,
+            'authors' => $this->authors,
+            'institutions' => $this->institutions,
+            'abstract' => $this->abstract,
+            'keywords' => $this->keywords,
+            'presenter' => $this->presenter,
+        ]);
+
+        session()->flash('message', 'Edit abstract was successful !');
+        $this->empty();
+        $this->cancel();
+    }
+
     public function cancel()
     {
         $this->add = false;
+        $this->edit = false;
         $this->resetErrorBag();
         $this->resetValidation();
         $this->dispatchBrowserEvent('to-top');
@@ -81,8 +131,12 @@ class AbstractForm extends Component
             'status' => 'not yet reviewed'
         ]);
 
+        session()->flash('message', 'Add abstract was successful !');
         $this->cancel();
+        $this->empty();
     }
+
+
 
     public function render()
     {
