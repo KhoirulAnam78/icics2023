@@ -168,7 +168,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
-                data-setbg="{{ url('') }}/assets/img/team-member/keynote-1.jpg">
+                data-setbg="{{ url('') }}/assets/img/team-member/keynote-1.png">
                 <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -315,19 +315,44 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                    style="font-size: 115%; font-weight: 700">
+                    Abstract Submission Deadline
+                    <span style="font-size: 115%; color: white" class="badge bg-primary rounded-pill">16 September
+                        2023</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                    style="font-size: 115%;font-weight: 700">
+                    Abstract Acceptance Notifications
+                    <span style="font-size: 115%; color: white" class="badge bg-primary rounded-pill">20 September
+                        2023</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                    style="font-size: 115%;font-weight: 700">
+                    Full Paper Submission
+                    <span style="font-size: 115%; color: white" class="badge bg-primary rounded-pill">30 September
+                        2023</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                    style="font-size: 115%;font-weight: 700">
+                    Conference
+                    <span style="font-size: 115%; color: white" class="badge bg-primary rounded-pill">16 November
+                        2023</span>
+                </li>
+            </ul>
+            {{-- <div class="row">
                 <div class="col-lg-12">
                     <div class="schedule-tab">
                         <div class="tab-content">
-                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                                <div class="st-content">
+                            <div class="tab-pane active">
+                                <div>
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <i style="font-size: 50px;padding-top: 20px" class="fa fa-file-text-o"
+                                                <div>
+                                                    <i style="font-size: 30px" class="fa fa-file-text-o"
                                                         aria-hidden="true"></i>
-
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -346,13 +371,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="st-content">
+                                <div>
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <i style="font-size: 50px;padding-top: 20px"
-                                                        class="fa fa-check-square-o" aria-hidden="true"></i>
+                                                    <i style="font-size: 30px" class="fa fa-check-square-o"
+                                                        aria-hidden="true"></i>
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -371,14 +396,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="st-content">
+                                <div>
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
 
-                                                    <i style="font-size: 50px;padding-top: 20px" class="fa fa-book"
-                                                        aria-hidden="true"></i>
+                                                    <i style="font-size: 30px" class="fa fa-book" aria-hidden="true"></i>
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -397,12 +421,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="st-content">
+                                <div>
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <i style="font-size: 50px;padding-top: 20px" class="fa fa-globe"
+                                                    <i style="font-size: 30px" class="fa fa-globe"
                                                         aria-hidden="true"></i>
 
                                                 </div>
@@ -427,7 +451,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
     <!-- Schedule Section End -->
