@@ -6,17 +6,40 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
-                    <div class="hero-text">
-                        <span style="font-size: 30px">16 November 2023, Jambi</span>
-                        <h3 style="color: white; font-size: 50px">Strengthening the Role of Chemistry as Basic
-                            Science in Supporting the
-                            Downstreaming of Agro-Industrial Products</h3>
-                        <br>
-                        <a href="#" class="primary-btn">Buy Ticket</a>
-                    </div>
+
+                    <span class="px-3"
+                        style="font-size: 30px; color: white;font-weight: 600; background-image: linear-gradient(to right,#E08445, #E46671); border-radius: 10px; text-align: center ">14-17
+                        November 2023, Jambi</span>
+                    <h3 style="color: white; font-size: 40px">Strengthening the Role of Chemistry as Basic
+                        Science in Supporting the
+                        Downstreaming of Agro-Industrial Products</h3>
+                    <br>
+                    <a href="#" class="primary-btn">Buy Ticket</a>
+
                 </div>
                 <div class="col-lg-5">
-                    <img src="{{ url('') }}/assets/img/hero-right.png" alt="">
+                    <h3
+                        style="color: white; background-image: linear-gradient(to right,#E08445, #E46671); border-radius: 10px; text-align: center">
+                        Opening Speech
+                    </h3>
+                    <div class="row">
+                        <div class="col-5"><img src="{{ url('') }}/assets/img/opening-1.png" alt="">
+                        </div>
+                        <div class="col-7" style="padding-top: 12%">
+                            <h5 style="color: white"> Prof. Drs. Sutrisno, Ph.D
+                                <span>Rector of Jambi University</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5"><img src="{{ url('') }}/assets/img/opening-2.png" alt="">
+                        </div>
+                        <div class="col-7" style="padding-top: 12%">
+                            <h5 style="color: white"> Dr. Sukro Muhab, M.Si
+                                <span>President of HKI</span>
+                            </h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,7 +102,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="ha-text">
-                        <img src="{{ url('') }}/assets/img/home-icics.png" alt="">
+                        <img src="{{ url('') }}/assets/img/logo-fix.png" alt="">
                     </div>
                 </div>
             </div>
