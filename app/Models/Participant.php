@@ -19,4 +19,10 @@ class Participant extends Model
     {
         return $this->hasMany(UploadAbstract::class);
     }
+
+
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
 }

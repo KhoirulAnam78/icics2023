@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ParticipantController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
@@ -49,16 +50,19 @@ Route::middleware('auth')->group(function () {
 
 
 Route::middleware(['auth', 'verified'])->group(function () {
+
+    //ADMINISTRATOR
     Route::get('/abstrak', function () {
         return view('participant.abstrak', [
             'title' => 'My Abstrak'
         ]);
     });
-
     Route::get('/registered-participant', [ParticipantController::class, 'index']);
-
     Route::get('/validation-hki-member', [ParticipantController::class, 'validateMember']);
     Route::get('/review-abstract', [UploadAbstractController::class, 'review']);
+
+    //PARTICIPANT
+    Route::get('/payment', [PaymentController::class, 'payment']);
 });
 
 require __DIR__ . '/auth.php';
