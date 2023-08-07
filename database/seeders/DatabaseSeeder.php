@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
             'address' => 'Jambi',
             'phone' => '085788787427',
             'user_id' => $user->id,
-            'attendace' => 'offline'
+            'attendance' => 'offline'
         ]);
     }
 }
