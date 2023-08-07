@@ -33,11 +33,11 @@
                                     <a class="nav-link {{ $title == 'Dashboard' ? 'active' : '' }}"
                                         href="/dashboard">Dashboard</a>
                                 </li>
-                                <li class="nav-item col-4" style="white-space:nowrap;">
+                                <li class="nav-item col-4" style="padding:0px;margin:0px">
                                     <a class="nav-link {{ $title == 'Payment' ? 'active' : '' }}" href="payment">Payment</a>
                                 </li>
 
-                                <li class="nav-item col-4" style="white-space:nowrap;">
+                                <li class="nav-item col-4" style="padding:0px;margin:0px">
                                     <a class="nav-link {{ $title == 'My Profile' ? 'active' : '' }}" href="profile">Profile</a>
                                 </li>
                             @endcan
