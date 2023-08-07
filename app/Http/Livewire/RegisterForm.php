@@ -12,7 +12,7 @@ use App\Providers\RouteServiceProvider;
 
 class RegisterForm extends Component
 {
-    public $full_name1, $full_name2, $gender, $participant_type, $institution, $address, $phone, $member_card, $hki_id, $email, $password, $confirmPassword;
+    public $full_name1, $full_name2, $gender, $participant_type, $institution, $address, $phone, $member_card, $hki_id, $email, $password, $confirmPassword, $attendance;
 
 
     use WithFileUploads;
@@ -23,6 +23,7 @@ class RegisterForm extends Component
                 'full_name1' => 'required',
                 'full_name2' => 'required',
                 'gender' => 'required|in:male,female',
+                'attendance' => 'required|in:online,offline',
                 'participant_type' => 'required|in:professional presenter,student presenter,participant',
                 'institution' => 'required',
                 'address' => 'required',
@@ -39,6 +40,8 @@ class RegisterForm extends Component
         'full_name2.required' => 'Full name with academic title is required !',
         'gender.required' => 'Gender is required !',
         'gender.in' => 'Gender can only contain male or female !',
+        'attendance.required' => 'Attendance is required !',
+        'attendance.in' => 'Attendance can only contain online or offline !',
         'phone.required' => 'Phone number is required !',
         'phone.regex' => 'The phone number must be a number and the + character is allowed !',
         'participant_type.required' => 'Participant type is required !',
@@ -70,6 +73,7 @@ class RegisterForm extends Component
                 'full_name1' => 'required',
                 'full_name2' => 'required',
                 'gender' => 'required|in:male,female',
+                'attendance' => 'required|in:online,offline',
                 'participant_type' => 'required|in:professional presenter,student presenter,participant',
                 'institution' => 'required',
                 'address' => 'required',
@@ -99,6 +103,7 @@ class RegisterForm extends Component
             'institution' => $this->institution,
             'address' => $this->address,
             'phone' => $this->phone,
+            'attendance' => $this->attendance,
             'hki_id' => $this->hki_id,
             'member_card' => $imagePath,
             'hki_status' => $status,

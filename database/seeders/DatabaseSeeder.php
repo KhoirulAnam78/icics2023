@@ -36,7 +36,8 @@ class DatabaseSeeder extends Seeder
             'institution' => 'Universitas Jambi',
             'address' => 'Jambi',
             'phone' => '085788787427',
-            'user_id' => $user->id
+            'user_id' => $user->id,
+            'attendace' => 'offline'
         ]);
     }
 }

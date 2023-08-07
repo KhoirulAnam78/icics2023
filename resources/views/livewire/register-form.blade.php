@@ -55,6 +55,23 @@
             @enderror
         </div>
         <div class="form-group">
+            <label for="participant">
+                Attendance
+            </label>
+            <select class="custom-select @error('attendance') is-invalid @enderror" id="attendance" name="attendance"
+                wire:model='attendance'>
+                <option value="">Choose One</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+            </select>
+            @error('attendance')
+                <span class="invalid-feedback">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+
+        <div class="form-group">
             <label for="institution">Institution</label>
             <textarea class="form-control @error('institution') is-invalid @enderror" id="institution" rows="3"
                 placeholder="Institution Name" name="institution" wire:model='institution'></textarea>
@@ -141,8 +158,9 @@
         </div>
         <div class="form-group">
             <label for="password">Confirm Password</label>
-            <input id="password" type="password" class="form-control @error('confirmPassword') is-invalid @enderror"
-                name="confirmPassword" wire:model='confirmPassword' autocomplete="current-password">
+            <input id="password" type="password"
+                class="form-control @error('confirmPassword') is-invalid @enderror" name="confirmPassword"
+                wire:model='confirmPassword' autocomplete="current-password">
             @error('confirmPassword')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
