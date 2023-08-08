@@ -7,6 +7,7 @@
                 </div>
             </div>
         </div>
+        <a class="btn btn-warning my-3" wire:click='cancel()'>Back</a>
         <form wire:submit.prevent="save">
             <div class="form-group">
                 <label for="topic">
@@ -115,6 +116,7 @@
                 </div>
             </div>
         </div>
+        <a class="btn btn-warning my-3" wire:click='cancel()'>Back</a>
         <form wire:submit.prevent="update">
             <div class="form-group">
                 <label for="topic">
@@ -124,7 +126,8 @@
                     wire:model='topic'>
                     <option value="">Choose One</option>
                     <option value="organic and bio chemistry">Organic and Bio Chemistry</option>
-                    <option value="analytical and enviromental chemistry">Analytical and Enviromental Chemistry</option>
+                    <option value="analytical and enviromental chemistry">Analytical and Enviromental Chemistry
+                    </option>
                     <option value="inorganic and material chemistry">Inorganic and Material Chemistry</option>
                     <option value="physical and computation chemistry">Physical and Computation Chemistry</option>
                     <option value="chemical education">Chemical Education</option>

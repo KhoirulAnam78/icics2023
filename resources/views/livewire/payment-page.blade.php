@@ -8,7 +8,7 @@
             </div>
         </div>
 
-        <a class="btn btn-warning" wire:click='cancel()'>Back</a>
+        <a class="btn btn-warning my-3" wire:click='cancel()'>Back</a>
         <form wire:submit.prevent="save">
             {{-- <div class="form-group">
                 <label for="topic">

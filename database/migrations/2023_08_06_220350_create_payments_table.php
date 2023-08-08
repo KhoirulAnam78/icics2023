@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
+            $table->string('fee');
+            $table->string('discount');
+            $table->string('fee_after_discount');
             $table->string('total_bill');
             $table->string('invoice');
             $table->enum('validation', ['valid', 'invalid', 'not yet validated']);

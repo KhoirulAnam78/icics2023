@@ -10,7 +10,7 @@ use Livewire\WithFileUploads;
 
 class PaymentPage extends Component
 {
-    public $fee, $discount, $total_bill, $amount, $invoice;
+    public $fee, $discount, $total_bill, $fee_after_discount, $invoice;
     public $add = false, $edit = false, $payment_edit_id, $abstract_delete_id;
     public $abstract, $uploadAbstractId;
 
@@ -63,31 +63,31 @@ class PaymentPage extends Component
                 if (Auth::user()->participant->attendance == 'offline') {
                     $this->fee = 350000;
                     $this->discount = $this->fee * 0.25;
-                    $this->amount = $this->fee - $this->discount;
+                    $this->fee_after_discount = $this->fee - $this->discount;
                 } else {
                     $this->fee = 100000;
                     $this->discount = $this->fee * 0.25;
-                    $this->amount = $this->fee - $this->discount;
+                    $this->fee_after_discount = $this->fee - $this->discount;
                 }
             } elseif (Auth::user()->participant->participant_type == 'professional presenter') {
                 if (Auth::user()->participant->attendance == 'offline') {
                     $this->fee = 750000;
                     $this->discount = $this->fee * 0.25;
-                    $this->amount = $this->fee - $this->discount;
+                    $this->fee_after_discount = $this->fee - $this->discount;
                 } else {
                     $this->fee = 250000;
                     $this->discount = $this->fee * 0.25;
-                    $this->amount = $this->fee - $this->discount;
+                    $this->fee_after_discount = $this->fee - $this->discount;
                 }
             } else {
                 if (Auth::user()->participant->attendance == 'offline') {
                     $this->fee = 550000;
                     $this->discount = $this->fee * 0.25;
-                    $this->amount = $this->fee - $this->discount;
+                    $this->fee_after_discount = $this->fee - $this->discount;
                 } else {
                     $this->fee = 150000;
                     $this->discount = $this->fee * 0.25;
-                    $this->amount = $this->fee - $this->discount;
+                    $this->fee_after_discount = $this->fee - $this->discount;
                 }
             }
         } else {
@@ -95,31 +95,31 @@ class PaymentPage extends Component
                 if (Auth::user()->participant->attendance == 'offline') {
                     $this->fee = 'IDR 350K / $24 USD';
                     $this->discount = 0;
-                    $this->amount =  $this->fee;
+                    $this->fee_after_discount =  $this->fee;
                 } else {
                     $this->fee = 'IDR 100K / $7 USD';
                     $this->discount = 0;
-                    $this->amount =  $this->fee;
+                    $this->fee_after_discount =  $this->fee;
                 }
             } elseif (Auth::user()->participant->participant_type == 'professional presenter') {
                 if (Auth::user()->participant->attendance == 'offline') {
                     $this->fee = 'IDR 750K / $50 USD';
                     $this->discount = 0;
-                    $this->amount =  $this->fee;
+                    $this->fee_after_discount =  $this->fee;
                 } else {
                     $this->fee = 'IDR 250K / $17 USD';
                     $this->discount = 0;
-                    $this->amount =  $this->fee;
+                    $this->fee_after_discount =  $this->fee;
                 }
             } else {
                 if (Auth::user()->participant->attendance == 'offline') {
                     $this->fee = 'IDR 550K / $37 USD';
                     $this->discount = 0;
-                    $this->amount =  $this->fee;
+                    $this->fee_after_discount =  $this->fee;
                 } else {
                     $this->fee = 'IDR 150K / $10 USD';
                     $this->discount = 0;
-                    $this->amount =  $this->fee;
+                    $this->fee_after_discount =  $this->fee;
                 }
             }
         }
@@ -136,7 +136,7 @@ class PaymentPage extends Component
         $this->fee = null;
         $this->discount = null;
         $this->total_bill = null;
-        $this->amount = null;
+        $this->fee_after_discount = null;
         $this->invoice = null;
         $this->uploadAbstractId = null;
         $this->edit = false;
@@ -147,7 +147,7 @@ class PaymentPage extends Component
     //     $abstract = UploadAbstract::find($id);
     //     $this->payment_edit_id = $id;
     //     $this->total_bill = $abstract->total_bill;
-    //     $this->amount = $abstract->amount;
+    //     $this->fee_after_discount = $abstract->fee_after_discount;
     //     $this->invoice = $abstract->invoice;
     //     $this->edit = true;
     // }
@@ -179,6 +179,9 @@ class PaymentPage extends Component
         $this->validate();
         $imagePath = $this->invoice->store('images');
         Payment::create([
+            'fee' => $this->fee,
+            'discount' => $this->discount,
+            'fee_after_discount' => $this->fee_after_discount,
             'total_bill' => $this->total_bill,
             'invoice' => $imagePath,
             'validation' => 'not yet validated',
