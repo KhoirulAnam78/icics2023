@@ -15,6 +15,13 @@ class PaymentPage extends Component
     public $abstract, $uploadAbstractId;
 
     use WithFileUploads;
+
+    public function mount()
+    {
+        if (Auth::user()->participant->participant_type !== 'participant') {
+            $this->abstract = UploadAbstract::where('participant_id', Auth::user()->participant->id)->where('status', 'accepted')->get();
+        }
+    }
     public function rules()
     {
         if (Auth::user()->participant->participant_type == 'participant') {
@@ -49,7 +56,7 @@ class PaymentPage extends Component
     public function add()
     {
         if (Auth::user()->participant->participant_type !== 'participant') {
-            $this->abstract = UploadAbstract::where('participant_id', Auth::user()->participant->id)->get();
+            $this->abstract = UploadAbstract::where('participant_id', Auth::user()->participant->id)->where('status', 'accepted')->get();
         }
         if (Auth::user()->participant->hki_status == 'valid') {
             if (Auth::user()->participant->participant_type == 'participant') {
@@ -131,6 +138,7 @@ class PaymentPage extends Component
         $this->total_bill = null;
         $this->amount = null;
         $this->invoice = null;
+        $this->uploadAbstractId = null;
         $this->edit = false;
     }
 
@@ -169,9 +177,10 @@ class PaymentPage extends Component
     public function save()
     {
         $this->validate();
+        $imagePath = $this->invoice->store('images');
         Payment::create([
             'total_bill' => $this->total_bill,
-            'invoice' => $this->invoice,
+            'invoice' => $imagePath,
             'validation' => 'not yet validated',
             'participant_id' => Auth::user()->participant->id,
             'upload_abstract_id' => $this->uploadAbstractId

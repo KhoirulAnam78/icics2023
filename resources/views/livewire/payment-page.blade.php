@@ -7,6 +7,8 @@
                 </div>
             </div>
         </div>
+
+        <a class="btn btn-warning" wire:click='cancel()'>Back</a>
         <form wire:submit.prevent="save">
             {{-- <div class="form-group">
                 <label for="topic">
@@ -110,7 +112,16 @@
             <a class="btn btn-warning" wire:click='cancel()'>Cancel</a>
         </form>
     @else
-        <button class="btn btn-primary" wire:click="add()">Add Payment</button>
+        @can('presenter')
+            @if (count($abstract) == 0)
+                <button class="btn btn-primary" disabled>Add Payment</button>
+            @else
+                <button class="btn btn-primary" wire:click="add()">Add Payment</button>
+            @endif
+        @endcan
+        @can('participant')
+            <button class="btn btn-primary" wire:click="add()">Add Payment</button>
+        @endcan
         @if (session()->has('message'))
             <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
                 {{ session('message') }}
@@ -129,6 +140,9 @@
                         <th scope="col">#</th>
                         <th scope="col">Date</th>
                         <th scope="col">Total Bill</th>
+                        @can('presenter')
+                            <th scope="col">Payment for abstract</th>
+                        @endcan
                         <th scope="col">Status Validation</th>
                         <th scope="col">Validated By</th>
                     </tr>
@@ -142,6 +156,9 @@
                             <td scope="row">{{ ++$a }}</td>
                             <td>{{ $item->created_at }}</td>
                             <td>{{ $item->total_bill }}</td>
+                            @can('presenter')
+                                <td>{{ $item->uploadAbstract->title }}</td>
+                            @endcan
                             <td>{{ $item->validation }}</td>
                             <td>{{ $item->validated_by }}</td>
                             {{-- <td> --}}
