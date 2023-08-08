@@ -74,7 +74,7 @@
 
     <div class="modal fade" id="modalValidate" data-backdrop="static" data-keyboard="false" tabindex="-1"
         role="dialog" wire:ignore.self aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalEditTitle">Validate HKI</h5>
@@ -83,32 +83,39 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group">
-                        <label for="full_name1">Full Name</label>
-                        <input type="text" disabled class="form-control @error('full_name1') is-invalid @enderror"
-                            id="full_name1" name="full_name1" wire:model="full_name1" placeholder="judul">
-                        @error('full_name1')
-                            <span class="invalid-feedback">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="hki_id">HKI ID</label>
-                        <input type="text" disabled class="form-control @error('hki_id') is-invalid @enderror"
-                            id="hki_id" name="hki_id" wire:model="hki_id" placeholder="judul">
-                        @error('hki_id')
-                            <span class="invalid-feedback">{{ $message }}</span>
-                        @enderror
-                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="full_name1">Full Name</label>
+                                <input type="text" disabled
+                                    class="form-control @error('full_name1') is-invalid @enderror" id="full_name1"
+                                    name="full_name1" wire:model="full_name1" placeholder="judul">
+                                @error('full_name1')
+                                    <span class="invalid-feedback">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="hki_id">HKI ID</label>
+                                <input type="text" disabled
+                                    class="form-control @error('hki_id') is-invalid @enderror" id="hki_id"
+                                    name="hki_id" wire:model="hki_id" placeholder="judul">
+                                @error('hki_id')
+                                    <span class="invalid-feedback">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="">Member Card HKI :</label>
-                        <div class="row mx-3 card">
-                            @if ($member_card)
-                                <img src="{{ asset('storage/' . $member_card) }}" style="max-width:100%">
-                            @endif
+                        <div class="col-7">
+                            <div class="form-group">
+                                <label for="">Member Card HKI :</label>
+                                <div class="row mx-3 card">
+                                    @if ($member_card)
+                                        <img src="{{ asset('storage/' . $member_card) }}" style="max-width:100%">
+                                    @endif
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-danger" wire:click='invalid()'>Invalid</button>
