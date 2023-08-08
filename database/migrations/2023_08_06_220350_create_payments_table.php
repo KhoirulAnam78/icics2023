@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('invoice');
             $table->enum('validation', ['valid', 'invalid', 'not yet validated']);
             $table->string('validated_by')->nullable();
+            $table->foreignId('upload_abstract_id')->nullable()->constrained('upload_abstracts');
             $table->foreignId('participant_id')->constrained('participants');
             $table->timestamps();
         });

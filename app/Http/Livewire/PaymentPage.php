@@ -12,23 +12,31 @@ class PaymentPage extends Component
 {
     public $fee, $discount, $total_bill, $amount, $invoice;
     public $add = false, $edit = false, $payment_edit_id, $abstract_delete_id;
-    public $abstract, $upload_abstract_id;
+    public $abstract, $uploadAbstractId;
 
     use WithFileUploads;
     public function rules()
     {
-        return
-            [
-                'total_bill' => 'required',
-                'amount' => 'required',
-                'invoice' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-            ];
+        if (Auth::user()->participant->participant_type == 'participant') {
+            return
+                [
+                    'total_bill' => 'required',
+                    'invoice' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+                ];
+        } else {
+            return
+                [
+                    'total_bill' => 'required',
+                    'uploadAbstractId' => 'required',
+                    'invoice' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+                ];
+        }
     }
 
     //Custom Errror messages for validation
     protected $messages = [
         'total_bill.required' => 'Total bill is required !',
-        'amount.required' => 'Amount is required !',
+        'uploadAbstractId.required' => 'Pay for abstract is required !',
         'invoice.required' => 'Invoice is required !',
     ];
 
@@ -115,7 +123,6 @@ class PaymentPage extends Component
         $this->resetValidation();
     }
 
-
     public function empty()
     {
         $this->payment_edit_id = null;
@@ -166,7 +173,8 @@ class PaymentPage extends Component
             'total_bill' => $this->total_bill,
             'invoice' => $this->invoice,
             'validation' => 'not yet validated',
-            'participant_id' => Auth::user()->participant->id
+            'participant_id' => Auth::user()->participant->id,
+            'upload_abstract_id' => $this->uploadAbstractId
         ]);
 
         session()->flash('message', 'Add payment was successful !');

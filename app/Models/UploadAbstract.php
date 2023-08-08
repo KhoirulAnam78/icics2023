@@ -14,8 +14,8 @@ class UploadAbstract extends Model
         return $this->belongsTo(Participant::class);
     }
 
-    public function detailPayments()
+    public function payments()
     {
-        return $this->hasMany(DetailPayment::class);
+        return $this->hasMany(Payment::class);
     }
 }

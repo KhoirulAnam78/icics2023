@@ -29,17 +29,17 @@
             </div> --}}
             @can('presenter')
                 <div class="form-group">
-                    <label for="upload_abstract_id">
+                    <label for="uploadAbstractId">
                         Pay for abstract
                     </label>
-                    <select class="custom-select @error('upload_abstract_id') is-invalid @enderror" id="upload_abstract_id"
-                        name="upload_abstract_id" wire:model='upload_abstract_id'>
+                    <select class="custom-select @error('uploadAbstractId') is-invalid @enderror" id="uploadAbstractId"
+                        name="uploadAbstractId" wire:model='uploadAbstractId'>
                         <option value="">Choose One</option>
                         @foreach ($abstract as $item)
-                            <option value="{{ $abstract->id }}">{{ $abstract->title }}</option>
+                            <option value="{{ $item->id }}">{{ $item->title }}</option>
                         @endforeach
                     </select>
-                    @error('upload_abstract_id')
+                    @error('uploadAbstractId')
                         <span class="invalid-feedback">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -68,7 +68,7 @@
                 @enderror
             </div>
             <div class="form-group">
-                <label for="amount">Amount</label>
+                <label for="amount">Fee after discount</label>
                 <input disabled type="text" class="form-control @error('amount') is-invalid @enderror" id="amount"
                     placeholder="Title" name="amount" value='{{ $amount }}'>
                 @error('amount')
