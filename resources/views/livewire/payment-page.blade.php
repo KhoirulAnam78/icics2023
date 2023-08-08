@@ -70,10 +70,11 @@
                 @enderror
             </div>
             <div class="form-group">
-                <label for="amount">Fee after discount</label>
-                <input disabled type="text" class="form-control @error('amount') is-invalid @enderror" id="amount"
-                    placeholder="Title" name="amount" value='{{ $amount }}'>
-                @error('amount')
+                <label for="fee_after_discount">Fee after discount</label>
+                <input disabled type="text" class="form-control @error('fee_after_discount') is-invalid @enderror"
+                    id="fee_after_discount" placeholder="Title" name="fee_after_discount"
+                    value='{{ $fee_after_discount }}'>
+                @error('fee_after_discount')
                     <span class="invalid-feedback">
                         <strong>{{ $message }}</strong>
                     </span>
