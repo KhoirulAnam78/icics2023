@@ -10,7 +10,7 @@
         <div class="form-group">
             <label for="email">Email address</label>
             <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
-                aria-describedby="emailHelp" placeholder="Enter email" name="email" wire:model='email'>
+                aria-describedby="emailHelp" placeholder="Enter email" name="email" wire:model.debounce.500ms='email'>
             @error('email')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -20,7 +20,7 @@
         <div class="form-group">
             <label for="password">Password</label>
             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                name="password" wire:model='password' autocomplete="current-password">
+                name="password" wire:model.debounce.500ms='password' autocomplete="current-password">
             @error('password')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>

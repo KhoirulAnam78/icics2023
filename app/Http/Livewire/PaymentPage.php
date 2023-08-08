@@ -194,8 +194,6 @@ class PaymentPage extends Component
         $this->empty();
     }
 
-
-
     public function render()
     {
         return view('livewire.payment-page', [
