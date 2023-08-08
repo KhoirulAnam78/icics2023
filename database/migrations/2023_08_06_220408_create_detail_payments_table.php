@@ -13,9 +13,7 @@ return new class extends Migration
     {
         Schema::create('detail_payments', function (Blueprint $table) {
             $table->id();
-            $table->integer('cost');
-            $table->integer('discount');
-            $table->integer('total');
+            $table->foreignId('payment_id')->constrained('payments');
             $table->foreignId('upload_abstract_id')->constrained('upload_abstracts');
             $table->timestamps();
         });

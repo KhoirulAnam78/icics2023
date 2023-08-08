@@ -6,42 +6,30 @@ use App\Models\Payment;
 use App\Models\UploadAbstract;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
+use Livewire\WithFileUploads;
 
 class PaymentPage extends Component
 {
-    public $topic, $type, $title, $authors, $institutions, $abstract, $keywords, $presenter;
-    public $add = false, $edit = false, $abstract_edit_id, $abstract_delete_id;
+    public $fee, $discount, $total_bill, $amount, $invoice;
+    public $add = false, $edit = false, $payment_edit_id, $abstract_delete_id;
+    public $abstract, $upload_abstract_id;
 
-    public function mount()
-    {
-        $this->presenter = Auth::user()->participant->full_name1;
-    }
+    use WithFileUploads;
     public function rules()
     {
         return
             [
-                'topic' => 'required|in:organic and bio chemistry,analytical and enviromental chemistry,inorganic and material chemistry,physical and computation chemistry,chemical education',
-                'type' => 'required',
-                'title' => 'required',
-                'authors' => 'required',
-                'institutions' => 'required',
-                'abstract' => 'required',
-                'keywords' => 'required',
-                'presenter' => 'required',
+                'total_bill' => 'required',
+                'amount' => 'required',
+                'invoice' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             ];
     }
 
     //Custom Errror messages for validation
     protected $messages = [
-        'topic.required' => 'topic is required !',
-        'topic.in' => 'topic can only contain (Organic and Bio Chemistry, Analytical and Enviromental Chemistry, Inorganic and Material Chemistry, Physical and Computation Chemistry, Chemical Education) !',
-        'type.required' => 'Type is required !',
-        'title.required' => 'Title is required !',
-        'keywords.required' => 'Keywords is required !',
-        'authors.required' => 'Authors type is required !',
-        'institutions.required' => 'Institutions is required !',
-        'abstract.required' => 'Abstract is required !',
-        'presenter.required' => 'Presenter is required !',
+        'total_bill.required' => 'Total bill is required !',
+        'amount.required' => 'Amount is required !',
+        'invoice.required' => 'Invoice is required !',
     ];
 
     //Reatime Validation
@@ -52,6 +40,75 @@ class PaymentPage extends Component
 
     public function add()
     {
+        if (Auth::user()->participant->participant_type !== 'participant') {
+            $this->abstract = UploadAbstract::where('participant_id', Auth::user()->participant->id)->get();
+        }
+        if (Auth::user()->participant->hki_status == 'valid') {
+            if (Auth::user()->participant->participant_type == 'participant') {
+                if (Auth::user()->participant->attendance == 'offline') {
+                    $this->fee = 350000;
+                    $this->discount = $this->fee * 0.25;
+                    $this->amount = $this->fee - $this->discount;
+                } else {
+                    $this->fee = 100000;
+                    $this->discount = $this->fee * 0.25;
+                    $this->amount = $this->fee - $this->discount;
+                }
+            } elseif (Auth::user()->participant->participant_type == 'professional presenter') {
+                if (Auth::user()->participant->attendance == 'offline') {
+                    $this->fee = 750000;
+                    $this->discount = $this->fee * 0.25;
+                    $this->amount = $this->fee - $this->discount;
+                } else {
+                    $this->fee = 250000;
+                    $this->discount = $this->fee * 0.25;
+                    $this->amount = $this->fee - $this->discount;
+                }
+            } else {
+                if (Auth::user()->participant->attendance == 'offline') {
+                    $this->fee = 550000;
+                    $this->discount = $this->fee * 0.25;
+                    $this->amount = $this->fee - $this->discount;
+                } else {
+                    $this->fee = 150000;
+                    $this->discount = $this->fee * 0.25;
+                    $this->amount = $this->fee - $this->discount;
+                }
+            }
+        } else {
+            if (Auth::user()->participant->participant_type == 'participant') {
+                if (Auth::user()->participant->attendance == 'offline') {
+                    $this->fee = 'IDR 350K / $24 USD';
+                    $this->discount = 0;
+                    $this->amount =  $this->fee;
+                } else {
+                    $this->fee = 'IDR 100K / $7 USD';
+                    $this->discount = 0;
+                    $this->amount =  $this->fee;
+                }
+            } elseif (Auth::user()->participant->participant_type == 'professional presenter') {
+                if (Auth::user()->participant->attendance == 'offline') {
+                    $this->fee = 'IDR 750K / $50 USD';
+                    $this->discount = 0;
+                    $this->amount =  $this->fee;
+                } else {
+                    $this->fee = 'IDR 250K / $17 USD';
+                    $this->discount = 0;
+                    $this->amount =  $this->fee;
+                }
+            } else {
+                if (Auth::user()->participant->attendance == 'offline') {
+                    $this->fee = 'IDR 550K / $37 USD';
+                    $this->discount = 0;
+                    $this->amount =  $this->fee;
+                } else {
+                    $this->fee = 'IDR 150K / $10 USD';
+                    $this->discount = 0;
+                    $this->amount =  $this->fee;
+                }
+            }
+        }
+
         $this->add = true;
         $this->dispatchBrowserEvent('to-top');
         $this->resetErrorBag();
@@ -61,51 +118,37 @@ class PaymentPage extends Component
 
     public function empty()
     {
-        $this->abstract_edit_id = null;
-        $this->topic = null;
-        $this->type = null;
-        $this->title = null;
-        $this->keywords = null;
-        $this->authors = null;
-        $this->abstract = null;
-        $this->institutions = null;
-        $this->presenter = null;
+        $this->payment_edit_id = null;
+        $this->fee = null;
+        $this->discount = null;
+        $this->total_bill = null;
+        $this->amount = null;
+        $this->invoice = null;
         $this->edit = false;
     }
 
-    public function editAbstract($id)
-    {
-        $abstract = UploadAbstract::find($id);
-        $this->abstract_edit_id = $id;
-        $this->topic = $abstract->topic;
-        $this->type = $abstract->type;
-        $this->title = $abstract->title;
-        $this->keywords = $abstract->keywords;
-        $this->authors = $abstract->authors;
-        $this->abstract = $abstract->abstract;
-        $this->institutions = $abstract->institutions;
-        $this->presenter = $abstract->presenter;
-        $this->edit = true;
-    }
+    // public function editAbstract($id)
+    // {
+    //     $abstract = UploadAbstract::find($id);
+    //     $this->payment_edit_id = $id;
+    //     $this->total_bill = $abstract->total_bill;
+    //     $this->amount = $abstract->amount;
+    //     $this->invoice = $abstract->invoice;
+    //     $this->edit = true;
+    // }
 
-    public function update()
-    {
-        $this->validate();
-        UploadAbstract::where('id', $this->abstract_edit_id)->update([
-            'topic' => $this->topic,
-            'type' => $this->type,
-            'title' => $this->title,
-            'authors' => $this->authors,
-            'institutions' => $this->institutions,
-            'abstract' => $this->abstract,
-            'keywords' => $this->keywords,
-            'presenter' => $this->presenter,
-        ]);
+    // public function update()
+    // {
+    //     $this->validate();
+    //     Payment::where('id', $this->payment_edit_id)->update([
+    //         'total_bill' => $this->total_bill,
+    //         'invoice' => $this->invoice,
+    //     ]);
 
-        session()->flash('message', 'Edit abstract was successful !');
-        $this->empty();
-        $this->cancel();
-    }
+    //     session()->flash('message', 'Edit abstract was successful !');
+    //     $this->empty();
+    //     $this->cancel();
+    // }
 
     public function cancel()
     {
@@ -119,20 +162,14 @@ class PaymentPage extends Component
     public function save()
     {
         $this->validate();
-        UploadAbstract::create([
-            'topic' => $this->topic,
-            'type' => $this->type,
-            'title' => $this->title,
-            'authors' => $this->authors,
-            'institutions' => $this->institutions,
-            'abstract' => $this->abstract,
-            'keywords' => $this->keywords,
-            'presenter' => $this->presenter,
-            'participant_id' => Auth::user()->participant->id,
-            'status' => 'not yet reviewed'
+        Payment::create([
+            'total_bill' => $this->total_bill,
+            'invoice' => $this->invoice,
+            'validation' => 'not yet validated',
+            'participant_id' => Auth::user()->participant->id
         ]);
 
-        session()->flash('message', 'Add abstract was successful !');
+        session()->flash('message', 'Add payment was successful !');
         $this->cancel();
         $this->empty();
     }

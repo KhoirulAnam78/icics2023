@@ -27,27 +27,61 @@
                     </span>
                 @enderror
             </div> --}}
+            @can('presenter')
+                <div class="form-group">
+                    <label for="upload_abstract_id">
+                        Pay for abstract
+                    </label>
+                    <select class="custom-select @error('upload_abstract_id') is-invalid @enderror" id="upload_abstract_id"
+                        name="upload_abstract_id" wire:model='upload_abstract_id'>
+                        <option value="">Choose One</option>
+                        @foreach ($abstract as $item)
+                            <option value="{{ $abstract->id }}">{{ $abstract->title }}</option>
+                        @endforeach
+                    </select>
+                    @error('upload_abstract_id')
+                        <span class="invalid-feedback">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+            @endcan
 
-            {{-- <div class="form-group">
-                <label for="type">
-                    Type
-                </label>
-                <select class="custom-select @error('type') is-invalid @enderror" id="type" name="type"
-                    wire:model='type'>
-                    <option value="">Choose One</option>
-                    <option value="oral presentation">Oral Presentation</option>
-                </select>
-                @error('type')
+            <div class="form-group">
+                <label for="fee">Fee</label>
+                <input disabled type="text" class="form-control @error('fee') is-invalid @enderror" id="fee"
+                    name="fee" value="{{ $fee }}">
+                @error('fee')
                     <span class="invalid-feedback">
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
-            </div> --}}
+            </div>
+            <div class="form-group">
+                <label for="discount">Discount</label>
+                <input disabled type="text" class="form-control @error('discount') is-invalid @enderror"
+                    id="discount" placeholder="Title" name="discount" value='{{ $discount }}'>
+                @error('discount')
+                    <span class="invalid-feedback">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input disabled type="text" class="form-control @error('amount') is-invalid @enderror" id="amount"
+                    placeholder="Title" name="amount" value='{{ $amount }}'>
+                @error('amount')
+                    <span class="invalid-feedback">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
 
             <div class="form-group">
-                <label for="total_bill">Title</label>
+                <label for="total_bill">Total Bill</label>
                 <input type="text" class="form-control @error('total_bill') is-invalid @enderror" id="total_bill"
-                    placeholder="Title" name="total_bill" wire:model='total_bill'>
+                    name="total_bill" wire:model='total_bill'>
                 @error('total_bill')
                     <span class="invalid-feedback">
                         <strong>{{ $message }}</strong>
@@ -55,51 +89,19 @@
                 @enderror
             </div>
             <div class="form-group">
-                <label for="authors">All Authors</label>
-                <textarea class="form-control @error('authors') is-invalid @enderror" id="authors" rows="3"
-                    placeholder="All Authors" name="authors" wire:model='authors'></textarea>
-                @error('authors')
+                <label for="invoice">Invoice</label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" accept=".jpg,.png,.jpeg,.gif,.svg"
+                            class="custom-file-input @error('invoice') is-invalid @enderror" id="invoice"
+                            wire:model='invoice'>
+                        <label class="custom-file-label" for="invoice">
+                            {{ $invoice == null ? 'Choose' : $invoice->getClientOriginalName() }}
+                        </label>
+                    </div>
+                </div>
+                @error('invoice')
                     <span class="invalid-feedback">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
-            <div class="form-group">
-                <label for="institutions">Institutions</label>
-                <textarea class="form-control @error('institutions') is-invalid @enderror" id="institutions" rows="3"
-                    placeholder="Institutions" name="institutions" wire:model='institutions'></textarea>
-                @error('institutions')
-                    <span class="invalid-feedback">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
-            <div class="form-group">
-                <label for="abstract">Content of Abstract</label>
-                <textarea class="form-control @error('abstract') is-invalid @enderror" id="abstract" rows="3"
-                    placeholder="Content of abstract" name="abstract" wire:model='abstract'></textarea>
-                @error('abstract')
-                    <span class="invalid-feedback">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
-            <div class="form-group">
-                <label for="keywords">Keywords</label>
-                <input type="text" class="form-control @error('keywords') is-invalid @enderror" id="keywords"
-                    placeholder="Keywords" name="keywords" wire:model='keywords'>
-                @error('keywords')
-                    <span class="invalid-feedback">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
-            <div class="form-group">
-                <label for="presenter">Presenter</label>
-                <input type="text" class="form-control @error('presenter') is-invalid @enderror" id="presenter"
-                    aria-describedby="emailHelp" placeholder="Presenter" name="presenter" wire:model='presenter'>
-                @error('presenter')
-                    <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
@@ -119,14 +121,16 @@
         @endif
 
         @if (count($payments) !== 0)
+
+            <h4 class="mt-5">Your Payment</h4>
             <table class="table my-3">
                 <thead class="thead-light">
                     <tr>
                         <th scope="col">#</th>
+                        <th scope="col">Date</th>
                         <th scope="col">Total Bill</th>
                         <th scope="col">Status Validation</th>
                         <th scope="col">Validated By</th>
-                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -135,22 +139,73 @@
                     @endphp
                     @foreach ($payments as $item)
                         <tr>
-                            <th scope="row">{{ ++$a }}</th>
+                            <td scope="row">{{ ++$a }}</td>
+                            <td>{{ $item->created_at }}</td>
                             <td>{{ $item->total_bill }}</td>
                             <td>{{ $item->validation }}</td>
                             <td>{{ $item->validated_by }}</td>
-                            <td>
-                                {{-- @if ($item->status == 'not yet reviewed')
+                            {{-- <td> --}}
+                            {{-- @if ($item->status == 'not yet reviewed')
                                     <button class="btn btn-info"
                                         wire:click='editAbstract({{ $item->id }})'>edit</button>
                                 @else
                                     <p>No actions</p>
                                 @endif --}}
-                            </td>
+                            {{-- </td> --}}
                         </tr>
                     @endforeach
                 </tbody>
             </table>
         @endif
+        <h4 class="mt-5">Fee</h4>
+        <table class="table my-3">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Fee</th>
+                    <th scope="col">Offline</th>
+                    <th scope="col">Online</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Professional Presenter</td>
+                    <td>IDR 750K / $50 USD</td>
+                    <td>IDR 250K / $17 USD</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Student Presenter</td>
+                    <td>IDR 550K / $37 USD</td>
+                    <td>IDR 150K / $10 USD</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Student Participant</td>
+                    <td>IDR 350K / $24 USD</td>
+                    <td>IDR 100K / $7 USD</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h4 class="mt-5">Payment</h4>
+        <table class="table my-3">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Bank Name</th>
+                    <th scope="col">Account Number</th>
+                    <th scope="col">Account Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bank Negara Indonesia</td>
+                    <td>698124931</td>
+                    <td>Perkumpulan Indonesian Chemical Society</td>
+                </tr>
+            </tbody>
+        </table>
     @endif
 </div>

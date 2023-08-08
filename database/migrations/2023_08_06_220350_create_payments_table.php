@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->integer('total_bill');
+            $table->string('total_bill');
             $table->string('invoice');
-            $table->enum('validation', ['valid', 'invalid']);
-            $table->string('validated_by');
+            $table->enum('validation', ['valid', 'invalid', 'not yet validated']);
+            $table->string('validated_by')->nullable();
             $table->foreignId('participant_id')->constrained('participants');
             $table->timestamps();
         });

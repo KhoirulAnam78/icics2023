@@ -13,7 +13,7 @@
         @else
             @if (Auth::user()->participant->payments->first())
                 <p><strong>Information : </strong>Your payment status is
-                    <strong>{{ Auth::user()->participant->uploadAbstracts->first()->status }}</strong>
+                    <strong>{{ Auth::user()->participant->payments->first()->validation }}</strong>
                 </p>
             @else
                 <p><strong>Information : </strong>you have not made a payment, add payment in payment menu</p>
