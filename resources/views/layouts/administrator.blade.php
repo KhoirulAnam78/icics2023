@@ -27,8 +27,8 @@
                                     href="/review-abstract" style="font-size:16px">Review Abstract</a>
                             </li>
                             <li class="nav-item" style="width:100%">
-                                <a class="nav-link {{ $title == 'Payment Validation' ? 'active' : '' }}" href="payment"
-                                    style="font-size:16px">Payment Validation</a>
+                                <a class="nav-link {{ $title == 'Payment Validation' ? 'active' : '' }}"
+                                    href="/payment-validation" style="font-size:16px">Payment Validation</a>
                             </li>
                             <li class="nav-item" style="width:100%">
                                 <a class="nav-link {{ $title == 'Presenter' ? 'active' : '' }}" href="/presenter"

@@ -57,17 +57,14 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'verified'])->group(function () {
 
     //ADMINISTRATOR
-    Route::get('/abstrak', function () {
-        return view('participant.abstrak', [
-            'title' => 'My Abstrak'
-        ]);
-    });
     Route::get('/registered-participant', [ParticipantController::class, 'index']);
     Route::get('/validation-hki-member', [ParticipantController::class, 'validateMember']);
     Route::get('/review-abstract', [UploadAbstractController::class, 'review']);
+    Route::get('/payment-validation', [PaymentController::class, 'validation']);
 
-    //PARTICIPANT
+    //PARTICIPANT   
     Route::get('/payment', [PaymentController::class, 'payment']);
+    Route::get('/abstrak', [ParticipantController::class, 'abstract']);
 });
 
 require __DIR__ . '/auth.php';

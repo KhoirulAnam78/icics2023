@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Participant;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreParticipantRequest;
 use App\Http\Requests\UpdateParticipantRequest;
 
@@ -13,6 +14,7 @@ class ParticipantController extends Controller
      */
     public function index()
     {
+        $this->authorize('administrator');
         return view('administrator.registered-participant', [
             'title' => 'Registered Participant',
         ]);
@@ -23,8 +25,19 @@ class ParticipantController extends Controller
      */
     public function validateMember()
     {
+        $this->authorize('administrator');
         return view('administrator.validate-member', [
             'title' => 'Validation HKI Member'
+        ]);
+    }
+
+    public function abstract()
+    {
+        if (Auth::user()->role == 'administrator') {
+            return abort(403);
+        }
+        return view('participant.abstrak', [
+            'title' => 'My Abstrak'
         ]);
     }
 }

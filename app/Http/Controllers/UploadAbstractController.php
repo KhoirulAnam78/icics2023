@@ -14,6 +14,7 @@ class UploadAbstractController extends Controller
      */
     public function review()
     {
+        $this->authorize('administrator');
         return view('administrator.review-abstract', [
             'title' => 'Review Abstract'
         ]);
