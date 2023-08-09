@@ -4,6 +4,15 @@
         <div class="col-lg-6">
             <a class="btn btn-success">Export</a>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="search2">Search</label>
+                <input type="text" class="form-control" id="search2" name="search2"
+                    wire:model.debounce.500ms="search2" placeholder="Search by full name">
+            </div>
+        </div>
         <div class="col-lg-6">
             <div class="form-group">
                 <label for="participant">
@@ -48,6 +57,12 @@
                         </tr>
                     </thead>
                     <tbody>
+
+                        @if (count($participants) == 0)
+                            <tr>
+                                <td colspan="7" align="center">No data</td>
+                            </tr>
+                        @endif
                         @foreach ($participants as $item)
                             <tr>
                                 <td>{{ ($participants->currentpage() - 1) * $participants->perpage() + $loop->index + 1 }}

@@ -15,7 +15,7 @@ class ReviewAbstract extends Component
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
     public $topic, $type, $title, $authors, $institutions, $abstract, $keywords, $presenter;
-    public $search = '', $abstract_review;
+    public $search = '', $search2, $abstract_review;
 
     public function empty()
     {
@@ -87,7 +87,9 @@ class ReviewAbstract extends Component
     public function render()
     {
         return view('livewire.review-abstract', [
-            'abstracts' => UploadAbstract::where('status', 'like', '%' . $this->search)->orderBy('topic')->paginate(10)
+            'abstracts' => UploadAbstract::where('status', 'like', '%' . $this->search)->whereHas('participant', function ($query) {
+                $query->where('full_name1', 'like', '%' . $this->search2 . '%');
+            })->orderBy('topic')->paginate(10)
         ]);
     }
 }
