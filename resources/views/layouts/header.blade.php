@@ -26,7 +26,9 @@
                 <nav class="mainmenu mobile-menu">
                     <ul>
                         <li class="{{ $title == 'Home' ? 'active' : '' }}"><a href="/">Home</a></li>
-                        <li class="{{ $title == 'Information' ? 'active' : '' }}"> <a href="#">Information</a>
+                        <li
+                            class="{{ ($title == 'Registration Fsee' or $title == 'Scientific Committee' or $title == 'Steering Committee' or $title == 'Organizing Committee' or $title == 'About' or $title == 'Contact') ? 'active' : '' }}">
+                            <a href="#">Information</a>
                             <ul class="dropdown" style="width:300px">
                                 <li><a href="/registration-fee">Registration fee</a></li>
                                 <li><a href="/scientific-committe">Scientific Committee</a></li>

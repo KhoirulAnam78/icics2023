@@ -479,7 +479,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">550K IDR/36,20 USD</h4>
+                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">550K IDR/37 USD</h4>
                         <div class="pi-price">
                             <ul>
                                 <li>
@@ -487,8 +487,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 style="color: black;font-weight: 400">150K IDR/9,87 USD</h4>
-                        <a href="#" class="price-btn">Get Ticket <span class="arrow_right"></span></a>
+                        <h4 style="color: black;font-weight: 400">150K IDR/10 USD</h4>
+
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-8">
@@ -504,7 +504,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">750K IDR/49,38 USD</h4>
+                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">750K IDR/50 USD</h4>
                         <div class="pi-price">
                             <ul>
                                 <li>
@@ -512,8 +512,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 style="color: black;font-weight: 400">250K IDR/16,46 USD</h4>
-                        <a href="#" class="price-btn">Get Ticket <span class="arrow_right"></span></a>
+                        <h4 style="color: black;font-weight: 400">250K IDR/17 USD</h4>
+
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-8">
@@ -526,7 +526,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">350K IDR/23,04 USD</h4>
+                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">350K IDR/24 USD</h4>
                         <div class="pi-price">
                             <ul>
                                 <li>
@@ -534,8 +534,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 style="color: black;font-weight: 400">100K IDR/6,58 USD</h4>
-                        <a href="#" class="price-btn">Get Ticket <span class="arrow_right"></span></a>
+                        <h4 style="color: black;font-weight: 400">100K IDR/7 USD</h4>
+
                     </div>
                 </div>
 
