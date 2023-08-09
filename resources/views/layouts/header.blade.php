@@ -27,7 +27,7 @@
                     <ul>
                         <li class="{{ $title == 'Home' ? 'active' : '' }}"><a href="/">Home</a></li>
                         <li
-                            class="{{ ($title == 'Registration Fsee' or $title == 'Scientific Committee' or $title == 'Steering Committee' or $title == 'Organizing Committee' or $title == 'About' or $title == 'Contact') ? 'active' : '' }}">
+                            class="{{ ($title == 'Registration Fee' or $title == 'Scientific Committee' or $title == 'Steering Committee' or $title == 'Organizing Committee' or $title == 'About' or $title == 'Contact') ? 'active' : '' }}">
                             <a href="#">Information</a>
                             <ul class="dropdown" style="width:300px">
                                 <li><a href="/registration-fee">Registration fee</a></li>
@@ -41,7 +41,7 @@
                         </li>
                         {{-- <li class="{{ $title == 'Presentations' ? 'active' : '' }}"><a
                             href="./about-us.html">Presentations</a></li> --}}
-                        <li class="{{ $title == 'ICICS2023 Rundown' ? 'active' : '' }}"><a
+                        <li class="{{ $title == 'Rundown ICICS 2023' ? 'active' : '' }}"><a
                                 href="/rundown-icics2023">Rundown</a></li>
 
                         <li class="{{ $title == 'Satellite Event' ? 'active' : '' }}"><a href="#">Satellite
