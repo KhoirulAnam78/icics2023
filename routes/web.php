@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UploadAbstractController;
+use App\Http\Controllers\UploadFulltextController;
 use App\Mail\SendMail;
 use Illuminate\Support\Facades\Mail;
 
@@ -66,10 +67,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/payment-validation', [PaymentController::class, 'validation']);
     Route::get('/participant-have-paid', [PaymentController::class, 'participantPaid']);
     Route::get('/presenter-have-paid', [PaymentController::class, 'presenterPaid']);
+    Route::get('/uploaded-paper', [UploadFulltextController::class, 'uploadedPaper']);
 
     //PARTICIPANT   
     Route::get('/payment', [PaymentController::class, 'payment']);
     Route::get('/abstrak', [ParticipantController::class, 'abstract']);
+    Route::get('/upload-fulltext', [UploadFulltextController::class, 'upload']);
 });
 
 require __DIR__ . '/auth.php';

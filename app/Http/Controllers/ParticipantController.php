@@ -33,9 +33,7 @@ class ParticipantController extends Controller
 
     public function abstract()
     {
-        if (Auth::user()->role == 'administrator') {
-            return abort(403);
-        }
+        $this->authorize('presenter');
         return view('participant.abstrak', [
             'title' => 'My Abstrak'
         ]);

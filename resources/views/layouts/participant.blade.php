@@ -21,7 +21,8 @@
                                     <a class="nav-link {{ $title == 'Payment' ? 'active' : '' }}" href="payment">Payment</a>
                                 </li>
                                 <li class="nav-item" style="white-space:nowrap;">
-                                    <a class="nav-link {{ $title == 'Full Paper' ? 'active' : '' }}" href="/upload-paper">Upload
+                                    <a class="nav-link {{ $title == 'Upload Fulltext' ? 'active' : '' }}"
+                                        href="/upload-fulltext">Upload
                                         Paper</a>
                                 </li>
                                 <li class="nav-item" style="white-space:nowrap;">

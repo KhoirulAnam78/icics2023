@@ -31,7 +31,7 @@
                                     href="/payment-validation" style="font-size:16px">Payment Validation</a>
                             </li>
                             <li class="nav-item" style="width:100%">
-                                <a class="nav-link {{ $title == 'Full Paper' ? 'active' : '' }}" href="/upload-paper"
+                                <a class="nav-link {{ $title == 'Uploaded Paper' ? 'active' : '' }}" href="/uploaded-paper"
                                     style="font-size:16px">Uploaded
                                     Paper</a>
                             </li>

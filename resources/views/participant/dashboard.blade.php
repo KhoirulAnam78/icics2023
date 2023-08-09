@@ -21,6 +21,5 @@
         @else
             <p><strong>Information : </strong>you have not made a payment, add payment in payment menu</p>
         @endif
-
     </div>
 @endsection

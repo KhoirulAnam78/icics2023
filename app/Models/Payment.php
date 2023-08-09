@@ -24,4 +24,9 @@ class Payment extends Model
     {
         return $this->belongsTo(Participant::class);
     }
+
+    public function uploadFulltexts()
+    {
+        return $this->hasMany(UploadFulltext::class);
+    }
 }
