@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Manup Template">
-    <meta name="keywords" content="Manup, unica, creative, html">
+    <meta name="description" content="International Conference of the Indonesian Chemical Society
+    2023">
+    <meta name="keywords" content="icics, icics 2023, icics2023, icics jambi, universitas jambi">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ICICS 2023 | {{ $title }}</title>
