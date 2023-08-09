@@ -41,19 +41,19 @@ Route::get('/registration-fee', function () {
 
 Route::get('/scientific-committe', function () {
     return view('homepage.scientific-committe', [
-        'title' => 'Scientific Committe'
+        'title' => 'Scientific Committee'
     ]);
 });
 
 Route::get('/steering-committe', function () {
     return view('homepage.steering-committe', [
-        'title' => 'Steering Committe'
+        'title' => 'Steering Committee'
     ]);
 });
 
 Route::get('/organizing-committe', function () {
     return view('homepage.organizing-committe', [
-        'title' => 'Organizing Committe'
+        'title' => 'Organizing Committee'
     ]);
 });
 
