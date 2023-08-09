@@ -28,12 +28,12 @@
                         <li class="{{ $title == 'Home' ? 'active' : '' }}"><a href="/">Home</a></li>
                         <li class="{{ $title == 'Information' ? 'active' : '' }}"> <a href="#">Information</a>
                             <ul class="dropdown" style="width:300px">
-                                <li><a href="#">Registration fee</a></li>
-                                <li><a href="#">Scientific Committee</a></li>
-                                <li><a href="#">Steering Committee</a></li>
-                                <li><a href="#">Organizing Committee</a></li>
+                                <li><a href="/registration-fee">Registration fee</a></li>
+                                <li><a href="/scientific-committe">Scientific Committee</a></li>
+                                <li><a href="/steering-committe">Steering Committee</a></li>
+                                <li><a href="/organizing-committe">Organizing Committee</a></li>
                                 <li><a href="/about-conference">About Conference</a></li>
-                                <li><a href="#">Contacts</a></li>
+                                <li><a href="/contact">Contacts</a></li>
                             </ul>
                         </li>
                         </li>
@@ -46,14 +46,14 @@
                         <li class="{{ $title == 'Satellite Event' ? 'active' : '' }}"><a href="#">Satellite
                                 Event</a>
                             <ul class="dropdown" style="width:300px">
-                                <li><a href="#">FGD MBKM</a></li>
-                                <li><a href="#">FGD Akreditasi Internasional</a></li>
-                                <li><a href="#">Kongres HKI</a></li>
-                                <li><a href="#">Forum Ketua Jurusan Kimia</a></li>
-                                <li><a href="#">Field Trip</a></li>
+                                <li><a href="/fgd-mbkm">FGD MBKM</a></li>
+                                <li><a href="/fgd-akreditasi-internasional">FGD Akreditasi Internasional</a></li>
+                                <li><a href="/kongres-hki">Kongres HKI</a></li>
+                                <li><a href="/forum-ketua-jurusan-kimia">Forum Ketua Jurusan Kimia</a></li>
+                                <li><a href="/field-trip">Field Trip</a></li>
                             </ul>
                         </li>
-                        <li class="{{ $title == 'Download' ? 'active' : '' }}"><a href="./about-us.html">Download</a>
+                        <li class="{{ $title == 'Download' ? 'active' : '' }}"><a href="/downloads">Download</a>
                         </li>
                     </ul>
                 </nav>
