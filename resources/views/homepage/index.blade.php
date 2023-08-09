@@ -138,7 +138,6 @@
                     <span>Gadjah Mada University</span>
                 </div>
             </div>
-
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/fgd-2.jpg">
                 <div class="mi-social">
