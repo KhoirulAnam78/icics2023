@@ -28,7 +28,33 @@ Route::get('/', function () {
 });
 
 Route::get('/rundown-icics2023', function () {
-    return view('homepage.rundown', ['title' => 'Rundown ICICS 2023']);
+    return view('homepage.rundown', [
+        'title' => 'Rundown ICICS 2023'
+    ]);
+});
+
+Route::get('/registration-fee', function () {
+    return view('homepage.registration-fee', [
+        'title' => 'Registration Fee'
+    ]);
+});
+
+Route::get('/scientific-committe', function () {
+    return view('homepage.scientific-committe', [
+        'title' => 'Scientific Committe'
+    ]);
+});
+
+Route::get('/steering-committe', function () {
+    return view('homepage.steering-committe', [
+        'title' => 'Steering Committe'
+    ]);
+});
+
+Route::get('/organizing-committe', function () {
+    return view('homepage.organizing-committe', [
+        'title' => 'Organizing Committe'
+    ]);
 });
 
 Route::get('/dashboard', function () {
