@@ -94,6 +94,10 @@
                     </div>
                 </a>
             </div>
+
+            <div class="row mt-3 justify-content-center">
+                <img src="{{ url('') }}/assets/img/hosted.png" alt="hosted.png">
+            </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer-text">

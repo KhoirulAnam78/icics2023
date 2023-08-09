@@ -14,7 +14,7 @@
                         Science in Supporting the
                         Downstreaming of Agro-Industrial Products</h3>
                     <br>
-                    <a href="#" class="primary-btn">Buy Ticket</a>
+                    <a href="/register" class="primary-btn">Buy Ticket</a>
 
                 </div>
                 <div class="col-lg-5">
@@ -59,24 +59,6 @@
                 <div class="col-lg-8">
                     <div class="cd-timer" id="demo">
                     </div>
-                    {{-- <div class="cd-timer" id="countdown">
-                        <div class="cd-item">
-                            <span>01</span>
-                            <p>Days</p>
-                        </div>
-                        <div class="cd-item">
-                            <span>01</span>
-                            <p>Hours</p>
-                        </div>
-                        <div class="cd-item">
-                            <span>01</span>
-                            <p>Minutes</p>
-                        </div>
-                        <div class="cd-item">
-                            <span>01</span>
-                            <p>Seconds</p>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>
@@ -340,117 +322,6 @@
                         2023</span>
                 </li>
             </ul>
-            {{-- <div class="row">
-                <div class="col-lg-12">
-                    <div class="schedule-tab">
-                        <div class="tab-content">
-                            <div class="tab-pane active">
-                                <div>
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <i style="font-size: 30px" class="fa fa-file-text-o"
-                                                        aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Abstract Submission Deadline</h4>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <ul class="sc-widget">
-                                                    <li style="font-size: 20px"><i style="font-size: 20px"
-                                                            class="fa fa-calendar" aria-hidden="true"></i>16 SEPTEMBER
-                                                        2023
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <i style="font-size: 30px" class="fa fa-check-square-o"
-                                                        aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Abstract Acceptance Notifications</h4>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <ul class="sc-widget">
-                                                    <li style="font-size: 20px"><i style="font-size: 20px"
-                                                            class="fa fa-calendar" aria-hidden="true"></i>20 SEPTEMBER
-                                                        2023
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-
-                                                    <i style="font-size: 30px" class="fa fa-book" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Full Paper Submission</h4>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <ul class="sc-widget">
-                                                    <li style="font-size: 20px"><i style="font-size: 20px"
-                                                            class="fa fa-calendar" aria-hidden="true"></i>30 SEPTEMBER
-                                                        2023
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <i style="font-size: 30px" class="fa fa-globe"
-                                                        aria-hidden="true"></i>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Conference</h4>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <ul class="sc-widget">
-                                                    <li style="font-size: 20px"><i style="font-size: 20px"
-                                                            class="fa fa-calendar" aria-hidden="true"></i> 16 NOVEMBER
-                                                        2023
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </section>
     <!-- Schedule Section End -->
@@ -478,7 +349,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">550K IDR/36,20 USD</h4>
+                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">550K IDR/37 USD</h4>
                         <div class="pi-price">
                             <ul>
                                 <li>
@@ -486,8 +357,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 style="color: black;font-weight: 400">150K IDR/9,87 USD</h4>
-                        <a href="#" class="price-btn">Get Ticket <span class="arrow_right"></span></a>
+                        <h4 style="color: black;font-weight: 400">150K IDR/10 USD</h4>
+
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-8">
@@ -503,7 +374,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">750K IDR/49,38 USD</h4>
+                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">750K IDR/50 USD</h4>
                         <div class="pi-price">
                             <ul>
                                 <li>
@@ -511,8 +382,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 style="color: black;font-weight: 400">250K IDR/16,46 USD</h4>
-                        <a href="#" class="price-btn">Get Ticket <span class="arrow_right"></span></a>
+                        <h4 style="color: black;font-weight: 400">250K IDR/17 USD</h4>
+
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-8">
@@ -525,7 +396,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">350K IDR/23,04 USD</h4>
+                        <h4 style="padding-bottom: 10px; color: black;font-weight: 400">350K IDR/24 USD</h4>
                         <div class="pi-price">
                             <ul>
                                 <li>
@@ -533,8 +404,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 style="color: black;font-weight: 400">100K IDR/6,58 USD</h4>
-                        <a href="#" class="price-btn">Get Ticket <span class="arrow_right"></span></a>
+                        <h4 style="color: black;font-weight: 400">100K IDR/7 USD</h4>
+
                     </div>
                 </div>
 

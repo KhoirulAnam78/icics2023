@@ -57,6 +57,18 @@ Route::get('/organizing-committe', function () {
     ]);
 });
 
+Route::get('/contact', function () {
+    return view('homepage.contact', [
+        'title' => 'Contact'
+    ]);
+});
+
+Route::get('/about-conference', function () {
+    return view('homepage.about', [
+        'title' => 'About'
+    ]);
+});
+
 Route::get('/dashboard', function () {
     if (Auth::user()->role === 'administrator') {
         return view('administrator.dashboard', [
