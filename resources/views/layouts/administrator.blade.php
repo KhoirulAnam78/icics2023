@@ -31,21 +31,17 @@
                                     href="/payment-validation" style="font-size:16px">Payment Validation</a>
                             </li>
                             <li class="nav-item" style="width:100%">
-                                <a class="nav-link {{ $title == 'Presenter' ? 'active' : '' }}" href="/presenter"
-                                    style="font-size:16px">Presenter</a>
-                            </li>
-                            <li class="nav-item" style="width:100%">
-                                <a class="nav-link {{ $title == 'Participant' ? 'active' : '' }}" href="/participant"
-                                    style="font-size:16px">Participant</a>
-                            </li>
-                            <li class="nav-item" style="width:100%">
                                 <a class="nav-link {{ $title == 'Full Paper' ? 'active' : '' }}" href="/upload-paper"
                                     style="font-size:16px">Uploaded
                                     Paper</a>
                             </li>
                             <li class="nav-item" style="width:100%">
-                                <a class="nav-link {{ $title == 'My Profile' ? 'active' : '' }}" href="profile"
-                                    style="font-size:16px;">Profile</a>
+                                <a class="nav-link {{ $title == 'Presenter Have Paid' ? 'active' : '' }}"
+                                    href="/presenter-have-paid" style="font-size:16px">Presenter</a>
+                            </li>
+                            <li class="nav-item" style="width:100%">
+                                <a class="nav-link {{ $title == 'Participant Have Paid' ? 'active' : '' }}"
+                                    href="/participant-have-paid" style="font-size:16px">Participant</a>
                             </li>
                             <li class="nav-item" style="width:100%;">
                                 <form method="POST" action="{{ route('logout') }}">

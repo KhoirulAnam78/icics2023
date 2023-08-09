@@ -24,9 +24,24 @@ class PaymentController extends Controller
 
     public function validation()
     {
-        // $this->authorize('administrator');
+        $this->authorize('administrator');
         return view('administrator.payment-validation', [
             'title' => 'Payment Validation'
+        ]);
+    }
+
+    public function participantPaid()
+    {
+        $this->authorize('administrator');
+        return view('administrator.participant-have-paid', [
+            'title' => 'Participant Have Paid'
+        ]);
+    }
+    public function presenterPaid()
+    {
+        $this->authorize('administrator');
+        return view('administrator.presenter-have-paid', [
+            'title' => 'Presenter Have Paid'
         ]);
     }
 }

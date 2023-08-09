@@ -33,12 +33,12 @@
                         </tr>
                     </thead>
                     <tbody>
+
                         @if (count($participants) == 0)
                             <tr>
                                 <td colspan="11" align="center">No data</td>
                             </tr>
                         @endif
-
                         @foreach ($participants as $item)
                             <tr>
                                 <td>{{ ($participants->currentpage() - 1) * $participants->perpage() + $loop->index + 1 }}

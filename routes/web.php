@@ -45,6 +45,9 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     //PROFILE
     Route::get('/profile', function () {
+        if (Auth::user()->role == 'administrator') {
+            return abort(403);
+        }
         return view('participant.profile', [
             'title' => 'My Profile'
         ]);
@@ -61,6 +64,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/validation-hki-member', [ParticipantController::class, 'validateMember']);
     Route::get('/review-abstract', [UploadAbstractController::class, 'review']);
     Route::get('/payment-validation', [PaymentController::class, 'validation']);
+    Route::get('/participant-have-paid', [PaymentController::class, 'participantPaid']);
+    Route::get('/presenter-have-paid', [PaymentController::class, 'presenterPaid']);
 
     //PARTICIPANT   
     Route::get('/payment', [PaymentController::class, 'payment']);
