@@ -28,7 +28,8 @@
                                         resembles an open pendopo with numerous supporting pillars and a large dome atop it.
                                         The location of this Grand Mosque stands where the former center of the Jambi Malay
                                         kingdom was, once the site of the Tanah Pilih palace of Sultan Thaha Syaifuddin.</p>
-                                    <a href="https://goo.gl/maps/1V3mfUDkCUXAaQGz6" class="primary-btn">Location</a>
+                                    <a href="https://id.wikipedia.org/wiki/Masjid_Agung_Al-Falah" class="primary-btn">Go
+                                        somewhere</a>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +45,8 @@
                                         setting it apart from typical bridges. The bridge was inaugurated in March 2015,
                                         with the honor of inauguration performed by Vice President Jusuf Kalla. This
                                         connecting bridge has a length of 503 meters and a width of 4.5 meters.</p>
-                                    <a href="https://goo.gl/maps/3MdNFkk9G6ytw7kP8" class="primary-btn">Location</a>
+                                    <a href="https://id.wikipedia.org/wiki/Gentala_Arasy" class="primary-btn">Go
+                                        somewhere</a>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +63,8 @@
                                         significant relic of the Sriwijaya and Malay kingdoms. This temple complex is
                                         situated in the Maro Sebo Subdistrict of Muaro Jambi Regency, Jambi, Indonesia,
                                         precisely on the banks of the Batang Hari River.</p>
-                                    <a href="https://goo.gl/maps/YwMKBSefTpLNN4fc9" class="primary-btn">Location</a>
+                                    <a href="https://id.wikipedia.org/wiki/Kompleks_Candi_Muaro_Jambi"
+                                        class="primary-btn">Go somewhere</a>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +79,8 @@
                                         animals, and mollusks. These fossils are estimated to be over 300 million years old
                                         and are scattered along the course of the Batang Merangin River and Mengkarang
                                         River.</p>
-                                    <a href="https://goo.gl/maps/3fhHULRNArfjekc59" class="primary-btn">Location</a>
+                                    <a href="https://id.wikipedia.org/wiki/Taman_Bumi_Merangin-Jambi" class="primary-btn">Go
+                                        somewhere</a>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +96,8 @@
                                     <p class="card-text">Kerinci is the westernmost regency in the province of Jambi,
                                         Indonesia. This regency is a prominent tourist destination in the province, known as
                                         the 'Land Beneath the Heavens'.</p>
-                                    <a href="https://goo.gl/maps/E6iEmoHHLFgh5cDa7" class="primary-btn">Location</a>
+                                    <a href="https://id.wikipedia.org/wiki/Kabupaten_Kerinci" class="primary-btn">Go
+                                        somewhere</a>
                                 </div>
                             </div>
                         </div>
