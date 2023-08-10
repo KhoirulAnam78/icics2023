@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>FGD MBKM</h2>
+                        <h2>Forum Ketua Jurusan Kimia</h2>
                         {{-- <p>Fill in the form below to register.</p> --}}
                     </div>
                 </div>

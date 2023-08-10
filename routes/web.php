@@ -75,6 +75,31 @@ Route::get('/fgd-mbkm', function () {
     ]);
 });
 
+
+Route::get('/fgd-akreditasi-internasional', function () {
+    return view('homepage.fgd-akreditasi', [
+        'title' => 'FGD Akreditasi Internasional'
+    ]);
+});
+
+Route::get('/kongres-hki', function () {
+    return view('homepage.kongres-hki', [
+        'title' => 'Kongres HKI'
+    ]);
+});
+
+Route::get('/forum-ketua-jurusan-kimia', function () {
+    return view('homepage.forum-ketua', [
+        'title' => 'Forum Ketua Jurusan Kimia'
+    ]);
+});
+
+Route::get('/fgd-akreditasi-internasional', function () {
+    return view('homepage.fgd-akreditasi', [
+        'title' => 'FGD Akreditasi Internasional'
+    ]);
+});
+
 Route::get('/about-conference', function () {
     return view('homepage.about', [
         'title' => 'About'
