@@ -2,9 +2,11 @@
 
 namespace App\Http\Livewire;
 
+use App\Exports\PaidPresenterExport;
 use Livewire\Component;
 use App\Models\Participant;
 use Livewire\WithPagination;
+use Maatwebsite\Excel\Facades\Excel;
 
 class PresenterPaid extends Component
 {
@@ -19,5 +21,10 @@ class PresenterPaid extends Component
                 $query->where('validation', 'valid');
             })->orderBy('full_name1')->paginate(10)
         ]);
+    }
+
+    public function export()
+    {
+        return Excel::download(new PaidPresenterExport(), 'Presenter have paid ICICS 2023.xlsx');
     }
 }

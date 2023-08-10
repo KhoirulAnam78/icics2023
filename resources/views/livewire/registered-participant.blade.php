@@ -1,7 +1,7 @@
 <div>
     <div class="row mb-2">
         <div class="col-lg-6">
-            <a class="btn btn-success">Export</a>
+            <a class="btn btn-success" wire:click='export()'>Export</a>
         </div>
     </div>
     <div class="row">

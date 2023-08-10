@@ -9,6 +9,8 @@ use App\Models\Payment;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\PaymentExport;
 
 class PaymentValidation extends Component
 {
@@ -77,6 +79,11 @@ class PaymentValidation extends Component
         $this->empty();
         session()->flash('message', 'Validation succesfully !');
         $this->dispatchBrowserEvent('close-modal');
+    }
+
+    public function export()
+    {
+        return Excel::download(new PaymentExport(), 'All Payment ICICS 2023.xlsx');
     }
 
     public function render()

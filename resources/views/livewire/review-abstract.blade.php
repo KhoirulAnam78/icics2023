@@ -1,16 +1,11 @@
 <div>
 
-    <div class="row mb-2">
-        <div class="col-lg-6">
-            <a class="btn btn-success">Export</a>
-        </div>
-    </div>
     <div class="row">
         <div class="col-6">
             <div class="form-group">
                 <label for="search2">Search</label>
-                <input type="text" class="form-control" id="search2" name="search2"
-                    wire:model.debounce.500ms="search2" placeholder="Search by presenter name">
+                <input type="text" class="form-control" id="search2" name="search2" wire:model.debounce.500ms="search2"
+                    placeholder="Search by presenter name">
             </div>
         </div>
         <div class="col-lg-6">
