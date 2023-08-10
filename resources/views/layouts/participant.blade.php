@@ -65,7 +65,7 @@
 
                                     <li><a href="/payment" class="btn btn-primary mb-2">Payment</li></a>
                                     @can('presenter')
-                                        <li><a href="/upload-paper" class="btn btn-primary mb-2">Full Paper</li></a>
+                                        <li><a href="/upload-fulltext" class="btn btn-primary mb-2">Full Paper</li></a>
                                     @endcan
                                     {{-- <li><a href="/change-password" class="btn btn-primary mb-2">Change Password</li></a> --}}
 
