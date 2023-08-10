@@ -67,7 +67,7 @@
                                     @can('presenter')
                                         <li><a href="/upload-paper" class="btn btn-primary mb-2">Full Paper</li></a>
                                     @endcan
-                                    <li><a href="/change-password" class="btn btn-primary mb-2">Change Password</li></a>
+                                    {{-- <li><a href="/change-password" class="btn btn-primary mb-2">Change Password</li></a> --}}
 
                                     <li>
                                         <form method="POST" action="{{ route('logout') }}">
