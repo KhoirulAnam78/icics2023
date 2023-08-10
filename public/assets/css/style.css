@@ -677,7 +677,7 @@ ol {
 .schedule-tab .st-content {
 	border: 1px solid #ebebeb;
 	border-radius: 2px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
@@ -686,7 +686,7 @@ ol {
 .schedule-tab .st-content:hover {
 	-webkit-box-shadow: 3px 12px 30px rgba(23, 24, 34, 0.05);
 	box-shadow: 3px 12px 30px rgba(23, 24, 34, 0.05);
-	border: 1px solid transparent;
+	border: 1px solid gray;
 }
 
 .schedule-tab .st-content .sc-pic {
