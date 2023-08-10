@@ -69,6 +69,12 @@ Route::get('/field-trip', function () {
     ]);
 });
 
+Route::get('/fgd-mbkm', function () {
+    return view('homepage.fgd-mbkm', [
+        'title' => 'FGD MBKM'
+    ]);
+});
+
 Route::get('/about-conference', function () {
     return view('homepage.about', [
         'title' => 'About'
