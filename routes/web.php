@@ -63,6 +63,12 @@ Route::get('/contact', function () {
     ]);
 });
 
+Route::get('/field-trip', function () {
+    return view('homepage.field-trip', [
+        'title' => 'Field Trip'
+    ]);
+});
+
 Route::get('/about-conference', function () {
     return view('homepage.about', [
         'title' => 'About'
