@@ -17,62 +17,88 @@
                     <div class="card" style="border: 0px">
                         <div class="card-body">
                             {{-- CONTENT --}}
-                            <h5 style="text-align: center ; font-weight: 600">MBKM Management Group Discussion Forum
-                                <br>(Forum Group Discussion: Independent Learning- Independent Campus)
-                            </h5>
+                            <div>
+                                <h5 style="text-align: center ; font-weight: 600">MBKM Management Group Discussion Forum
+                                    <br>(Forum Group Discussion: Independent Learning- Independent Campus)
+                                </h5>
+                            </div>
+                            <div>
+                                <h5>Registration :</h5>
+                                <a href="">link Googleform</a>
+                            </div>
                             <br>
-                            <h5 style="font-weight: 600">OVERVIEW</h5>
-                            <p style="text-align: justify; text-indent: 5%">
-                                The Study Program is encouraged to implement the Independent Learning and Campus Freedom
-                                (MBKM) Policy by the Ministry of Education and Culture, by establishing agreements in the
-                                form of cooperation documents (MoUs/SPK) with partners, including several state
-                                universities, government agencies, and the business world. The forms of cooperative
-                                activities include education implementation, internships in the business and industrial
-                                sectors, research, and community service such as rural development, similar to Community
-                                Service Learning (KKN). In the effort to optimize additional competencies for students to
-                                compete globally, the forms of collaboration need to be developed and enhanced further.
-                                FGD for the Development of MBKM Management as a recognition of student activities towards
-                                strengthening the University's IKU 3 is in line with the goal of producing graduates with
-                                competencies relevant to the needs of the business/industrial world. The FGD on the
-                                Development of MBKM Management pertains to the efforts of developing the MBKM curriculum,
-                                FGD on Curriculum and Learning Tool Development, tailored to the expertise of each speaker,
-                                which, of course, corresponds to the study program. The focus of the MBKM management focus
-                                group discussion revolves around the skills required by Chemistry Study Program graduates.
-                                Strengthening the curriculum of the Chemistry Study Program cannot be separated from the
-                                support, evaluation, and guidance of the Chemical Association, Indonesian Chemical Society
-                                (HKI). Additionally, it is essential to receive reinforcement from international chemists
-                                (foreign countries) to gain insights/benchmarking from Chemistry Departments at world-class
-                                campuses. This activity is part of realizing excellent human resources, where the
-                                transformation of higher education plays a crucial role. One of these roles involves
-                                developing and strengthening the partnership implementation of MBKM to produce more talents
-                                capable of competing on a global scale. This will have an impact on the development of
-                                resilient human resources capable of thinking and acting extraordinarily, having the ability
-                                to quickly adapt to face challenges, not falling behind, and succeeding in competition. This
-                                activity will also have an impact on other study programs within the scope of Universitas
-                                Jambi.
-                            </p>
+                            <div>
+                                <h5 style="font-weight: 600">OVERVIEW</h5>
+                                <p style="text-align: justify; text-indent: 5%">
+                                    The Study Program is encouraged to implement the Independent Learning and Campus Freedom
+                                    (MBKM) Policy by the Ministry of Education and Culture, by establishing agreements in
+                                    the
+                                    form of cooperation documents (MoUs/SPK) with partners, including several state
+                                    universities, government agencies, and the business world. The forms of cooperative
+                                    activities include education implementation, internships in the business and industrial
+                                    sectors, research, and community service such as rural development, similar to Community
+                                    Service Learning (KKN). In the effort to optimize additional competencies for students
+                                    to
+                                    compete globally, the forms of collaboration need to be developed and enhanced further.
+                                    FGD for the Development of MBKM Management as a recognition of student activities
+                                    towards
+                                    strengthening the University's IKU 3 is in line with the goal of producing graduates
+                                    with
+                                    competencies relevant to the needs of the business/industrial world. The FGD on the
+                                    Development of MBKM Management pertains to the efforts of developing the MBKM
+                                    curriculum,
+                                    FGD on Curriculum and Learning Tool Development, tailored to the expertise of each
+                                    speaker,
+                                    which, of course, corresponds to the study program. The focus of the MBKM management
+                                    focus
+                                    group discussion revolves around the skills required by Chemistry Study Program
+                                    graduates.
+                                    Strengthening the curriculum of the Chemistry Study Program cannot be separated from the
+                                    support, evaluation, and guidance of the Chemical Association, Indonesian Chemical
+                                    Society
+                                    (HKI). Additionally, it is essential to receive reinforcement from international
+                                    chemists
+                                    (foreign countries) to gain insights/benchmarking from Chemistry Departments at
+                                    world-class
+                                    campuses. This activity is part of realizing excellent human resources, where the
+                                    transformation of higher education plays a crucial role. One of these roles involves
+                                    developing and strengthening the partnership implementation of MBKM to produce more
+                                    talents
+                                    capable of competing on a global scale. This will have an impact on the development of
+                                    resilient human resources capable of thinking and acting extraordinarily, having the
+                                    ability
+                                    to quickly adapt to face challenges, not falling behind, and succeeding in competition.
+                                    This
+                                    activity will also have an impact on other study programs within the scope of
+                                    Universitas
+                                    Jambi.
+                                </p>
+                            </div>
 
-                            <h5 style="font-weight: 600">ACTIVITY OBJECTIVES </h5>
-                            <span>
-                                There are several objectives to be achieved through this activity, including:
-                                <div style="margin-left: 3%">
-                                    <ol type="1">
-                                        <li>Establishment of a sustainable partnership network with accomplished human
-                                            resources from
-                                            Chemistry Departments at the national and international levels.</li>
-                                        <li>Forging collaboration between the Chemistry Study Program, Faculty of Science
-                                            and
-                                            Technology, Universitas Jambi, and Chemistry Study Programs from other
-                                            universities.
-                                        </li>
-                                        <li>
-                                            Conducting a Forum Group Discussion on the Management of the Independent
-                                            Learning
-                                            and Campus Freedom (MBKM) Program Study.
-                                        </li>
-                                    </ol>
-                                </div>
-                            </span>
+                            <div>
+                                <h5 style="font-weight: 600">ACTIVITY OBJECTIVES </h5>
+                                <span>
+                                    There are several objectives to be achieved through this activity, including:
+                                    <div style="margin-left: 3%">
+                                        <ol type="1">
+                                            <li>Establishment of a sustainable partnership network with accomplished human
+                                                resources from
+                                                Chemistry Departments at the national and international levels.</li>
+                                            <li>Forging collaboration between the Chemistry Study Program, Faculty of
+                                                Science
+                                                and
+                                                Technology, Universitas Jambi, and Chemistry Study Programs from other
+                                                universities.
+                                            </li>
+                                            <li>
+                                                Conducting a Forum Group Discussion on the Management of the Independent
+                                                Learning
+                                                and Campus Freedom (MBKM) Program Study.
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </span>
+                            </div>
                             <br>
                             <div>
                                 <h5 style="font-weight: 600">ACTIVITY IMPLEMENTERS </h5>

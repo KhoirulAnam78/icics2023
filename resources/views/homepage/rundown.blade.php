@@ -14,9 +14,9 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-12">
-                    <div class="card">
+                    <div class="card" style="border: 0px">
                         <div class="card-body">
-                            <section class="schedule-section spad">
+                            <section class="schedule-section">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-12">

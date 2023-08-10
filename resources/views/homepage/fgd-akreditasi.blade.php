@@ -10,6 +10,10 @@
                         <h2>FGD Akreditasi Internasional</h2>
                         {{-- <p>Fill in the form below to register.</p> --}}
                     </div>
+                    <div style="padding-left: 1%">
+                        <h5>Registration :</h5>
+                        <a href="">link Googleform</a>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-center">
