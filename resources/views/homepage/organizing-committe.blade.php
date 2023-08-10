@@ -21,7 +21,7 @@
                             <div class="row justify-content-center" style="padding-bottom: 5%">
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-1.jpg"
                                             class="card-img-top" alt="...">
@@ -33,7 +33,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-2.jpg"
                                             class="card-img-top" alt="...">
@@ -73,7 +73,7 @@
                             <div class="row justify-content-center" style="padding-bottom: 5%">
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-5.jpeg"
                                             class="card-img-top" alt="...">
@@ -85,37 +85,37 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-6.jpeg"
                                             class="card-img-top" alt="...">
                                         <div class="card-body" style="height: 200px">
                                             <h5 class="card-title">Aulia Sanova, S.T., M.Pd. </h5>
-                                            <p class="card-text">Department of Educational Chemistry, Universita Jambi</p>
+                                            <p class="card-text">Department of Educational Chemistry, Universitas Jambi</p>
                                         </div>
                                     </div>
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-7.jpeg"
                                             class="card-img-top" alt="...">
                                         <div class="card-body" style="height: 200px">
                                             <h5 class="card-title">Dr. Dra. M. Dwi Wiwik Ernawati, M.Kes </h5>
-                                            <p class="card-text">Department of Educational Chemistry, Universita Jambi</p>
+                                            <p class="card-text">Department of Educational Chemistry, Universitas Jambi</p>
                                         </div>
                                     </div>
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-8.jpeg"
                                             class="card-img-top" alt="...">
                                         <div class="card-body" style="height: 200px">
                                             <h5 class="card-title">Prof. Dr. Dra. Wilda Syahri, M. Pd. </h5>
-                                            <p class="card-text">Department of Educational Chemistry, Universita Jambi</p>
+                                            <p class="card-text">Department of Educational Chemistry, Universitas Jambi</p>
                                         </div>
                                     </div>
                                 </div>
@@ -124,7 +124,7 @@
                             <div class="row justify-content-center" style="padding-bottom: 5%">
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-9.jpeg"
                                             class="card-img-top" alt="...">
@@ -136,7 +136,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-10.jpeg"
                                             class="card-img-top" alt="...">
@@ -148,7 +148,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-11.jpeg"
                                             class="card-img-top" alt="...">
@@ -160,7 +160,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-12.png"
                                             class="card-img-top" alt="...">
@@ -175,7 +175,7 @@
                             <div class="row justify-content-center" style="padding-bottom: 5%">
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-13.jpeg"
                                             class="card-img-top" alt="...">
@@ -187,7 +187,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-14.jpeg"
                                             class="card-img-top" alt="...">
@@ -199,7 +199,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-15.jpeg"
                                             class="card-img-top" alt="...">
@@ -211,7 +211,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-16.jpeg"
                                             class="card-img-top" alt="...">
@@ -226,7 +226,7 @@
                             <div class="row justify-content-center" style="padding-bottom: 5%">
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-17.jpeg"
                                             class="card-img-top" alt="...">
@@ -238,7 +238,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-18.jpeg"
                                             class="card-img-top" alt="...">
@@ -250,7 +250,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-19.png"
                                             class="card-img-top" alt="...">
@@ -262,7 +262,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-20.png"
                                             class="card-img-top" alt="...">
@@ -277,7 +277,7 @@
                             <div class="row justify-content-center" style="padding-bottom: 5%">
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-21.jpeg"
                                             class="card-img-top" alt="...">
@@ -289,7 +289,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-22.jpeg"
                                             class="card-img-top" alt="...">
@@ -301,7 +301,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-23.png"
                                             class="card-img-top" alt="...">
@@ -313,7 +313,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-24.jpeg"
                                             class="card-img-top" alt="...">
@@ -328,7 +328,7 @@
                             <div class="row justify-content-center" style="padding-bottom: 5%">
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-25.jpeg"
                                             class="card-img-top" alt="...">
@@ -340,7 +340,7 @@
                                 </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-26.jpeg"
                                             class="card-img-top" alt="...">
