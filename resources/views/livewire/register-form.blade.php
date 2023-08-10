@@ -103,14 +103,14 @@
             @enderror
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-lg-4 col-sm-12">
                 <div class="form-group">
                     <label for="hki_id">HKI Member ID</label>
                     <input type="text" class="form-control" id="hki_id" placeholder="Member ID"
                         wire:model.debounce.500ms='hki_id' name="hki_id">
                 </div>
             </div>
-            <div class="col-8">
+            <div class="col-lg-8 col-sm-12">
                 <div class="form-group">
                     <label for="image">HKI Member Card</label>
                     <div class="input-group">
@@ -123,7 +123,13 @@
                             </label>
                         </div>
                         <div class="input-group-append">
-                            <span class="input-group-text" id="">Upload</span>
+                            <span class="input-group-text" id="">
+                                <div wire:loading wire:target="member_card">
+
+                                    Uploading ...
+
+                                </div>
+                            </span>
                         </div>
                     </div>
                     @error('image')

@@ -12,7 +12,7 @@ use App\Providers\RouteServiceProvider;
 
 class ProfilePage extends Component
 {
-    public $full_name1, $full_name2, $gender, $participant_type, $institution, $address, $phone, $member_card, $hki_id, $email, $password, $confirmPassword, $attendance;
+    public $full_name1, $full_name2, $gender, $participant_type, $institution, $address, $phone, $member_card, $hki_status, $email, $password, $confirmPassword, $attendance;
 
 
     use WithFileUploads;
@@ -28,6 +28,7 @@ class ProfilePage extends Component
         $this->participant_type = $user->participant->participant_type;
         $this->institution = $user->participant->institution;
         $this->address = $user->participant->address;
+        $this->hki_status = $user->participant->hki_status;
         $this->phone = $user->participant->phone;
         $this->attendance = $user->participant->attendance;
     }

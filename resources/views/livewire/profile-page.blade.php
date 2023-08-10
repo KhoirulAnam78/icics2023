@@ -110,6 +110,12 @@
                 </span>
             @enderror
         </div>
+        <div class="form-group">
+            <label for="hki_id">HKI Member Status</label>
+            <input type="text" disabled class="form-control" id="hki_id" placeholder="Member ID"
+                value="{{ $hki_status }}" name="hki_id">
+        </div>
+
         {{-- <div class="row">
             <div class="col-4">
                 <div class="form-group">

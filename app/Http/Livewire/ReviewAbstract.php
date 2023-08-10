@@ -47,17 +47,14 @@ class ReviewAbstract extends Component
     public function accept()
     {
         $email = UploadAbstract::find($this->abstract_review)->participant->user->email;
+        $abstract = UploadAbstract::find($this->abstract_review)->title;
         UploadAbstract::where('id', $this->abstract_review)->update([
             'status' => 'accepted',
             'reviewed_by' => Auth::user()->email
         ]);
+        dd($abstract->title);
         Mail::to($email)->send(new SendMail('Reviewed Abstract', 'Dear Author,
-        Congratulations, your article has been accepted to be presented at the 2nd ITAPS Conference. Herewith we attach
-        your Acceptance Letter. On this note, we would like to confirm whether you want to publish your article in Scopus-
-        indexed Proceeding. Please reply to this email with your answer.
-        On another note, we have a tour program after the conference which will be held on November 24, 2019. We would like
-        you to confirm your attendance by filling this form:
-        Bokori Island Tour Form
+        Congratulations, your abstract ' . $abstract . ' has been accepted to be presented at the 11st ICICS 2023 Conference.
         See you at the conference.'));
         $this->empty();
         session()->flash('message', 'Review succesfully !');
@@ -67,19 +64,14 @@ class ReviewAbstract extends Component
     public function reject()
     {
         $email = UploadAbstract::find($this->abstract_review)->participant->user->email;
+        $abstract = UploadAbstract::find($this->abstract_review)->title;
         UploadAbstract::where('id', $this->abstract_review)->update([
             'status' => 'rejected',
             'reviewed_by' => Auth::user()->email
         ]);
         $this->empty();
         Mail::to($email)->send(new SendMail('Reviewed Abstract', "Dear Author,
-        Congratulations, your article has been accepted to be presented at the 2nd ITAPS Conference. Herewith we attach
-        your Acceptance Letter. On this note, we would like to confirm whether you want to publish your article in Scopus-
-        indexed Proceeding. Please reply to this email with your answer.
-        On another note, we have a tour program after the conference which will be held on November 24, 2019. We would like
-        you to confirm your attendance by filling this form:
-        Bokori Island Tour Form
-        See you at the conference."));
+        Sorry, your article " . $abstract . " has been rejected to be presented at the 11st ICICS 2023 Conference."));
         session()->flash('message', 'Review succesfully !');
         $this->dispatchBrowserEvent('close-modal');
     }

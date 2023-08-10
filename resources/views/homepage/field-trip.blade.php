@@ -12,11 +12,11 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12">
                     {{-- CONTENT --}}
-                    <div class="row" style="padding-bottom: 5%">
-                        <div class="col-6">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 mb-3">
                             <div class="card">
                                 <img style="height: 320px" class="card-img-top"
                                     src="{{ url('') }}/assets/img/field-trip/ft-1.jpg" alt="Card image cap">
@@ -28,12 +28,12 @@
                                         resembles an open pendopo with numerous supporting pillars and a large dome atop it.
                                         The location of this Grand Mosque stands where the former center of the Jambi Malay
                                         kingdom was, once the site of the Tanah Pilih palace of Sultan Thaha Syaifuddin.</p>
-                                    <a href="https://id.wikipedia.org/wiki/Masjid_Agung_Al-Falah" class="primary-btn">Go
-                                        somewhere</a>
+                                    <a href="https://id.wikipedia.org/wiki/Masjid_Agung_Al-Falah"
+                                        class="primary-btn">Wikipedia</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-lg-6 col-sm-12 mb-3">
                             <div class="card">
                                 <img style="height: 320px" class="card-img-top"
                                     src="{{ url('') }}/assets/img/field-trip/ft-2.jpg" alt="Card image cap">
@@ -45,14 +45,11 @@
                                         setting it apart from typical bridges. The bridge was inaugurated in March 2015,
                                         with the honor of inauguration performed by Vice President Jusuf Kalla. This
                                         connecting bridge has a length of 503 meters and a width of 4.5 meters.</p>
-                                    <a href="https://id.wikipedia.org/wiki/Gentala_Arasy" class="primary-btn">Go
-                                        somewhere</a>
+                                    <a href="https://id.wikipedia.org/wiki/Gentala_Arasy" class="primary-btn">Wikipedia</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row" style="padding-bottom: 5%">
-                        <div class="col-6">
+                        <div class="col-lg-6 col-sm-12 mb-3">
                             <div class="card">
                                 <img style="height: 320px" class="card-img-top"
                                     src="{{ url('') }}/assets/img/field-trip/ft-3.jpg" alt="Card image cap">
@@ -64,11 +61,11 @@
                                         situated in the Maro Sebo Subdistrict of Muaro Jambi Regency, Jambi, Indonesia,
                                         precisely on the banks of the Batang Hari River.</p>
                                     <a href="https://id.wikipedia.org/wiki/Kompleks_Candi_Muaro_Jambi"
-                                        class="primary-btn">Go somewhere</a>
+                                        class="primary-btn">Wikipedia</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-lg-6 col-sm-12 mb-3">
                             <div class="card">
                                 <img style="height: 320px" class="card-img-top"
                                     src="{{ url('') }}/assets/img/field-trip/ft-4.jpg" alt="Card image cap">
@@ -79,15 +76,12 @@
                                         animals, and mollusks. These fossils are estimated to be over 300 million years old
                                         and are scattered along the course of the Batang Merangin River and Mengkarang
                                         River.</p>
-                                    <a href="https://id.wikipedia.org/wiki/Taman_Bumi_Merangin-Jambi" class="primary-btn">Go
-                                        somewhere</a>
+                                    <a href="https://id.wikipedia.org/wiki/Taman_Bumi_Merangin-Jambi"
+                                        class="primary-btn">Wikipedia</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row justify-content-center">
-
-                        <div class="col-6">
+                        <div class="col-lg-6 col-sm-12 mb-3">
                             <div class="card">
                                 <img style="height: 320px" class="card-img-top"
                                     src="{{ url('') }}/assets/img/field-trip/ft-5.jpg" alt="Card image cap">
@@ -96,13 +90,12 @@
                                     <p class="card-text">Kerinci is the westernmost regency in the province of Jambi,
                                         Indonesia. This regency is a prominent tourist destination in the province, known as
                                         the 'Land Beneath the Heavens'.</p>
-                                    <a href="https://id.wikipedia.org/wiki/Kabupaten_Kerinci" class="primary-btn">Go
-                                        somewhere</a>
+                                    <a href="https://id.wikipedia.org/wiki/Kabupaten_Kerinci"
+                                        class="primary-btn">Wikipedia</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
