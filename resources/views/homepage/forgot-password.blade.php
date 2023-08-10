@@ -7,25 +7,20 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Login</h2>
-                        <p>Use email and password to login.</p>
+                        <h2>Contact</h2>
+                        {{-- <p>Fill in the form below to register.</p> --}}
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <livewire:login-form />
-                            <div class="row">
-                                <a href="/forgot-password" class="text-primary mx-3 my-3">Forgot password ?</a>
-                            </div>
+                            {{-- CONTENT --}}
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-    <!-- Contact Form Section End -->
 @endsection
