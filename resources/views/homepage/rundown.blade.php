@@ -138,7 +138,7 @@
                                                                     <div class="col-lg-8" style="padding-left: 5%">
                                                                         <div class="sc-text">
                                                                             <h4>HKI National Meeting and Forum of Heads of
-                                                                                Chemistry Departments throughout Indonesia
+                                                                                Chemistry Departments Indonesia
                                                                             </h4>
                                                                             <ul>
                                                                                 <li><i class="fa fa-user"></i> HKI Center

@@ -39,7 +39,7 @@
                                             class="card-img-top" alt="...">
                                         <div class="card-body" style="height: 200px">
                                             <h5 class="card-title">Muhammad Haris Effendi Hsb, S.Pd., M.Si., Ph.D </h5>
-                                            <p class="card-text">Department of Educational Chemistry, Universita Jambi</p>
+                                            <p class="card-text">Department of Educational Chemistry, Universitas Jambi</p>
                                         </div>
                                     </div>
                                 </div>
@@ -99,6 +99,18 @@
                                 <div style="padding-left: 10px; padding-right: 10px">
                                     <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
+                                            src="{{ url('') }}/assets/img/organizing-committe/OC-25.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body" style="height: 200px">
+                                            <h5 class="card-title">Dr. Lenny Marlinda, S.T., M.T.</h5>
+                                            <p class="card-text">Department of Chemistry, Universitas Jambi</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{-- <div style="padding-left: 10px; padding-right: 10px">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
+                                        <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-7.jpeg"
                                             class="card-img-top" alt="...">
                                         <div class="card-body" style="height: 200px">
@@ -106,7 +118,7 @@
                                             <p class="card-text">Department of Educational Chemistry, Universitas Jambi</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
                                     <div class="card" style="width: 16rem; border: 2px solid black">
@@ -264,7 +276,7 @@
                                 <div style="padding-left: 10px; padding-right: 10px">
                                     <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
-                                            src="{{ url('') }}/assets/img/organizing-committe/OC-20.png"
+                                            src="{{ url('') }}/assets/img/organizing-committe/bu dori.jpeg"
                                             class="card-img-top" alt="...">
                                         <div class="card-body" style="height: 200px">
                                             <h5 class="card-title">Dori Fitria, M.Si.</h5>
@@ -327,17 +339,6 @@
                             {{-- baris 6 --}}
                             <div class="row justify-content-center" style="padding-bottom: 5%">
                                 {{-- Pembatas --}}
-                                <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid black">
-                                        <img style="height: 280px"
-                                            src="{{ url('') }}/assets/img/organizing-committe/OC-25.jpeg"
-                                            class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Dr. Lenny Marlinda, S.T., M.T.</h5>
-                                            <p class="card-text">Department of Chemistry, Universitas Jambi</p>
-                                        </div>
-                                    </div>
-                                </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
                                     <div class="card" style="width: 16rem; border: 2px solid black">

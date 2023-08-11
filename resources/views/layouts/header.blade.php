@@ -44,7 +44,9 @@
                         <li class="{{ $title == 'Rundown ICICS 2023' ? 'active' : '' }}"><a
                                 href="/rundown-icics2023">Rundown</a></li>
 
-                        <li class="{{ $title == 'Satellite Event' ? 'active' : '' }}"><a href="#">Satellite
+                        <li
+                            class="{{ ($title == 'FGD MBKM' or $title == 'FGD Akreditasi Internasional' or $title == 'Kongres HKI' or $title == 'Forum Ketua Jurusan Kimia' or $title == 'Field Trip') ? 'active' : '' }}">
+                            <a href="#">Satellite
                                 Event</a>
                             <ul class="dropdown" style="width:300px">
                                 <li><a href="/fgd-mbkm">FGD MBKM</a></li>

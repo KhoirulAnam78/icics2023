@@ -430,12 +430,13 @@
                         <ul>
                             <li>
                                 <span>Phone:</span>
-                                Indra (+6282142265676)<br />
-                                Aulia (+6285266180861) <br />
-                                Yusnaidar (+628127866961) <br />
+                                Indra Lasmana Tarigan, M.Sc. (+6282142265676)<br />
+                                Aulia Sanova, M.Pd. (+6285266180861) <br />
+                                Dr. Yusnaidar, M.Si. (+628127866961) <br />
+                                Restina Bemis, M.Si. (+6285274405887) <br>
                             </li>
 
-                            <li>
+                            <li class="mt-3">
                                 <span>Email:</span>
                                 icics2023@.unja.ac.id
                             </li>
