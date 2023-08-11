@@ -24,6 +24,8 @@ return new class extends Migration
             $table->foreignId('participant_id')->constrained('participants');
             $table->enum('status', ['not yet reviewed', 'accepted', 'rejected'])->default('not yet reviewed');
             $table->string('reviewed_by')->nullable();
+            $table->string('loa')->nullable();
+            $table->string('invoice')->nullable();
             $table->timestamps();
         });
     }

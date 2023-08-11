@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('discount');
             $table->string('fee_after_discount');
             $table->string('total_bill');
-            $table->string('invoice');
+            $table->string('proof_of_payment');
+            $table->string('receipt')->nullable();
             $table->enum('validation', ['valid', 'invalid', 'not yet validated']);
             $table->string('validated_by')->nullable();
             $table->foreignId('upload_abstract_id')->nullable()->constrained('upload_abstracts');
