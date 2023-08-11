@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\UploadAbstract;
-use App\Http\Requests\StoreUploadAbstractRequest;
-use App\Http\Requests\UpdateUploadAbstractRequest;
-use Illuminate\Support\Facades\Mail;
+use PDF;
 
 class UploadAbstractController extends Controller
 {
@@ -18,5 +15,17 @@ class UploadAbstractController extends Controller
         return view('administrator.review-abstract', [
             'title' => 'Review Abstract'
         ]);
+    }
+
+    public function test()
+    {
+        $pdf = PDF::loadView('administrator.pdf.loa')->setPaper('a4', 'potrait');
+        return $pdf->download('letter-of-acceptance.pdf');
+    }
+
+    public function testInvoice()
+    {
+        $pdf = PDF::loadView('administrator.pdf.invoice')->setPaper('a4', 'potrait');
+        return $pdf->download('invoice.pdf');
     }
 }

@@ -264,7 +264,7 @@
                                 <div style="padding-left: 10px; padding-right: 10px">
                                     <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
-                                            src="{{ url('') }}/assets/img/organizing-committe/OC-19.png"
+                                            src="{{ url('') }}/assets/img/organizing-committe/bu wiji.jpeg"
                                             class="card-img-top" alt="...">
                                         <div class="card-body" style="height: 200px">
                                             <h5 class="card-title">Wiji Utami, M.Sc.</h5>

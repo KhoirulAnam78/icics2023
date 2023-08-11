@@ -150,4 +150,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/upload-fulltext', [UploadFulltextController::class, 'upload']);
 });
 
+Route::get('/test', [UploadAbstractController::class, 'test']);
+Route::get('/loa', function () {
+    return view('administrator.pdf.loa');
+});
+
+
 require __DIR__ . '/auth.php';
