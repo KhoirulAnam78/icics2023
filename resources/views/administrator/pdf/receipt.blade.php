@@ -4,14 +4,14 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Invoice</title>
+    <title>Receipt</title>
 </head>
 
 <body>
     <div class="row justify-content-center">
         <div style="width:100%">
-            <div class="row justify-content-center"style="width:100%" style="margin:0px 5px">
-                <table style="width:100%">
+            <div class="row justify-content-center" style="margin:0px 5px">
+                <table>
                     <tr style="margin:0; padding:0">
                         <td style="width:20%">
                             <img src="{{ public_path('assets\img\unja-3d.jpeg') }}" width="100px" alt="">
@@ -39,69 +39,29 @@
                         </td>
                     </tr>
                 </table>
-                <h2 style="text-align: center">INVOICE</h2>
-                <table style="width:100%; border-spacing:10px; font-size:16px !important">
+                <h4 style="text-align: center">RECEIPT</h4>
+                <table style="width:100%">
                     <tr>
-                        <td style="width: 20%; font-weight:bold; ">
-                            Bill for
+                        <td>
+                            No
                         </td>
-                        <td style="width: 20%; font-weight:bold;">Issued Date</td>
-                        <td style="width: 40%; font-weight:bold;">Total bill</td>
-                        <td style="width: 20%;font-weight:bold;"></td>
+                        <td>: 92804823432/42423/432/4</td>
                     </tr>
                     <tr>
-                        <td>Khoirul Anam <br> Khoirulanam4580@gmail.com</td>
-                        <td>25 October 2023</td>
-                        <td>IDR 750.000</td>
-                        <td></td>
+                        <td>Received From</td>
+                        <td>: Khoirul Anam</td>
                     </tr>
                     <tr>
-                        <td style="width: 20%; font-weight:bold;">
-                            Recipient's name
+                        <td>
+                            Amount Paid
                         </td>
-                        <td style="width: 20%; font-weight:bold;">Payment method</td>
-                        <td style="width: 20%; font-weight:bold;">Product Name</td>
-                        <td style="width: 20%; font-weight:bold;">Category Product</td>
+                        <td>
+                            : IDR 750.000
+                        </td>
                     </tr>
                     <tr>
-                        <td>Anugrah Mukti</td>
-                        <td>Bank BNI</td>
-                        <td>The 11st International Conference of the Indonesian Chemical Society (ICICS 2023)</td>
-                        <td>Seminar</td>
-                    </tr>
-                </table>
-                <table style="width:100%;border-collapse: collapse; border-spacing:10px !important;">
-                    {{-- <tr>
-                        <td colspan="8">
-                            <hr>
-                        </td>
-                    </tr> --}}
-                    <tr style="border-top:1px solid black;">
-                        <td style="font-weight:bold; padding:5px">No</td>
-                        <td style="font-weight:bold; padding:5px">Packet Name</td>
-                        <td style="font-weight:bold; padding:5px">Fee</td>
-                        <td style="font-weight:bold;padding:5px">Amount</td>
-                        <td style="font-weight:bold;padding:5px">Subtotal</td>
-                        <td style="font-weight:bold;padding:5px">Virtual Account</td>
-                        <td style="font-weight:bold;padding:5px">Payment Start Date</td>
-                        <td style="font-weight:bold;padding:5px">Payment End Date</td>
-                    </tr>
-                    <tr style="border-top:1px solid black; border-bottom:1px solid black; pading:3px">
-                        <td style="padding:5px">1</td>
-                        <td style="padding:5px">Student Presenter</td>
-                        <td style="padding:5px">IDR 350.000</td>
-                        <td style="padding:5px">1</td>
-                        <td style="padding:5px">IDR 350.000</td>
-                        <td style="padding:5px">698124931</td>
-                        <td style="padding:5px">12 August 2023</td>
-                        <td style="padding:5px">14 August 2023</td>
-                    </tr>
-                    <tr>
-                        <td colspan="8" style="padding-top:20px" align="center">
-                            <strong>
-                                Total Bill : IDR 750.000
-                            </strong>
-                        </td>
+                        <td>For the Payment of</td>
+                        <td>: Registration Fee of ICICS 2023 as Author</td>
                     </tr>
                 </table>
                 <table style="width:100%">

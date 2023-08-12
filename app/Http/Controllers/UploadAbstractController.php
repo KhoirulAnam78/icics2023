@@ -25,7 +25,13 @@ class UploadAbstractController extends Controller
 
     public function testInvoice()
     {
-        $pdf = PDF::loadView('administrator.pdf.invoice')->setPaper('a4', 'potrait');
+        $pdf = PDF::loadView('administrator.pdf.invoice')->setPaper('a4', 'landscape');
         return $pdf->download('invoice.pdf');
+    }
+
+    public function testReceipt()
+    {
+        $pdf = PDF::loadView('administrator.pdf.receipt')->setPaper('a4', 'potrait');
+        return $pdf->download('receipt.pdf');
     }
 }

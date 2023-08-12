@@ -151,8 +151,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::get('/test', [UploadAbstractController::class, 'test']);
+Route::get('/test-invoice', [UploadAbstractController::class, 'testInvoice']);
+Route::get('/test-receipt', [UploadAbstractController::class, 'testReceipt']);
 Route::get('/loa', function () {
-    return view('administrator.pdf.loa');
+    return view('administrator.pdf.invoice');
 });
 
 

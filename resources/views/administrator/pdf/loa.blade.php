@@ -4,11 +4,6 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <!-- Bootstrap CSS -->
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
-    <link rel="stylesheet" href="{{ public_path('assets\css\bootstrap.min.css') }}" type="text/css">
-
     <title>Letter Of Acceptance</title>
 </head>
 
@@ -31,7 +26,7 @@
                                 TECHNOLOGY <br>
                                 UNIVERSITAS JAMBI</h6>
                             <p style="text-align: center; font-size:14px; margin:0; padding:0">
-                                Email : icics2023@.unja.ac.id; Website : https://icics2023unja.ac.id
+                                Email : icics2023@unja.ac.id; Website : https://icics2023.unja.ac.id
                             </p>
                         </td>
                         <td style="width:15%">
