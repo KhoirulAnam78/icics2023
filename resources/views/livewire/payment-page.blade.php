@@ -92,18 +92,18 @@
                 @enderror
             </div>
             <div class="form-group">
-                <label for="invoice">Invoice</label>
+                <label for="proof_of_payment">Proof of Payment</label>
                 <div class="input-group">
                     <div class="custom-file">
                         <input type="file" accept=".jpg,.png,.jpeg,.gif,.svg"
-                            class="custom-file-input @error('invoice') is-invalid @enderror" id="invoice"
-                            wire:model='invoice'>
-                        <label class="custom-file-label" for="invoice">
-                            {{ $invoice == null ? 'Choose' : $invoice->getClientOriginalName() }}
+                            class="custom-file-input @error('proof_of_payment') is-invalid @enderror"
+                            id="proof_of_payment" wire:model='proof_of_payment'>
+                        <label class="custom-file-label" for="proof_of_payment">
+                            {{ $proof_of_payment == null ? 'Choose' : $proof_of_payment->getClientOriginalName() }}
                         </label>
                     </div>
                 </div>
-                @error('invoice')
+                @error('proof_of_payment')
                     <span class="invalid-feedback">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -145,7 +145,9 @@
                             <th scope="col">Payment for abstract</th>
                         @endcan
                         <th scope="col">Status Validation</th>
+                        <th>Receipt</th>
                         <th scope="col">Validated By</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -161,6 +163,14 @@
                                 <td>{{ $item->uploadAbstract->title }}</td>
                             @endcan
                             <td>{{ $item->validation }}</td>
+                            <td>
+                                @if ($item->receipt)
+                                    <a href="{{ asset('storage/' . $item->receipt) }}" target="_blank"
+                                        style="color:red; font-size:20px"><i class="fa fa-file-pdf-o"
+                                            aria-hidden="true"></i>
+                                    </a>
+                                @endif
+                            </td>
                             <td>{{ $item->validated_by }}</td>
                             {{-- <td> --}}
                             {{-- @if ($item->status == 'not yet reviewed')

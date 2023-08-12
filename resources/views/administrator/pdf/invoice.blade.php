@@ -50,9 +50,9 @@
                         <td style="width: 20%;font-weight:bold;"></td>
                     </tr>
                     <tr>
-                        <td>Khoirul Anam <br> Khoirulanam4580@gmail.com</td>
-                        <td>25 October 2023</td>
-                        <td>IDR 750.000</td>
+                        <td>{{ $full_name }} <br> {{ $email }}</td>
+                        <td>{{ date('d F Y') }}</td>
+                        <td>{{ $fee }}</td>
                         <td></td>
                     </tr>
                     <tr>
@@ -64,7 +64,7 @@
                         <td style="width: 20%; font-weight:bold;">Category Product</td>
                     </tr>
                     <tr>
-                        <td>Anugrah Mukti</td>
+                        <td>Perkumpulan Indonesian Chemical Society</td>
                         <td>Bank BNI</td>
                         <td>The 11st International Conference of the Indonesian Chemical Society (ICICS 2023)</td>
                         <td>Seminar</td>
@@ -88,18 +88,18 @@
                     </tr>
                     <tr style="border-top:1px solid black; border-bottom:1px solid black; pading:3px">
                         <td style="padding:5px">1</td>
-                        <td style="padding:5px">Student Presenter</td>
-                        <td style="padding:5px">IDR 350.000</td>
+                        <td style="padding:5px">{{ $participant_type }}</td>
+                        <td style="padding:5px">{{ $fee }}</td>
                         <td style="padding:5px">1</td>
-                        <td style="padding:5px">IDR 350.000</td>
+                        <td style="padding:5px">{{ $fee }}</td>
                         <td style="padding:5px">698124931</td>
-                        <td style="padding:5px">12 August 2023</td>
-                        <td style="padding:5px">14 August 2023</td>
+                        <td style="padding:5px">{{ date('d F Y') }}</td>
+                        <td style="padding:5px">30 September 2023</td>
                     </tr>
                     <tr>
                         <td colspan="8" style="padding-top:20px" align="center">
                             <strong>
-                                Total Bill : IDR 750.000
+                                Total Bill : {{ $fee }}
                             </strong>
                         </td>
                     </tr>
@@ -128,7 +128,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><strong>Paid : IDR 750.000</strong></td>
+                        <td><strong>Paid : {{ $fee }}</strong></td>
                         <td></td>
                     </tr>
                 </table>

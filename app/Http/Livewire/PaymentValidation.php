@@ -3,27 +3,31 @@
 namespace App\Http\Livewire;
 
 use App\Mail\SendMail;
+use App\Models\Payment;
 use Livewire\Component;
 use App\Models\Participant;
-use App\Models\Payment;
 use Livewire\WithPagination;
+use App\Exports\PaymentExport;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Exports\PaymentExport;
+use PDF;
+use Illuminate\Support\Facades\Storage;
 
 class PaymentValidation extends Component
 {
 
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
-    public $full_name1, $email, $participant_type, $payment_for, $fee, $discount, $fee_after_discount, $total_bill, $invoice, $paymentValidate;
+    public $validation = false;
+    public $full_name1, $email, $participant_type, $payment_for, $fee, $discount, $fee_after_discount, $total_bill, $proof_of_payment, $paymentValidate;
     public $search = '', $search2 = '';
+    public $no_receipt, $for_payment_of, $amount;
 
     public function empty()
     {
         $this->full_name1 = null;
-        $this->invoice = null;
+        $this->proof_of_payment = null;
         $this->paymentValidate = null;
         $this->email = null;
         $this->participant_type = null;
@@ -32,10 +36,11 @@ class PaymentValidation extends Component
         $this->discount = null;
         $this->fee_after_discount = null;
         $this->total_bill = null;
-        $this->invoice = null;
+        $this->proof_of_payment = null;
     }
-    public function showValidate($id)
+    public function showDetail($id)
     {
+        $this->validation = true;
         $this->paymentValidate = $id;
         $payment = Payment::find($id);
         $this->full_name1 = $payment->participant->full_name1;
@@ -49,22 +54,45 @@ class PaymentValidation extends Component
         $this->discount = $payment->discount;
         $this->fee_after_discount = $payment->fee_after_discount;
         $this->total_bill = $payment->total_bill;
-        $this->invoice = $payment->invoice;
+        $this->proof_of_payment = $payment->proof_of_payment;
+    }
+
+    public function showValidate()
+    {
+        $this->amount = $this->fee_after_discount;
+        $participant = Payment::find($this->paymentValidate)->participant->participant_type;
+        if ($participant !== 'participant') {
+            $this->for_payment_of = 'Registration Fee of ICICS 2023 as Author';
+        } else {
+            $this->for_payment_of = 'Registration Fee of ICICS 2023 as Participant';
+        }
         $this->dispatchBrowserEvent('show-modal');
     }
 
     public function valid()
     {
+        $this->validate([
+            'no_receipt' => 'required',
+            'full_name1' => 'required',
+            'amount' => 'required',
+            'for_payment_of' => 'required'
+        ]);
         $participant_id = Payment::find($this->paymentValidate)->participant_id;
-        $email = Participant::find($participant_id)->user->email;
+        // $email = Participant::find($participant_id)->user->email;
+        $receipt = PDF::loadView('administrator.pdf.receipt', [
+            'full_name' => $this->full_name1,
+            'fee' => $this->amount,
+            'receipt_no' => $this->no_receipt,
+            'payment_for' => $this->for_payment_of
+        ])->setPaper('a4', 'potrait');
+        Storage::put('receipt/' . 'receipt-' . $this->full_name1 . '.pdf', $receipt->output());
+        $receiptPath = 'receipt/' . 'receipt-' . $this->full_name1 . '.pdf';
         Payment::where('id', $this->paymentValidate)->update([
             'validation' => 'valid',
+            'receipt' => $receiptPath,
             'validated_by' => Auth::user()->email
         ]);
-        Mail::to($email)->send(new SendMail('Payment Validation', 'Yout payment is validated!'));
-        $this->empty();
-        session()->flash('message', 'Validation succesfully !');
-        $this->dispatchBrowserEvent('close-modal');
+        return redirect('/payment-validation')->with('message', 'Validation succesfully !');
     }
 
     public function invalid()

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class PaymentPage extends Component
 {
-    public $fee, $discount, $total_bill, $fee_after_discount, $invoice;
+    public $fee, $discount, $total_bill, $fee_after_discount, $proof_of_payment;
     public $add = false, $edit = false, $payment_edit_id, $abstract_delete_id;
     public $abstract, $uploadAbstractId;
 
@@ -28,14 +28,14 @@ class PaymentPage extends Component
             return
                 [
                     'total_bill' => 'required',
-                    'invoice' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+                    'proof_of_payment' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
                 ];
         } else {
             return
                 [
                     'total_bill' => 'required',
                     'uploadAbstractId' => 'required',
-                    'invoice' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+                    'proof_of_payment' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
                 ];
         }
     }
@@ -44,7 +44,7 @@ class PaymentPage extends Component
     protected $messages = [
         'total_bill.required' => 'Total bill is required !',
         'uploadAbstractId.required' => 'Pay for abstract is required !',
-        'invoice.required' => 'Invoice is required !',
+        'proof_of_payment.required' => 'Invoice is required !',
     ];
 
     //Reatime Validation
@@ -137,7 +137,7 @@ class PaymentPage extends Component
         $this->discount = null;
         $this->total_bill = null;
         $this->fee_after_discount = null;
-        $this->invoice = null;
+        $this->proof_of_payment = null;
         $this->uploadAbstractId = null;
         $this->edit = false;
     }
@@ -148,7 +148,7 @@ class PaymentPage extends Component
     //     $this->payment_edit_id = $id;
     //     $this->total_bill = $abstract->total_bill;
     //     $this->fee_after_discount = $abstract->fee_after_discount;
-    //     $this->invoice = $abstract->invoice;
+    //     $this->proof_of_payment = $abstract->proof_of_payment;
     //     $this->edit = true;
     // }
 
@@ -157,7 +157,7 @@ class PaymentPage extends Component
     //     $this->validate();
     //     Payment::where('id', $this->payment_edit_id)->update([
     //         'total_bill' => $this->total_bill,
-    //         'invoice' => $this->invoice,
+    //         'proof_of_payment' => $this->proof_of_payment,
     //     ]);
 
     //     session()->flash('message', 'Edit abstract was successful !');
@@ -177,13 +177,13 @@ class PaymentPage extends Component
     public function save()
     {
         $this->validate();
-        $imagePath = $this->invoice->store('images');
+        $imagePath = $this->proof_of_payment->store('images');
         Payment::create([
             'fee' => $this->fee,
             'discount' => $this->discount,
             'fee_after_discount' => $this->fee_after_discount,
             'total_bill' => $this->total_bill,
-            'invoice' => $imagePath,
+            'proof_of_payment' => $imagePath,
             'validation' => 'not yet validated',
             'participant_id' => Auth::user()->participant->id,
             'upload_abstract_id' => $this->uploadAbstractId

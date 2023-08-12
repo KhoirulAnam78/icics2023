@@ -236,6 +236,8 @@
                         <th scope="col">#</th>
                         <th scope="col">Title</th>
                         <th scope="col">Status</th>
+                        <th>LOA</th>
+                        <th>Invoice</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -248,6 +250,22 @@
                             <th scope="row">{{ ++$a }}</th>
                             <td>{{ $item->title }}</td>
                             <td>{{ $item->status }}</td>
+                            <td>
+                                @if ($item->loa)
+                                    <a href="{{ asset('storage/' . $item->loa) }}" target="_blank"
+                                        style="color:red; font-size:20px"><i class="fa fa-file-pdf-o"
+                                            aria-hidden="true"></i></a>
+                                @endif
+                            </td>
+                            <td>
+                                @if ($item->invoice)
+                                    <a href="{{ asset('storage/' . $item->invoice) }}" target="_blank"
+                                        style="color:red; font-size:20px"><i class="fa fa-file-pdf-o"
+                                            aria-hidden="true"></i>
+                                    </a>
+                                @endif
+                            </td>
+
                             <td>
                                 @if ($item->status == 'not yet reviewed')
                                     <button class="btn btn-info"

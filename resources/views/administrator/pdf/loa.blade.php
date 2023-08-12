@@ -48,8 +48,8 @@
                 </table>
                 <p style="margin:0px; padding:0px;font-size: 14px">Dear :</p>
                 <div class="div" style="margin:0px; padding:0px; width:200px;font-size: 14px">
-                    <strong>Khoirul Anam</strong> <br>
-                    <strong>Fakultas Sains dan Teknologi Universitas Jambi</strong>
+                    <strong>{{ $full_name }}</strong> <br>
+                    <strong>{{ $institution }}</strong>
                 </div>
                 <br>
                 <br>
@@ -59,9 +59,8 @@
                     your Abstract entitled:
                 </p>
 
-                <p style="margin:20px 0px 0px 0px; padding:0px;font-size: 14px; text-align:center"><strong>Sintesis Dan
-                        Karakterisasi Selulosa Bakteri Ramah Lingkungan Berbahan Kulit Buah Pir (Pyrus
-                        pyrifolia)</strong>
+                <p style="margin:20px 0px 0px 0px; padding:0px;font-size: 14px; text-align:center">
+                    <strong>{{ $abstractTitle }}</strong>
                 </p>
 
                 <p style="margin:20px 0px 0px 0px; padding:0px;font-size: 14px">It is our pleasure to inform you that

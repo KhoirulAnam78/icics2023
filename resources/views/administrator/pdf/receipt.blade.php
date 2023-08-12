@@ -45,23 +45,23 @@
                         <td>
                             No
                         </td>
-                        <td>: 92804823432/42423/432/4</td>
+                        <td>: {{ $receipt_no }}</td>
                     </tr>
                     <tr>
                         <td>Received From</td>
-                        <td>: Khoirul Anam</td>
+                        <td>: {{ $full_name }}</td>
                     </tr>
                     <tr>
                         <td>
                             Amount Paid
                         </td>
                         <td>
-                            : IDR 750.000
+                            : {{ $fee }}
                         </td>
                     </tr>
                     <tr>
                         <td>For the Payment of</td>
-                        <td>: Registration Fee of ICICS 2023 as Author</td>
+                        <td>: {{ $payment_for }}</td>
                     </tr>
                 </table>
                 <table style="width:100%">
@@ -88,7 +88,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><strong>Paid : IDR 750.000</strong></td>
+                        <td><strong>Paid : {{ $fee }}</strong></td>
                         <td></td>
                     </tr>
                 </table>
