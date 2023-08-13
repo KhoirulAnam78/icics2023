@@ -7,21 +7,26 @@
             <div class="row">
                 <div class="col-lg-7">
 
-                    <span class="px-3"
+                    {{-- <span class="px-3"
                         style="font-size: 30px; color: white;font-weight: 600; background-image: linear-gradient(to right,#E08445, #E46671); border-radius: 10px; text-align: center ">14-17
-                        November 2023, Jambi</span>
+                        November 2023, Jambi</span> --}}
+                    <h3 class="primary-btn mb-3" style="font-size:20px">
+                        14-17
+                        November 2023, Jambi
+                    </h3>
                     <h3 style="color: white; font-size: 40px">Strengthening the Role of Chemistry as Basic
                         Science in Supporting the
                         Downstreaming of Agro-Industrial Products</h3>
                     <br>
-                    <a href="/register" class="primary-btn">Buy Ticket</a>
+                    <a href="/register" class="primary-btn mb-3">Buy Ticket</a>
 
                 </div>
                 <div class="col-lg-5">
-                    <h3
+                    {{-- <h3
                         style="color: white; background-image: linear-gradient(to right,#E08445, #E46671); border-radius: 10px; text-align: center">
                         Opening Speech
-                    </h3>
+                    </h3> --}}
+                    <h3 class="primary-btn mb-3" style="font-size:20px">Opening Speech</h3>
                     <div class="row">
                         <div class="col-5"><img src="{{ url('') }}/assets/img/opening-1.png" alt="">
                         </div>

@@ -72,14 +72,15 @@
                                 <li><a href="https://www.hki.or.id/ICICS">1st ICICS 2012 Surabaya</a></li>
                             </ul>
                         </li>
+                        @if (Auth::user())
+                            <a href="/dashboard" class="primary-btn mx-2  my-2">{{ Auth::user()->email }}</a>
+                        @else
+                            <a href="/login" class="primary-btn my-2 mx-2">Login</a>
+                            <a href="/register" class="primary-btn mx-2 my-2">Registration</a>
+                        @endif
+
                     </ul>
                 </nav>
-                @if (Auth::user())
-                    <a href="/dashboard" class="primary-btn">{{ Auth::user()->email }}</a>
-                @else
-                    <a href="/login" class="primary-btn">Login</a>
-                    <a href="/register" class="primary-btn mx-3">Registration</a>
-                @endif
             </div>
             <div id="mobile-menu-wrap"></div>
         </div>
