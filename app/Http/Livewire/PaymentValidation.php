@@ -87,8 +87,13 @@ class PaymentValidation extends Component
             'payment_for' => $this->for_payment_of
         ])->setPaper('a4', 'potrait');
         $abstract = Payment::find($this->paymentValidate)->uploadAbstract;
-        Storage::put('receipt/' . 'receipt-abs-' . $abstract->id . '-' . $this->full_name1 . '.pdf', $receipt->output());
-        $this->receiptPath = 'receipt/' . 'receipt-abs-' . $abstract->id . '-' . $this->full_name1 . '.pdf';
+        if ($abstract) {
+            $id = $abstract->id;
+        } else {
+            $id = 'participant';
+        }
+        Storage::put('receipt/' . 'receipt-abs-' . $id . '-' . $this->full_name1 . '.pdf', $receipt->output());
+        $this->receiptPath = 'receipt/' . 'receipt-abs-' . $id . '-' . $this->full_name1 . '.pdf';
         Payment::where('id', $this->paymentValidate)->update([
             'validation' => 'valid',
             'receipt' => $this->receiptPath,
@@ -101,12 +106,21 @@ class PaymentValidation extends Component
         ];
 
 
-        Mail::to($this->email, $this->full_name1)->send(new SendMail('Payment Validation', "<p>
-        Dear " . $this->full_name1 . ", <br>
-        We have validated your payment for the abstract entitled <strong>" . $abstract->title . "</strong>, here we include
-        your receipt of payment. <br>
-        Warm regards, <br><br><br><br>
-        Steering Committee ICICS 2023 </p>", $attachment));
+        if ($abstract) {
+            Mail::to($this->email, $this->full_name1)->send(new SendMail('Payment Validation', "<p>
+            Dear " . $this->full_name1 . ", <br>
+            We have validated your payment for the abstract entitled <strong>" . $abstract->title . "</strong>, here we include
+            your receipt of payment. <br>
+            Warm regards, <br><br><br><br>
+            Steering Committee ICICS 2023 </p>", $attachment));
+        } else {
+            Mail::to($this->email, $this->full_name1)->send(new SendMail('Payment Validation', "<p>
+            Dear " . $this->full_name1 . ", <br>
+            We have validated your payment for the participant ICICS 2023, here we include
+            your receipt of payment. <br>
+            Warm regards, <br><br><br><br>
+            Steering Committee ICICS 2023 </p>", $attachment));
+        }
 
         return redirect('/payment-validation')->with('message', 'Validation succesfully !');
     }
