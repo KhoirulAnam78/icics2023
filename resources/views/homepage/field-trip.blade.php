@@ -18,9 +18,9 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-6 mb-3">
                             <div class="card">
-                                <img style="height: 320px" class="card-img-top"
+                                <img style="height:320px" class="card-img-top"
                                     src="{{ url('') }}/assets/img/field-trip/ft-1.jpg" alt="Card image cap">
-                                <div style="height: 380px" class="card-body">
+                                <div class="card-body">
                                     <h5 class="card-title">1000 Pillar Mosque</h5>
                                     <p class="card-text">The Al-Falah Grand Mosque is the largest mosque in Jambi,
                                         Indonesia. This mosque is also known as the '1000 Pillar Mosque,' even though it has
@@ -35,9 +35,9 @@
                         </div>
                         <div class="col-lg-6 col-sm-12 mb-3">
                             <div class="card">
-                                <img style="height: 320px" class="card-img-top"
+                                <img style="height:320px" class="card-img-top"
                                     src="{{ url('') }}/assets/img/field-trip/ft-2.jpg" alt="Card image cap">
-                                <div style="height: 380px" class="card-body">
+                                <div class="card-body">
                                     <h5 class="card-title">The Gentala Arasy Bridge</h5>
                                     <p class="card-text">The Gentala Arasy Bridge is a pedestrian bridge spanning the
                                         Batanghari River. The bridge connects Tepian Tanggo Rajo to Jambi Kota Seberang. The
@@ -51,9 +51,9 @@
                         </div>
                         <div class="col-lg-6 col-sm-12 mb-3">
                             <div class="card">
-                                <img style="height: 320px" class="card-img-top"
+                                <img style="height:320px" class="card-img-top"
                                     src="{{ url('') }}/assets/img/field-trip/ft-3.jpg" alt="Card image cap">
-                                <div style="height: 350px" class="card-body">
+                                <div class="card-body">
                                     <h5 class="card-title">Muaro Jambi Temple</h5>
                                     <p class="card-text">The Muaro Jambi Temple is the largest Hindu-Buddhist temple
                                         complex in Southeast Asia, spanning an area of 3981 hectares. It is believed to be a
@@ -67,9 +67,9 @@
                         </div>
                         <div class="col-lg-6 col-sm-12 mb-3">
                             <div class="card">
-                                <img style="height: 320px" class="card-img-top"
+                                <img style="height:320px" class="card-img-top"
                                     src="{{ url('') }}/assets/img/field-trip/ft-4.jpg" alt="Card image cap">
-                                <div style="height: 350px" class="card-body">
+                                <div class="card-body">
                                     <h5 class="card-title">Geopark Merangin</h5>
                                     <p class="card-text">Geopark Merangin is an ancient heritage site located in Merangin
                                         Regency. This geopark houses a collection of fossils including leaves, wood, roots,
@@ -83,9 +83,9 @@
                         </div>
                         <div class="col-lg-6 col-sm-12 mb-3">
                             <div class="card">
-                                <img style="height: 320px" class="card-img-top"
+                                <img style="height:320px" class="card-img-top"
                                     src="{{ url('') }}/assets/img/field-trip/ft-5.jpg" alt="Card image cap">
-                                <div style="height: 250px" class="card-body">
+                                <div class="card-body">
                                     <h5 class="card-title">Kerinci</h5>
                                     <p class="card-text">Kerinci is the westernmost regency in the province of Jambi,
                                         Indonesia. This regency is a prominent tourist destination in the province, known as
