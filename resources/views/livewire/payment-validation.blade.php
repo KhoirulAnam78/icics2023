@@ -3,7 +3,10 @@
     @if ($validation == false)
         <div class="row mb-2">
             <div class="col-lg-6">
-                <a class="btn btn-success" wire:click="export()">Export</a>
+                <button wire:click="export()" class="btn btn-success" wire:loading.attr="disabled">
+                    <span wire:loading.remove wire:target="export">Export</span>
+                    <span wire:loading wire:target="export">Exporting..</span>
+                </button>
             </div>
         </div>
         <div class="row">
@@ -45,7 +48,6 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">Full Name</th>
                                 <th scope="col">Total Bill</th>
                                 <th scope="col">Invoice For</th>
                                 <th scope="col">Status</th>
@@ -66,7 +68,6 @@
                                     </td>
                                     <td>{{ $item->created_at }}</td>
                                     <td>{{ $item->participant->user->email }}</td>
-                                    <td>{{ $item->participant->full_name1 }}</td>
                                     <td>{{ $item->total_bill }}</td>
                                     <td>{{ $item->upload_abstract_id == null ? 'participant' : $item->uploadAbstract->title }}
                                     </td>
@@ -170,10 +171,15 @@
             </div>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-danger" wire:click='invalid()'>Invalid</button>
-            <button class="btn btn-primary" wire:click='showValidate()'>Valid</button>
+            @if (!$receipt)
+                <button wire:click="invalid()" class="btn btn-danger" wire:loading.attr="disabled">
+                    <span wire:loading.remove wire:target="invalid">Invalid</span>
+                    <span wire:loading wire:target="invalid">Validating..</span>
+                </button>
+                <button class="btn btn-primary" wire:click='showValidate()'>Valid</button>
+            @endif
             <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                wire:click="empty()">Cancel</button>
+                wire:click="back()">Cancel</button>
         </div>
 
         <div class="modal fade" id="modalValidate" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -224,7 +230,10 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-primary" wire:click='valid()'>Valid</button>
+                        <button wire:click="valid()" class="btn btn-primary" wire:loading.attr="disabled">
+                            <span wire:loading.remove wire:target="valid">Valid</span>
+                            <span wire:loading wire:target="valid">Validating..</span>
+                        </button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>

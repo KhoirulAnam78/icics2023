@@ -127,8 +127,14 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-danger" wire:click='invalid()'>Invalid</button>
-                    <button class="btn btn-primary" wire:click='valid()'>Valid</button>
+                    <button wire:click="invalid()" class="btn btn-danger" wire:loading.attr="disabled">
+                        <span wire:loading.remove wire:target="invalid">Invalid</span>
+                        <span wire:loading wire:target="invalid">Validating..</span>
+                    </button>
+                    <button wire:click="valid()" class="btn btn-primary" wire:loading.attr="disabled">
+                        <span wire:loading.remove wire:target="valid">Valid</span>
+                        <span wire:loading wire:target="valid">Validating..</span>
+                    </button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"
                         wire:click="empty()">Cancel</button>
                 </div>

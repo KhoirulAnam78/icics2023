@@ -20,9 +20,9 @@ class ReviewAbstract extends Component
     public $search = '', $search2, $abstract_review;
 
     //LOA
-    public $full_name, $institution, $abstractTitle, $loa;
+    public $full_name, $institution, $abstractTitle, $loa, $loaPath;
     //Invoice
-    public $email, $fee, $participant_type;
+    public $email, $fee, $participant_type, $invoicePath;
 
     public function empty()
     {
@@ -123,19 +123,25 @@ class ReviewAbstract extends Component
         $this->dispatchBrowserEvent('show-modal');
     }
 
+    public function back()
+    {
+        $this->review = false;
+        $this->dispatchBrowserEvent('to-top');
+    }
+
     public function accept()
     {
 
 
-        $email = UploadAbstract::find($this->abstract_review)->participant->user->email;
+        $this->email = UploadAbstract::find($this->abstract_review)->participant->user->email;
 
         $loa = PDF::loadView('administrator.pdf.loa', [
             'full_name' => $this->full_name,
             'institution' => $this->institution,
             'abstractTitle' => $this->abstractTitle
         ])->setPaper('a4', 'potrait');
-        Storage::put('letter-of-acceptance/' . 'LOA-' . $this->full_name . '.pdf', $loa->output());
-        $loaPath = 'letter-of-acceptance/' . 'LOA-' . $this->full_name . '.pdf';
+        Storage::put('letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $loa->output());
+        $this->loaPath = 'letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
 
         $invoice = PDF::loadView('administrator.pdf.invoice', [
             'full_name' => $this->full_name,
@@ -143,15 +149,54 @@ class ReviewAbstract extends Component
             'participant_type' => $this->participant_type,
             'email' => $this->email
         ])->setPaper('a4', 'landscape');
-        Storage::put('invoice/' . 'Invoice-' . $this->full_name . '.pdf', $invoice->output());
-        $invoicePath = 'invoice/' . 'Invoice-' . $this->full_name . '.pdf';
+        Storage::put('invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $invoice->output());
+        $this->invoicePath = 'invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
 
         UploadAbstract::where('id', $this->abstract_review)->update([
             'status' => 'accepted',
-            'loa' => $loaPath,
-            'invoice' => $invoicePath,
+            'loa' => $this->loaPath,
+            'invoice' => $this->invoicePath,
             'reviewed_by' => Auth::user()->email
         ]);
+
+        $data = array('name' => $this->full_name, 'title' => $this->abstractTitle);
+
+
+        Mail::send('mail.accepted-abstract', $data, function ($message) {
+            $message->to($this->email, $this->full_name)->subject('ABSTRACT ACCEPTANCE');
+            // $message->attach(asset('storage/letter-of-acceptance/LOA-Muhammad Ridho.pdf'));
+            $message->attach(public_path() . '/storage/' . $this->loaPath);
+            $message->attach(public_path() . '/storage/' . $this->invoicePath);
+        });
+
+        $attachment = [
+            public_path() . '/storage/' . $this->loaPath,
+            public_path() . '/storage/' . $this->invoicePath
+        ];
+
+
+        Mail::to($this->email, $this->full_name)->send(new SendMail('ABSTRACT ACCEPTANCE', "<p>
+        Dear" . $this->full_name . ", <br>
+        Congratulation! We are happy to inform you that your abstract for The 11st International Conference of the
+        Indonesian
+        Chemical Society
+        (ICICS 2023) <br>
+        Title of abstract : <strong>" . $this->abstractTitle . "</strong> has been accepted. <br>
+        It is our great pleasure therefore to request that you submit your full paper, no later than September 30th
+        2023 by following the template as attached in the website: <a href='icics2023.unja.ac.id'>icics2023.unja.ac.id</a>. <br>
+        In addition, you are requested to proceed with the payment of the registration fee (no later than September 16th
+        2023). <br> <br>
+        After finishing the payment, kindly send the receipt to the committee via website. Here is the bank information
+        detail: <br>
+        Account name : Perkumpulan Indonesian Chemical Society <br>
+        Account number : 698124931 <br>
+        Bank name : Bank Negara Indonesia (BNI) <br> <br>
+        For the purpose of the conference proceeding, we also require that you submit a detailed resume. Please kindly
+        acknowledge the receipt of this email, and do not hesitate to contact the organizing committee
+        (icics2023@.unja.ac.id) for any inquiry. Thank you for your attention. <br> <br>
+        Warm regards, <br><br><br><br>
+        Steering Committee ICICS 2023</p>", $attachment));
+
 
         return redirect('/review-abstract')->with('message', 'Review succefully !');
     }
@@ -164,11 +209,10 @@ class ReviewAbstract extends Component
             'status' => 'rejected',
             'reviewed_by' => Auth::user()->email
         ]);
-        $this->empty();
-        Mail::to($email)->send(new SendMail('Reviewed Abstract', "Dear Author,
-        Sorry, your article " . $abstract . " has been rejected to be presented at the 11st ICICS 2023 Conference."));
+        Mail::to($email)->send(new SendMail('Abstract Rejected', "Dear Author,
+        Sorry, your article " . $abstract . " has been rejected to be presented at the 11st ICICS 2023 Conference. Thank you for your submission , however we hope you will consider submitting again next time", []));
         session()->flash('message', 'Review succesfully !');
-        $this->dispatchBrowserEvent('close-modal');
+        return redirect('/review-abstract')->with('message', 'Review succefully !');
     }
 
     public function render()

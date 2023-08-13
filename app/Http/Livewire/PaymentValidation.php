@@ -22,7 +22,7 @@ class PaymentValidation extends Component
     public $validation = false;
     public $full_name1, $email, $participant_type, $payment_for, $fee, $discount, $fee_after_discount, $total_bill, $proof_of_payment, $paymentValidate;
     public $search = '', $search2 = '';
-    public $no_receipt, $for_payment_of, $amount;
+    public $no_receipt, $for_payment_of, $amount, $receipt, $receiptPath;
 
     public function empty()
     {
@@ -50,6 +50,7 @@ class PaymentValidation extends Component
         if ($payment->upload_abstract_id !== null) {
             $this->payment_for = $payment->uploadAbstract->title;
         }
+        $this->receipt = $payment->receipt;
         $this->fee = $payment->fee;
         $this->discount = $payment->discount;
         $this->fee_after_discount = $payment->fee_after_discount;
@@ -85,14 +86,36 @@ class PaymentValidation extends Component
             'receipt_no' => $this->no_receipt,
             'payment_for' => $this->for_payment_of
         ])->setPaper('a4', 'potrait');
-        Storage::put('receipt/' . 'receipt-' . $this->full_name1 . '.pdf', $receipt->output());
-        $receiptPath = 'receipt/' . 'receipt-' . $this->full_name1 . '.pdf';
+        $abstract = Payment::find($this->paymentValidate)->uploadAbstract;
+        Storage::put('receipt/' . 'receipt-abs-' . $abstract->id . '-' . $this->full_name1 . '.pdf', $receipt->output());
+        $this->receiptPath = 'receipt/' . 'receipt-abs-' . $abstract->id . '-' . $this->full_name1 . '.pdf';
         Payment::where('id', $this->paymentValidate)->update([
             'validation' => 'valid',
-            'receipt' => $receiptPath,
+            'receipt' => $this->receiptPath,
             'validated_by' => Auth::user()->email
         ]);
+
+
+        $attachment = [
+            public_path() . '/storage/' . $this->receiptPath,
+        ];
+
+
+        Mail::to($this->email, $this->full_name1)->send(new SendMail('Payment Validation', "<p>
+        Dear " . $this->full_name1 . ", <br>
+        We have validated your payment for the abstract entitled <strong>" . $abstract->title . "</strong>, here we include
+        your receipt of payment. <br>
+        Warm regards, <br><br><br><br>
+        Steering Committee ICICS 2023 </p>", $attachment));
+
         return redirect('/payment-validation')->with('message', 'Validation succesfully !');
+    }
+
+    public function back()
+    {
+        $this->validation = false;
+
+        $this->dispatchBrowserEvent('to-top');
     }
 
     public function invalid()
@@ -103,10 +126,9 @@ class PaymentValidation extends Component
             'validation' => 'invalid',
             'validated_by' => Auth::user()->email
         ]);
-        Mail::to($email)->send(new SendMail('Payment Validation', 'Yout payment is invalid!'));
-        $this->empty();
-        session()->flash('message', 'Validation succesfully !');
-        $this->dispatchBrowserEvent('close-modal');
+        Mail::to($email)->send(new SendMail('Payment Validation', 'Yout payment for ' . $this->for_payment_of . ' is invalid!', []));
+
+        return redirect('/payment-validation')->with('message', 'Validation succesfully !');
     }
 
     public function export()

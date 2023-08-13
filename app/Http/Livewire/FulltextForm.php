@@ -18,6 +18,7 @@ class FulltextForm extends Component
     public function mount()
     {
         $this->payment = Payment::where('participant_id', Auth::user()->participant->id)->where('validation', 'valid')->get();
+        // dd($this->payment);
     }
     public function rules()
     {
@@ -122,8 +123,6 @@ class FulltextForm extends Component
         $this->cancel();
         $this->empty();
     }
-
-
 
     public function render()
     {

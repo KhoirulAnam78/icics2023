@@ -1,6 +1,6 @@
 <x-mail::message>
     <p>
-        {{ $content }}
+        {!! $content !!}
     </p>
     {{ config('app.name') }}
 </x-mail::message>

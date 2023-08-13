@@ -40,7 +40,7 @@ class UploadedPaper extends Component
             'validation' => 'valid',
             'validated_by' => Auth::user()->email
         ]);
-        Mail::to($email)->send(new SendMail('Validation Fulltext', 'Your fulltext status has been validated'));
+        Mail::to($email)->send(new SendMail('Validation Fulltext', 'Your fulltext status has been validated', []));
         $this->empty();
         session()->flash('message', 'Validation succesfully !');
         $this->dispatchBrowserEvent('close-modal');
@@ -53,7 +53,7 @@ class UploadedPaper extends Component
             'validation' => 'invalid',
             'validated_by' => Auth::user()->email
         ]);
-        Mail::to($email)->send(new SendMail('Validation Fulltext', 'Your fulltext status has been validated, your uploaded fulltext is invalid'));
+        Mail::to($email)->send(new SendMail('Validation Fulltext', 'Your fulltext status has been validated, your uploaded fulltext is invalid', []));
         $this->empty();
         session()->flash('message', 'Validation succesfully !');
         $this->dispatchBrowserEvent('close-modal');

@@ -46,7 +46,6 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Presenter</th>
                                 <th scope="col">Title</th>
-                                <th scope="col">Keywords</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Reviewed By</th>
                                 <th scope="col">LOA</th>
@@ -67,7 +66,6 @@
                                     </td>
                                     <td>{{ $item->participant->full_name1 }}</td>
                                     <td>{{ $item->title }}</td>
-                                    <td>{{ $item->keywords }}</td>
                                     <td>{{ $item->status }}</td>
                                     <td>{{ $item->reviewed_by }}</td>
                                     <td>
@@ -205,27 +203,30 @@
                 </span>
             @enderror
         </div>
-        @if (!$loa)
-            <div class="modal-footer">
-                <button class="btn btn-danger" wire:click='reject()'>Reject</button>
+        <div class="modal-footer">
+            @if (!$loa)
+                <button class="btn btn-danger" wire:click='reject()' wire:loading.attr="disabled">
+                    <span wire:loading.remove wire:target="reject">Reject</span>
+                    <span wire:loading wire:target="reject">Rejecting..</span>
+                </button>
                 <button class="btn btn-primary" wire:click='showValidate()'>Accept</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                    wire:click="empty()">Cancel</button>
-            </div>
-        @endif
+            @endif
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                wire:click="back()">Cancel</button>
+        </div>
+
         <div class="modal fade" id="modalValidate" data-backdrop="static" data-keyboard="false" tabindex="-1"
             role="dialog" wire:ignore.self aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog modal-xl" role="document">
+            <div class="modal-dialog modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="modalEditTitle">Accept Abstract</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                            wire:click="empty()">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h5 class="text-center">Data for Letter of Acceptance and Invoice</h5>
+                        <h4 class="text-center my-3">Data for Letter of Acceptance and Invoice</h4>
                         <div class="form-group">
                             <label for="full_name">Full Name</label>
                             <input type="text" class="form-control @error('full_name') is-invalid @enderror"
@@ -280,8 +281,11 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-primary" wire:click='accept()'>Send to {{ $email }}</button>
-                        <button type="button" class="btn btn-secondary" wire:click="empty()">Cancel</button>
+                        <button wire:click="accept()" class="btn btn-primary" wire:loading.attr="disabled">
+                            <span wire:loading.remove wire:target="accept">Send to {{ $email }}</span>
+                            <span wire:loading wire:target="accept">Sending to {{ $email }}..</span>
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>

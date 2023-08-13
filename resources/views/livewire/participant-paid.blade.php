@@ -1,7 +1,10 @@
 <div>
     <div class="row mb-2">
         <div class="col-lg-6">
-            <a class="btn btn-success" wire:click='export()'>Export</a>
+            <button wire:click="export()" class="btn btn-success" wire:loading.attr="disabled">
+                <span wire:loading.remove>Export</span>
+                <span wire:loading>Exporting..</span>
+            </button>
         </div>
     </div>
     <div class="row">

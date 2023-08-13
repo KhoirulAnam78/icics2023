@@ -175,14 +175,9 @@
                 </span>
             @enderror
         </div>
-        {{-- <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
-        </div>
-        <div class="form-group">
-            <label for="retypePw">Retype Password</label>
-            <input type="password" class="form-control" id="retypePw" placeholder="Confirmation Password">
-        </div> --}}
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" wire:target="save" wire:loading.attr="disabled">
+            <span wire:loading.remove wire:target="save">Register</span>
+            <span wire:loading wire:target="save">Registering..</span>
+        </button>
     </form>
 </div>

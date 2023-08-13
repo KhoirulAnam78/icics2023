@@ -16,11 +16,12 @@ class SendMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public $subject, $content;
-    public function __construct($subject, $content)
+    public $subject, $content, $attach;
+    public function __construct($subject, $content, $attach)
     {
         $this->subject = $subject;
         $this->content = $content;
+        $this->attach = $attach;
     }
 
     /**
@@ -53,6 +54,6 @@ class SendMail extends Mailable
      */
     public function attachments(): array
     {
-        return [];
+        return $this->attach;
     }
 }

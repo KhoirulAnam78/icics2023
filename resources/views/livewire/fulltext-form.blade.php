@@ -61,8 +61,8 @@
             <a class="btn btn-warning" wire:click='cancel()'>Cancel</a>
         </form>
     @else
-        @if (count($fulltexts) == 0)
-            <button class="btn btn-primary" disabled>Add Payment</button>
+        @if (count($payment) == 0)
+            <button class="btn btn-primary" disabled>Upload Paper</button>
         @else
             <button class="btn btn-primary" wire:click="add()">Upload Paper</button>
         @endif
