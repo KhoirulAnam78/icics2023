@@ -5,14 +5,13 @@
     <section class="contact-from-section spad" style="padding-top:0px">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" style="text-align:center">
                     <div class="section-title">
                         <h2>FGD Akreditasi Internasional</h2>
                         {{-- <p>Fill in the form below to register.</p> --}}
-                    </div>
-                    <div style="padding-left: 1%">
-                        <h5>Registration :</h5>
-                        <a href="">link Googleform</a>
+
+                        <a href="#" class="primary-btn my-3">Register for this
+                            event</a>
                     </div>
                 </div>
             </div>

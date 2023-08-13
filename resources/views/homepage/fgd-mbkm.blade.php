@@ -17,14 +17,12 @@
                     <div class="card" style="border: 0px">
                         <div class="card-body">
                             {{-- CONTENT --}}
-                            <div>
-                                <h5 style="text-align: center ; font-weight: 600">MBKM Management Group Discussion Forum
+                            <div style="text-align:center">
+                                <h5 style="font-weight: 600">MBKM Management Group Discussion Forum
                                     <br>(Forum Group Discussion: Independent Learning- Independent Campus)
                                 </h5>
-                            </div>
-                            <div>
-                                <h5>Registration :</h5>
-                                <a href="">link Googleform</a>
+                                <a href="#" class="primary-btn my-3">Register for this
+                                    event</a>
                             </div>
                             <br>
                             <div>
