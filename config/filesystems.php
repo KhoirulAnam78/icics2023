@@ -71,7 +71,8 @@ return [
     */
 
     'links' => [
-        public_path('storage') => storage_path('app/public'),
+        // public_path('storage') => storage_path('app/public'),
+        public_path('/home/icics2023/public_html/storage') => storage_path('/home/icics2023/repositories/icics2023/storage/app/public'),
     ],
 
 ];
