@@ -40,7 +40,7 @@ return [
             'driver' => 'local',
             // 'root' => storage_path('app/public'),
             // 'url' => env('APP_URL') . '/storage',
-            'root' => public_path('uploads'),
+            'root' => public_path('/home/icics2023/public_html/uploads'),
             'url' => env('APP_URL'),
             'visibility' => 'public',
             'throw' => false,
