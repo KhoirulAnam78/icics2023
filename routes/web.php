@@ -151,12 +151,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::get('/test', [UploadAbstractController::class, 'testEmail']);
-Route::get('/link', function () {
-    $target = ' /home/icics2023/repositories/icics2023/storage/app/public';
-    $shortcut = '/home/icics2023/public_html/storage';
-    symlink($target, $shortcut);
-});
-
 
 
 require __DIR__ . '/auth.php';

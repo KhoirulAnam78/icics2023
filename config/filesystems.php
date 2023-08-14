@@ -38,8 +38,7 @@ return [
 
         'public' => [
             'driver' => 'local',
-            // 'root' => storage_path('app/public'),
-            'root' => storage_path(),
+            'root' => storage_path('app/public'),
             'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
             'throw' => false,
@@ -71,8 +70,7 @@ return [
     */
 
     'links' => [
-        // public_path('storage') => storage_path('app/public'),
-        public_path('/home/icics2023/public_html/storage') => storage_path('/home/icics2023/repositories/icics2023/storage/app/public'),
+        public_path('storage') => storage_path('app/public'),
     ],
 
 ];
