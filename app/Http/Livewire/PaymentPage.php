@@ -176,8 +176,8 @@ class PaymentPage extends Component
 
     public function save()
     {
+        dd(public_path('/home/icics2023/publuc_html'));
         $this->validate();
-        dd(public_path());
         $imagePath = $this->proof_of_payment->store(
             'images',
             'public'
