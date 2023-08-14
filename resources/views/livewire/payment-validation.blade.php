@@ -75,7 +75,7 @@
                                     <td>{{ $item->validated_by }}</td>
                                     <td>
                                         @if ($item->receipt)
-                                            <a href="{{ asset('storage/' . $item->receipt) }}" target="_blank"
+                                            <a href="{{ url('') . '/uploads/' . $item->receipt }}" target="_blank"
                                                 style="color:red; font-size:20px"><i class="fa fa-file-pdf-o"
                                                     aria-hidden="true"></i>
                                             </a>
@@ -164,7 +164,7 @@
                     <label for="">Invoice :</label>
                     <div class="row mx-3 card">
                         @if ($proof_of_payment)
-                            <img src="{{ asset('storage/' . $proof_of_payment) }}" style="max-width:100%">
+                            <img src="{{ url('') . '/uploads/' . $proof_of_payment }}" style="max-width:100%">
                         @endif
                     </div>
                 </div>

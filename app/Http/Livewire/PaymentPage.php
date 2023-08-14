@@ -177,7 +177,10 @@ class PaymentPage extends Component
     public function save()
     {
         $this->validate();
-        $imagePath = $this->proof_of_payment->store('images');
+        $imagePath = $this->proof_of_payment->store(
+            'images',
+            'public'
+        );
         Payment::create([
             'fee' => $this->fee,
             'discount' => $this->discount,

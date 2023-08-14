@@ -83,7 +83,7 @@
                     </div>
                     <div class="form-group">
                         <label for="fulltext">Full Text</label>
-                        <a href="{{ asset('storage/' . $fulltext) }}" style="color:black" target="_blank"
+                        <a href="{{ url('') . '/uploads/' . $fulltext }}" style="color:black" target="_blank"
                             class="d-block"><i class="fa fa-file-pdf-o" style="color:red; font-size:30px"
                                 aria-hidden="true"></i>
                             {{ $fulltext }}

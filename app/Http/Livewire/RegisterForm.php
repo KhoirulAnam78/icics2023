@@ -83,7 +83,10 @@ class RegisterForm extends Component
                 'confirmPassword' => 'required|same:password',
                 'member_card' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             ]);
-            $imagePath = $this->member_card->store('images');
+            $imagePath = $this->member_card->store(
+                'images',
+                'public'
+            );
             $status = 'not yet validated';
         } else {
             $this->validate();
