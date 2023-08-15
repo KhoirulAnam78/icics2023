@@ -17,12 +17,11 @@ class SendMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public $subject, $content, $attach;
-    public function __construct($subject, $content, $attach)
+    public $subject, $content;
+    public function __construct($subject, $content)
     {
         $this->subject = $subject;
         $this->content = $content;
-        $this->attach = $attach;
     }
 
     /**
@@ -55,8 +54,6 @@ class SendMail extends Mailable
      */
     public function attachments(): array
     {
-        return [
-            Attachment::fromPath('https://icics2023.unja.ac.id/uploads/letter-of-acceptance/LOA-ABS2-Khoirul Anam.pdf')
-        ];
+        return [];
     }
 }
