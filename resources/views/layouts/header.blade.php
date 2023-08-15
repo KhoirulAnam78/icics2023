@@ -19,7 +19,7 @@
             <div class="logo">
                 <a href="./index.html">
                     {{-- <h2>ICICS2023</h2> --}}
-                    <img src="{{ url('') }}/assets/img/logo-icics2023.png" alt="logo.png">
+                    <img src="{{ url('') }}/assets/img/logo-icics2023-new.png" alt="logo.png">
                 </a>
             </div>
             <div class="nav-menu">

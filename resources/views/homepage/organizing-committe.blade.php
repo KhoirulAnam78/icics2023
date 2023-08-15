@@ -18,7 +18,19 @@
                         <div class="card-body">
                             {{-- CONTENT --}}
                             {{-- baris 1 --}}
-                            <div class="row justify-content-center" style="padding-bottom: 5%">
+                            <div class="row justify-content-center" style="padding-bottom: 5%; padding-top: 5%">
+                                {{-- Pembatas --}}
+                                <div style="padding-left: 10px; padding-right: 10px">
+                                    <div class="card" style="width: 16rem; border: 2px solid grey">
+                                        <img style="height: 280px"
+                                            src="{{ url('') }}/assets/img/organizing-committe/OC-3.png"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body" style="height: 200px">
+                                            <h5 class="card-title">Dr. Madyawati Latief, S.P., M.Si.</h5>
+                                            <p class="card-text">Department of Chemistry, Universitas Jambi</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
                                     <div class="card" style="width: 16rem; border: 2px solid black">
@@ -43,18 +55,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{-- Pembatas --}}
-                                <div style="padding-left: 10px; padding-right: 10px">
-                                    <div class="card" style="width: 16rem; border: 2px solid grey">
-                                        <img style="height: 280px"
-                                            src="{{ url('') }}/assets/img/organizing-committe/OC-3.png"
-                                            class="card-img-top" alt="...">
-                                        <div class="card-body" style="height: 200px">
-                                            <h5 class="card-title">Dr. Madyawati Latief, S.P., M.Si.</h5>
-                                            <p class="card-text">Department of Chemistry, Universitas Jambi</p>
-                                        </div>
-                                    </div>
-                                </div>
+
 
                                 {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
@@ -339,25 +340,79 @@
                             {{-- baris 6 --}}
                             <div class="row justify-content-center" style="padding-bottom: 5%">
                                 {{-- Pembatas --}}
-                                {{-- Pembatas --}}
                                 <div style="padding-left: 10px; padding-right: 10px">
                                     <div class="card" style="width: 16rem; border: 2px solid black">
                                         <img style="height: 280px"
                                             src="{{ url('') }}/assets/img/organizing-committe/OC-26.jpeg"
                                             class="card-img-top" alt="...">
-                                        <div class="card-body">
+                                        <div class="card-body" style="height: 200px">
                                             <h5 class="card-title">Dr. Hendrawati, M.Si.</h5>
                                             <p class="card-text">Department of Chemistry, UIN Syarif Hidayatullah Jakarta
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-
+                                {{-- Pembatas --}}
+                                <div style="padding-left: 10px; padding-right: 10px">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
+                                        <img style="height: 280px"
+                                            src="{{ url('') }}/assets/img/organizing-committe/OC-27.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body" style="height: 200px">
+                                            <h5 class="card-title">Prof. Dr. Drs. M. Naswir, M.Si.</h5>
+                                            <p class="card-text">Department of Chemical Engineering, Universitas Jambi
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{-- Pembatas --}}
+                                <div style="padding-left: 10px; padding-right: 10px">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
+                                        <img style="height: 280px"
+                                            src="{{ url('') }}/assets/img/organizing-committe/OC-28.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body" style="height: 200px">
+                                            <h5 class="card-title">Dr. Agus Subagyo, S.Si., M.Si.</h5>
+                                            <p class="card-text">Department of Educational Biology, Universitas Jambi
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{-- Pembatas --}}
+                                <div style="padding-left: 10px; padding-right: 10px">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
+                                        <img style="height: 280px"
+                                            src="{{ url('') }}/assets/img/organizing-committe/OC-29.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body" style="height: 200px">
+                                            <h5 class="card-title">Asmiyunda, M.Pd.</h5>
+                                            <p class="card-text">Department of Educational Chemistry, Universitas Jambi
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- baris 7 --}}
+                            <div class="row justify-content-center" style="padding-bottom: 5%">
+                                {{-- Pembatas --}}
+                                <div style="padding-left: 10px; padding-right: 10px">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
+                                        <img style="height: 280px"
+                                            src="{{ url('') }}/assets/img/organizing-committe/OC-30.jpeg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body" style="height: 200px">
+                                            <h5 class="card-title">Dr. Muhammad Yudhistira Azis, S.Si., M.Si.</h5>
+                                            <p class="card-text">Department of Chemistry, ITB
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 @endsection

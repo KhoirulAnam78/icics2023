@@ -11,8 +11,8 @@
                         style="font-size: 30px; color: white;font-weight: 600; background-image: linear-gradient(to right,#E08445, #E46671); border-radius: 10px; text-align: center ">14-17
                         November 2023, Jambi</span> --}}
                     <h3 class="primary-btn mb-3" style="font-size:20px">
-                        14-17
-                        November 2023, Jambi
+                        14-16
+                        November 2023, Swissbell-Hotel, Jambi
                     </h3>
                     <h3 style="color: white; font-size: 40px">Strengthening the Role of Chemistry as Basic
                         Science in Supporting the
@@ -71,25 +71,48 @@
     <!-- Counter Section End -->
 
     <!-- Home About Section Begin -->
-    <section class="home-about-section spad" style="padding-top:0px">
+    <section class="home-about-section" style="padding-bottom: 2%">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="ha-text">
                         <h2>ICICS Scopes</h2>
-                        <ul>
+                        <p>
+                            Your valuable work and ideas in all brances of chemistry, such as mining, geochemistry,
+                            isolation prediction, Artificial Intelegences in Chemistry, Chemical Synthesis, Chemical
+                            Education, Instrumental Chemistry, Applied Chemistry, Material and Environtmental Chemistry.
+                        </p>
+                        <p>All the topics related to Energy, Food, Materials, Environtment, Life, Industry, and Health.</p>
+                        {{-- <ul>
                             <li><span class="icon_check"></span> Organic and Bio Chemistry</li>
                             <li><span class="icon_check"></span> Analytical and Enviromental Chemistry</li>
                             <li><span class="icon_check"></span> Inorganic and Material Chemistry</li>
                             <li><span class="icon_check"></span> Physical and Computation Chemistry</li>
                             <li><span class="icon_check"></span> Chemical Education</li>
-                        </ul>
+                        </ul> --}}
                         {{-- <a href="#" class="ha-btn">Discover Now</a> --}}
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="ha-text">
                         <img src="{{ url('') }}/assets/img/logo-fix.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ha-text">
+                        <h3 style="font-weight: 600;padding-bottom:2%">Implementation</h3>
+                        <ul>
+                            <li><span class="icon_check"></span> Offline at Swissbell-Hotel, Jambi</li>
+                            <li><span class="icon_check"></span> Online Zoom:</li>
+                        </ul>
+                        <ul>
+                            <li>Meeting ID: 284 802 1895
+                            </li>
+                            <li>Passcode: icics2023</li>
+                        </ul>
+                        <a href="https://zoom.us/join" class="primary-btn mb-3"> Open Zoom</a>
                     </div>
                 </div>
             </div>
@@ -112,14 +135,14 @@
         <div class="row justify-content-center">
             <div class="member-item set-bg" style="margin: 10px; border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/fgd-1.jpg">
-                <div class="mi-social">
+                {{-- <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="mi-text">
                     <h5>Prof. Drs. Roto, M.Eng, Ph.D</h5>
                     <span>Gadjah Mada University</span>
@@ -127,14 +150,14 @@
             </div>
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/fgd-2.jpg">
-                <div class="mi-social">
+                {{-- <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="mi-text">
                     <h5>Prof. Anang WM Diah, M.Si., Ph.D</h5>
                     <span>Tadulako University</span>
@@ -155,14 +178,14 @@
         <div class="row justify-content-center">
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/keynote-1.png">
-                <div class="mi-social">
+                {{-- <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="mi-text">
                     <h5>Prof. Sedat Ballikaya, Ph.D</h5>
                     <span>Istanbul University, Cerrapasha Turkey</span>
@@ -170,14 +193,14 @@
             </div>
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/keynote-2.jpg">
-                <div class="mi-social">
+                {{-- <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="mi-text">
                     <h5>Prof. Teruna Siahaan, Ph.D</h5>
                     <span>Kansas University</span>
@@ -185,14 +208,14 @@
             </div>
             <div margin: 20px class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/keynote-3.jpg">
-                <div class="mi-social">
+                {{-- <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="mi-text">
                     <h5>Prof. Dr. Ir. Muh. Nurdin, M.Sc., IPU., ASEAN Eng.</h5>
                     <span>Halu Oleo University & Muhammadiyah University of Kendari</span>
@@ -200,14 +223,14 @@
             </div>
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/keynote-4.jpg">
-                <div class="mi-social">
+                {{-- <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="mi-text">
                     <h5>Dr. Agus Haryono</h5>
                     <span>Indonesian National Research and Innovation Agency</span>
@@ -228,14 +251,14 @@
         <div class="row justify-content-center">
             <div class="member-item set-bg" style="margin: 10px; border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/invited-1.jpg">
-                <div class="mi-social">
+                {{-- <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="mi-text">
                     <h5>Prof. Dr. Dyah Iswantini</h5>
                     <span>IPB University</span>
@@ -243,14 +266,14 @@
             </div>
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/invited-2.jpg">
-                <div class="mi-social">
+                {{-- <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="mi-text">
                     <h5>Nazarudin, S.Si., M.Si., Ph.D</h5>
                     <span>Universitas Jambi</span>
@@ -258,14 +281,14 @@
             </div>
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/invited-3.jpg">
-                <div class="mi-social">
+                {{-- <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="mi-text">
                     <h5>Prof. Yuli Rahmawati, Ph.D</h5>
                     <span>Jakarta State University</span>
@@ -273,14 +296,14 @@
             </div>
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/invited-4.jpg">
-                <div class="mi-social">
+                {{-- <div class="mi-social">
                     <div class="mi-social-inner bg-gradient">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="mi-text">
                     <h5>Prof. Indriana Kartini, Ph.D</h5>
                     <span>Gadjah Mada University</span>
@@ -291,7 +314,7 @@
     <!-- Team Member Section End -->
 
     <!-- Schedule Section Begin -->
-    <section class="schedule-section spad">
+    <section class="schedule-section" style="background-color: wheat; padding-top: 3%">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

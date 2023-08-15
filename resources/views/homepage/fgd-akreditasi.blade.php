@@ -10,7 +10,7 @@
                         <h2>FGD Akreditasi Internasional</h2>
                         {{-- <p>Fill in the form below to register.</p> --}}
 
-                        <a href="#" class="primary-btn my-3">Register for this
+                        <a href="https://forms.gle/3qugvzsKQiqQt5RT9" class="primary-btn my-3">Register for this
                             event</a>
                     </div>
                 </div>

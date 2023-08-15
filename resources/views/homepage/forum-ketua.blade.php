@@ -19,7 +19,7 @@
                     </h3>
                     <h3 style="color: white;text-shadow: 2px 2px 5px rgb(0, 0, 0);font-weight: 600">Swissbell-Hotel,
                         Jambi</h3>
-                    <a href="#" class="primary-btn my-3">Register for this
+                    <a href="https://forms.gle/SepKrGwTEGDs5H3L6" class="primary-btn my-3">Register for this
                         event</a>
                 </div>
             </div>

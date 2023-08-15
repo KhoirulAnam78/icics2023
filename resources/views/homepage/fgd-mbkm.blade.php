@@ -21,7 +21,7 @@
                                 <h5 style="font-weight: 600">MBKM Management Group Discussion Forum
                                     <br>(Forum Group Discussion: Independent Learning- Independent Campus)
                                 </h5>
-                                <a href="#" class="primary-btn my-3">Register for this
+                                <a href="https://forms.gle/3qugvzsKQiqQt5RT9" class="primary-btn my-3">Register for this
                                     event</a>
                             </div>
                             <br>

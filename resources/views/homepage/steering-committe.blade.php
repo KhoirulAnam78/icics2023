@@ -82,6 +82,18 @@
                                         </div>
                                     </div>
                                 </div>
+                                {{-- Pembatas --}}
+                                <div style="padding-left: 10px; padding-right: 10px">
+                                    <div class="card" style="width: 16rem; border: 2px solid black">
+                                        <img style="height: 280px"
+                                            src="{{ url('') }}/assets/img/steering-committe/SC-6.png"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body" style="height: 200px">
+                                            <h5 class="card-title">Prof. Drs. Damris Muhammad, M.Sc., Ph.D.</h5>
+                                            <p class="card-text">Department of Chemistry, Universitas Jambi</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
