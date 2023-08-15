@@ -85,6 +85,7 @@ class RegisterForm extends Component
             ]);
 
             $imagePath = $this->member_card->store('images');
+            dd($imagePath);
             $status = 'not yet validated';
         } else {
             $this->validate();
