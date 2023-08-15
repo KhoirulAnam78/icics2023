@@ -16,10 +16,12 @@
     <header class="header-section">
 
         <div class="container-fluid" style="position:fixed !important; top:0px; z-index: 1000; background-color:white">
-            <div class="logo">
-                <a href="./index.html">
+            <div class="logo" style="">
+                <a href="/">
                     {{-- <h2>ICICS2023</h2> --}}
-                    <img src="{{ url('') }}/assets/img/logo-icics2023-new.png" alt="logo.png">
+                    <img src="{{ url('') }}/assets/img/logo-fix.png" width="120px" alt="logo.png">
+                    <img src="{{ url('') }}/assets/img/Logo-HKI.png" width="120px" alt="logo.png" class="pb-3">
+                    <img src="{{ url('') }}/assets/img/unja-3d.jpeg" width="60px" alt="logo.png">
                 </a>
             </div>
             <div class="nav-menu">

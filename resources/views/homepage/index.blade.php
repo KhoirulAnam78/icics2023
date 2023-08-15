@@ -314,7 +314,7 @@
     <!-- Team Member Section End -->
 
     <!-- Schedule Section Begin -->
-    <section class="schedule-section" style="background-color: wheat; padding-top: 3%">
+    <section class="schedule-section mb-5 mt-5" style="background-color: wheat; padding-top: 3%;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
