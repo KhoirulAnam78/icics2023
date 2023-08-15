@@ -56,7 +56,7 @@ class SendMail extends Mailable
     public function attachments(): array
     {
         return [
-            Attachment::fromPath(url() . '/uploads/letter-of-acceptance/LOA-ABS2-Khoirul Anam.pdf')
+            Attachment::fromPath('https://icics2023.unja.ac.id/uploads/letter-of-acceptance/LOA-ABS2-Khoirul Anam.pdf')
         ];
     }
 }
