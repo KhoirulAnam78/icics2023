@@ -36,7 +36,6 @@ class ValidateMember extends Component
 
     public function valid()
     {
-        dd(public_path());
         $email = Participant::find($this->memberValidate)->user->email;
         Participant::where('id', $this->memberValidate)->update([
             'hki_status' => 'valid',
