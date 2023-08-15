@@ -9,7 +9,6 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
 use App\Providers\RouteServiceProvider;
-use Illuminate\Support\Facades\Storage;
 
 class RegisterForm extends Component
 {
@@ -70,26 +69,22 @@ class RegisterForm extends Component
         $status = 'not a member';
 
         if ($this->member_card or $this->hki_id) {
-            // $this->validate([
-            //     'full_name1' => 'required',
-            //     'full_name2' => 'required',
-            //     'gender' => 'required|in:male,female',
-            //     'attendance' => 'required|in:online,offline',
-            //     'participant_type' => 'required|in:professional presenter,student presenter,participant',
-            //     'institution' => 'required',
-            //     'address' => 'required',
-            //     'phone' => 'required|regex:/^([0-9\s\+]*)$/',
-            //     'email' => 'required|unique:users|email:rfc',
-            //     'password' => 'required|min:8',
-            //     'confirmPassword' => 'required|same:password',
-            //     'member_card' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-            // ]);
-            $path = '/home/icics2023/public_html/uploads/images';
-            // $request->file('cover_image')->move($path, $filename);
-            $name = $this->member_card->getClientOriginalName();
-            // Storage::put($path . '/images.jpg', $this->member_card);
-            $imagePath = $this->member_card->move($path, $name);
-            dd('Success');
+            $this->validate([
+                'full_name1' => 'required',
+                'full_name2' => 'required',
+                'gender' => 'required|in:male,female',
+                'attendance' => 'required|in:online,offline',
+                'participant_type' => 'required|in:professional presenter,student presenter,participant',
+                'institution' => 'required',
+                'address' => 'required',
+                'phone' => 'required|regex:/^([0-9\s\+]*)$/',
+                'email' => 'required|unique:users|email:rfc',
+                'password' => 'required|min:8',
+                'confirmPassword' => 'required|same:password',
+                'member_card' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            ]);
+
+            $imagePath = $this->member_card->store('images');
             $status = 'not yet validated';
         } else {
             $this->validate();
