@@ -16,8 +16,8 @@ $app = new Illuminate\Foundation\Application(
 );
 
 $app->bind('path.public', function () {
-    // return base_path().'/public_html';
-    return '/home/icics2023/public_html';
+    return base_path() . '/public_html';
+    // return '/home/icics2023/public_html';
 });
 
 /*
