@@ -140,7 +140,6 @@ class ReviewAbstract extends Component
         ])->setPaper('a4', 'potrait');
         Storage::put('letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $loa->output());
         $this->loaPath = 'letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
-        dd('Sampai Sini');
         $invoice = PDF::loadView('administrator.pdf.invoice', [
             'full_name' => $this->full_name,
             'fee' => $this->fee,
@@ -150,22 +149,12 @@ class ReviewAbstract extends Component
         Storage::put('invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $invoice->output());
         $this->invoicePath = 'invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
 
-        UploadAbstract::where('id', $this->abstract_review)->update([
-            'status' => 'accepted',
-            'loa' => $this->loaPath,
-            'invoice' => $this->invoicePath,
-            'reviewed_by' => Auth::user()->email
-        ]);
-
-        $data = array('name' => $this->full_name, 'title' => $this->abstractTitle);
-
-
-        Mail::send('mail.accepted-abstract', $data, function ($message) {
-            $message->to($this->email, $this->full_name)->subject('ABSTRACT ACCEPTANCE');
-            // $message->attach(asset('storage/letter-of-acceptance/LOA-Muhammad Ridho.pdf'));
-            $message->attach(url('') . '/uploads/' . $this->loaPath);
-            $message->attach(url('') . '/uploads/' . $this->invoicePath);
-        });
+        // UploadAbstract::where('id', $this->abstract_review)->update([
+        //     'status' => 'accepted',
+        //     'loa' => $this->loaPath,
+        //     'invoice' => $this->invoicePath,
+        //     'reviewed_by' => Auth::user()->email
+        // ]);
 
         $attachment = [
             url('') . '/uploads/' . $this->loaPath,
@@ -194,7 +183,7 @@ class ReviewAbstract extends Component
         (icics2023@.unja.ac.id) for any inquiry. Thank you for your attention. <br> <br>
         Warm regards, <br><br><br><br>
         Steering Committee ICICS 2023</p>", $attachment));
-
+        dd('Sampai Sini');
 
         return redirect('/review-abstract')->with('message', 'Review succefully !');
     }
