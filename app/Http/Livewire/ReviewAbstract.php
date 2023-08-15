@@ -157,8 +157,8 @@ class ReviewAbstract extends Component
         // ]);
 
         $attachment = [
-            Storage::path('uploads/' . $this->loaPath),
-            Storage::path('uploads/' . $this->invoicePath),
+            storage_path('uploads/' . $this->loaPath),
+            storage_path('uploads/' . $this->invoicePath),
         ];
 
 
