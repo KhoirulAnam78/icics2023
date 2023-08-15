@@ -131,6 +131,7 @@ class ReviewAbstract extends Component
 
     public function accept()
     {
+        dd(Storage::path('uploads/letter-of-acceptance'));
         $this->email = UploadAbstract::find($this->abstract_review)->participant->user->email;
 
         $loa = PDF::loadView('administrator.pdf.loa', [
