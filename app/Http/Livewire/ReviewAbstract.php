@@ -131,8 +131,6 @@ class ReviewAbstract extends Component
 
     public function accept()
     {
-
-
         $this->email = UploadAbstract::find($this->abstract_review)->participant->user->email;
 
         $loa = PDF::loadView('administrator.pdf.loa', [
@@ -142,7 +140,7 @@ class ReviewAbstract extends Component
         ])->setPaper('a4', 'potrait');
         Storage::put('letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $loa->output());
         $this->loaPath = 'letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
-
+        dd('Sampai Sini');
         $invoice = PDF::loadView('administrator.pdf.invoice', [
             'full_name' => $this->full_name,
             'fee' => $this->fee,
@@ -165,13 +163,13 @@ class ReviewAbstract extends Component
         Mail::send('mail.accepted-abstract', $data, function ($message) {
             $message->to($this->email, $this->full_name)->subject('ABSTRACT ACCEPTANCE');
             // $message->attach(asset('storage/letter-of-acceptance/LOA-Muhammad Ridho.pdf'));
-            $message->attach(public_path() . '/storage/' . $this->loaPath);
-            $message->attach(public_path() . '/storage/' . $this->invoicePath);
+            $message->attach(url('') . '/uploads/' . $this->loaPath);
+            $message->attach(url('') . '/uploads/' . $this->invoicePath);
         });
 
         $attachment = [
-            public_path() . '/storage/' . $this->loaPath,
-            public_path() . '/storage/' . $this->invoicePath
+            url('') . '/uploads/' . $this->loaPath,
+            url('') . '/uploads/' . $this->invoicePath
         ];
 
 
