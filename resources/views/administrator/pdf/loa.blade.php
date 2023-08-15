@@ -14,7 +14,7 @@
                 <table>
                     <tr style="margin:0; padding:0">
                         <td style="width:20%">
-                            <img src="{{ url('assets\img\unja-3d.jpeg') }}" width="100px" alt="">
+                            <img src="{{ url('') }}/assets/img/unja-3d.jpeg" width="100px" alt="">
                         </td>
                         <td style="width:80%">
                             <h4 style="text-align: center; font-size:18px; margin:0; padding:0">
@@ -30,7 +30,7 @@
                             </p>
                         </td>
                         <td style="width:15%">
-                            <img src="{{ url('assets\img\logo-fix.png') }}" width="150px" alt="">
+                            <img src="{{ url('assets/img/logo-fix.png') }}" width="150px" alt="">
                         </td>
                     </tr>
                     <tr>
