@@ -119,7 +119,7 @@
                                 <label for="">Member Card HKI :</label>
                                 <div class="row mx-3 card">
                                     @if ($member_card)
-                                        <img src="{{ asset('storage/' . $member_card) }}" style="max-width:100%">
+                                        <img src="{{ asset('uploads/' . $member_card) }}" style="max-width:100%">
                                     @endif
                                 </div>
                             </div>
