@@ -161,7 +161,7 @@ class ReviewAbstract extends Component
             Storage::path('uploads/' . $this->invoicePath),
         ];
         $linkLoa = "'https://icics2023.unja.ac.id/uploads/" . $this->loaPath . "'";
-        dd($linkLoa);
+        $linkInvoice = "'https://icics2023.unja.ac.id/uploads/" . $this->invoicePath . "'";
 
         Mail::to($this->email, $this->full_name)->send(new SendMail('ABSTRACT ACCEPTANCE', "<p>
         Dear" . $this->full_name . ", <br>
@@ -170,9 +170,9 @@ class ReviewAbstract extends Component
         Chemical Society
         (ICICS 2023) <br>
         Title of abstract : <strong>" . $this->abstractTitle . "</strong> has been accepted. <br>
-        <a href='https://icics2023.unja.ac.id/uploads/" . $this->loaPath . "'>Download LOA</a>
+        <a href=" . $linkLoa . ">Download LOA</a>
         <br>
-        <a href='https://icics2023.unja.ac.id/uploads/" . $this->invoicePath . "'>Download Invoice</a>
+        <a href=" . $linkInvoice . ">Download Invoice</a>
         <br>  
         <br>
         It is our great pleasure therefore to request that you submit your full paper, no later than September 30th
