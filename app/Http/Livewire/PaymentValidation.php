@@ -102,7 +102,7 @@ class PaymentValidation extends Component
 
 
         $attachment = [
-            public_path() . '/storage/' . $this->receiptPath,
+            public_path() . '/uploads/' . $this->receiptPath,
         ];
 
 
