@@ -149,12 +149,12 @@ class ReviewAbstract extends Component
         Storage::put('invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $invoice->output());
         $this->invoicePath = 'invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
 
-        // UploadAbstract::where('id', $this->abstract_review)->update([
-        //     'status' => 'accepted',
-        //     'loa' => $this->loaPath,
-        //     'invoice' => $this->invoicePath,
-        //     'reviewed_by' => Auth::user()->email
-        // ]);
+        UploadAbstract::where('id', $this->abstract_review)->update([
+            'status' => 'accepted',
+            'loa' => $this->loaPath,
+            'invoice' => $this->invoicePath,
+            'reviewed_by' => Auth::user()->email
+        ]);
 
         $attachment = [
             Storage::path('uploads/' . $this->loaPath),
