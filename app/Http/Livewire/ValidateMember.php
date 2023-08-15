@@ -41,7 +41,7 @@ class ValidateMember extends Component
             'hki_status' => 'valid',
             'hki_validated_by' => Auth::user()->email
         ]);
-        Mail::to($email)->send(new SendMail('Validation HKI Member', 'Your hki member status has been validated, now you get a 25% discount', []));
+        Mail::to($email)->send(new SendMail('Validation HKI Member', 'Your hki member status has been validated, now you get a 25% discount'));
         $this->empty();
         session()->flash('message', 'Validation succesfully !');
         $this->dispatchBrowserEvent('close-modal');
@@ -55,7 +55,7 @@ class ValidateMember extends Component
             'hki_validated_by' => Auth::user()->email
         ]);
         $this->empty();
-        Mail::to($email)->send(new SendMail('Validation HKI Member', "Your hki member status is invalid, you don't get 25% discount.", []));
+        Mail::to($email)->send(new SendMail('Validation HKI Member', "Your hki member status is invalid, you don't get 25% discount."));
         session()->flash('message', 'Validation succesfully !');
         $this->dispatchBrowserEvent('close-modal');
     }

@@ -165,7 +165,7 @@
                             <td>{{ $item->validation }}</td>
                             <td>
                                 @if ($item->receipt)
-                                    <a href="{{ asset('storage/' . $item->receipt) }}" target="_blank"
+                                    <a href="{{ asset('uploads/' . $item->receipt) }}" target="_blank"
                                         style="color:red; font-size:20px"><i class="fa fa-file-pdf-o"
                                             aria-hidden="true"></i>
                                     </a>

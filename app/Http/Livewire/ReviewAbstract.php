@@ -189,7 +189,6 @@ class ReviewAbstract extends Component
         (icics2023@.unja.ac.id) for any inquiry. Thank you for your attention. <br> <br>
         Warm regards, <br><br><br><br>
         Steering Committee ICICS 2023</p>"));
-        dd('Sampai Sini');
 
         return redirect('/review-abstract')->with('message', 'Review succefully !');
     }
@@ -203,7 +202,7 @@ class ReviewAbstract extends Component
             'reviewed_by' => Auth::user()->email
         ]);
         Mail::to($email)->send(new SendMail('Abstract Rejected', "Dear Author,
-        Sorry, your article " . $abstract . " has been rejected to be presented at the 11st ICICS 2023 Conference. Thank you for your submission , however we hope you will consider submitting again next time", []));
+        Sorry, your article " . $abstract . " has been rejected to be presented at the 11st ICICS 2023 Conference. Thank you for your submission , however we hope you will consider submitting again next time"));
         session()->flash('message', 'Review succesfully !');
         return redirect('/review-abstract')->with('message', 'Review succefully !');
     }

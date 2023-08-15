@@ -105,21 +105,24 @@ class PaymentValidation extends Component
             public_path() . '/uploads/' . $this->receiptPath,
         ];
 
+        $linkreceipt = "'https://icics2023.unja.ac.id/uploads/" . $this->receiptPath . "'";
 
         if ($abstract) {
             Mail::to($this->email, $this->full_name1)->send(new SendMail('Payment Validation', "<p>
             Dear " . $this->full_name1 . ", <br>
             We have validated your payment for the abstract entitled <strong>" . $abstract->title . "</strong>, here we include
             your receipt of payment. <br>
+            <a href=" . $linkreceipt . ">Download Receipt</a>
+            <br> <br>
             Warm regards, <br><br><br><br>
-            Steering Committee ICICS 2023 </p>", $attachment));
+            Steering Committee ICICS 2023 </p>"));
         } else {
             Mail::to($this->email, $this->full_name1)->send(new SendMail('Payment Validation', "<p>
             Dear " . $this->full_name1 . ", <br>
             We have validated your payment for the participant ICICS 2023, here we include
             your receipt of payment. <br>
             Warm regards, <br><br><br><br>
-            Steering Committee ICICS 2023 </p>", $attachment));
+            Steering Committee ICICS 2023 </p>"));
         }
 
         return redirect('/payment-validation')->with('message', 'Validation succesfully !');
