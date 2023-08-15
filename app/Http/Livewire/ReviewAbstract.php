@@ -168,12 +168,13 @@ class ReviewAbstract extends Component
         Chemical Society
         (ICICS 2023) <br>
         Title of abstract : <strong>" . $this->abstractTitle . "</strong> has been accepted. <br>
+        <a href='https://icics2023.unja.ac.id/uploads/" . $this->loaPath . "'>Download LOA</a>
+        <br>
+        <a href='https://icics2023.unja.ac.id/uploads/" . $this->invoicePath . "'>Download Invoice</a>
+        <br>  
+        <br>
         It is our great pleasure therefore to request that you submit your full paper, no later than September 30th
         2023 by following the template as attached in the website: <a href='icics2023.unja.ac.id'>icics2023.unja.ac.id</a>. <br>
-        <a href='https://icics2023.unja.ac.id/uploads/'" . $this->loaPath . ">Download LOA</a>
-        <br>
-        <a href='https://icics2023.unja.ac.id/uploads/'" . $this->invoicePath . ">Download Invoice</a>
-        <br>  
         In addition, you are requested to proceed with the payment of the registration fee (no later than September 16th
         2023). <br> <br>
         After finishing the payment, kindly send the receipt to the committee via website. Here is the bank information
