@@ -115,7 +115,7 @@
                             <div class="parent">
                                 <div class="parent" style="position: relative;top: 10px;left: 0;">
                                     <img class="image1" style="position: relative;top: 0;left: 0;"
-                                        src="{{ url('assets\img\stempel-removebg-preview.png') }}" width="100px" />
+                                        src="{{ url('assets/img/stempel-removebg-preview.png') }}" width="100px" />
                                     <img class="image2" style="position: absolute;left: 70px;"
                                         src="{{ url('assets/img/ttd_receipt-removebg-preview.png') }}"
                                         width="100px" />
