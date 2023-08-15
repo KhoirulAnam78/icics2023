@@ -58,6 +58,6 @@ class SendMail extends Mailable
         // return $this->attach;
         return [
             Attachment::fromStorage('/uploads/letter-of-acceptance/LOA-ABS2-Khoirul Anam.pdf')
-        ]
+        ];
     }
 }
