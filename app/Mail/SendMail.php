@@ -5,7 +5,6 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
@@ -17,13 +16,12 @@ class SendMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public $subject, $content;
-    //  $attach;
-    public function __construct($subject, $content)
+    public $subject, $content, $attach;
+    public function __construct($subject, $content, $attach)
     {
         $this->subject = $subject;
         $this->content = $content;
-        // $this->attach = $attach;
+        $this->attach = $attach;
     }
 
     /**
@@ -56,9 +54,6 @@ class SendMail extends Mailable
      */
     public function attachments(): array
     {
-        // return $this->attach;
-        return [
-            Attachment::fromStorage('/uploads/letter-of-acceptance/LOA-ABS2-Khoirul Anam.pdf')
-        ];
+        return $this->attach;
     }
 }

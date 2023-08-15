@@ -157,8 +157,8 @@ class ReviewAbstract extends Component
         // ]);
 
         $attachment = [
-            url('uploads/' . $this->loaPath),
-            url('uploads/' . $this->invoicePath),
+            Storage::path('uploads/' . $this->loaPath),
+            Storage::path('uploads/' . $this->invoicePath),
         ];
 
 
@@ -182,7 +182,7 @@ class ReviewAbstract extends Component
         acknowledge the receipt of this email, and do not hesitate to contact the organizing committee
         (icics2023@.unja.ac.id) for any inquiry. Thank you for your attention. <br> <br>
         Warm regards, <br><br><br><br>
-        Steering Committee ICICS 2023</p>"));
+        Steering Committee ICICS 2023</p>", []));
         dd('Sampai Sini');
 
         return redirect('/review-abstract')->with('message', 'Review succefully !');
