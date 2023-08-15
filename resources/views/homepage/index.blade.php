@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Hero Section Begin -->
-    <section class="hero-section set-bg" data-setbg="{{ url('') }}/assets/img/home-gentala.jpg">
+    <section class="hero-section set-bg" style="margin-top:100px" data-setbg="{{ url('') }}/assets/img/home-gentala.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">

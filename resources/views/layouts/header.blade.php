@@ -15,7 +15,7 @@
     <!-- Header Section Begin -->
     <header class="header-section">
 
-        <div class="container">
+        <div class="container-fluid" style="position:fixed !important; top:0px; z-index: 1000; background-color:white">
             <div class="logo">
                 <a href="./index.html">
                     {{-- <h2>ICICS2023</h2> --}}
