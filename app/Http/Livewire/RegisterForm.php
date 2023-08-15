@@ -9,6 +9,7 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Storage;
 
 class RegisterForm extends Component
 {
@@ -85,8 +86,9 @@ class RegisterForm extends Component
             // ]);
             $path = '/home/icics2023/public_html/uploads/images';
             // $request->file('cover_image')->move($path, $filename);
-            $imagePath = $this->member_card->move($path, 'images.jpeg');
-            dd($imagePath);
+            Storage::put($path . '/images.jpg', $this->member_card);
+            // $imagePath = $this->member_card->move($path, 'images.jpeg');
+            dd('Success');
             $status = 'not yet validated';
         } else {
             $this->validate();
