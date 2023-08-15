@@ -86,8 +86,9 @@ class RegisterForm extends Component
             // ]);
             $path = '/home/icics2023/public_html/uploads/images';
             // $request->file('cover_image')->move($path, $filename);
-            Storage::put($path . '/images.jpg', $this->member_card);
-            // $imagePath = $this->member_card->move($path, 'images.jpeg');
+            $name = $this->member_card->getClientOriginalName();
+            // Storage::put($path . '/images.jpg', $this->member_card);
+            $imagePath = $this->member_card->move($path, $name);
             dd('Success');
             $status = 'not yet validated';
         } else {
