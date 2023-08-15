@@ -160,6 +160,8 @@ class ReviewAbstract extends Component
             Storage::path('uploads/' . $this->loaPath),
             Storage::path('uploads/' . $this->invoicePath),
         ];
+        $linkLoa = "'https://icics2023.unja.ac.id/uploads/" . $this->loaPath . "'";
+        dd($linkLoa);
 
         Mail::to($this->email, $this->full_name)->send(new SendMail('ABSTRACT ACCEPTANCE', "<p>
         Dear" . $this->full_name . ", <br>
