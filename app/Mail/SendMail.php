@@ -17,12 +17,13 @@ class SendMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public $subject, $content, $attach;
-    public function __construct($subject, $content, $attach)
+    public $subject, $content;
+    //  $attach;
+    public function __construct($subject, $content)
     {
         $this->subject = $subject;
         $this->content = $content;
-        $this->attach = $attach;
+        // $this->attach = $attach;
     }
 
     /**
