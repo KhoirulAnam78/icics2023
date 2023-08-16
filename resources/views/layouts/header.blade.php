@@ -1,27 +1,12 @@
-    {{-- @if (Auth::user())
-        <div class="container-fluid">
-            <div class="row justify-content-end p-3" style="background-color: #0366fc">
-                <a href="/dashboard" class="primary-btn">{{ Auth::user()->email }}</a>
-            </div>
-        </div>
-    @else
-        <div class="container-fluid">
-            <div class="row justify-content-end p-3" style="background-color: #0366fc">
-                <a href="/login" class="primary-btn">Login</a>
-                <a href="/register" class="primary-btn mx-3">Registration</a>
-            </div>
-        </div>
-    @endif --}}
-    <!-- Header Section Begin -->
     <header class="header-section">
-
         <div class="container-fluid" style="position:fixed !important; top:0px; z-index: 1000; background-color:white">
             <div class="logo" style="">
                 <a href="/">
-                    {{-- <h2>ICICS2023</h2> --}}
-                    <img src="{{ url('') }}/assets/img/logo-fix.png" width="120px" alt="logo.png">
-                    <img src="{{ url('') }}/assets/img/Logo-HKI.png" width="120px" alt="logo.png" class="pb-3">
-                    <img src="{{ url('') }}/assets/img/unja-3d.jpeg" width="60px" alt="logo.png">
+                    <img src="{{ url('') }}/assets/img/logo-fix.png" width="120px" alt="logo.png" class="logo-icics">
+                    <img src="{{ url('') }}/assets/img/Logo-HKI.png" width="120px" alt="logo.png"
+                        class="logo-hki pb-3">
+                    <img src="{{ url('') }}/assets/img/unja-3d.jpeg" width="60px" class="logo-unja"
+                        alt="logo.png">
                 </a>
             </div>
             <div class="nav-menu">
