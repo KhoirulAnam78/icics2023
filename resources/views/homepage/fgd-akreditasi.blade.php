@@ -144,103 +144,103 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>1</td>
-                                                        <td>Gadjah Mada University</td>
+                                                        <td>Universitas Gadjah Mada</td>
                                                     </tr>
                                                     <tr>
                                                         <td>2</td>
-                                                        <td>Indonesia University</td>
+                                                        <td>Universitas Indonesia</td>
                                                     </tr>
                                                     <tr>
                                                         <td>3</td>
-                                                        <td>Diponegoro University</td>
+                                                        <td>Universitas Diponegoro</td>
                                                     </tr>
                                                     <tr>
                                                         <td>4</td>
-                                                        <td>Brawijaya University</td>
+                                                        <td>Universitas Brawijaya</td>
                                                     </tr>
                                                     <tr>
                                                         <td>5</td>
-                                                        <td>Airlangga University</td>
+                                                        <td>Universitas Airlangga</td>
                                                     </tr>
                                                     <tr>
                                                         <td>6</td>
-                                                        <td>Padang State University</td>
+                                                        <td>Universitas Negeri Padang</td>
                                                     </tr>
                                                     <tr>
                                                         <td>7</td>
-                                                        <td>Bandung Institute of Technology</td>
+                                                        <td>Institut Teknologi Bandung</td>
                                                     </tr>
                                                     <tr>
                                                         <td>8</td>
-                                                        <td>Bogor Agricultural University</td>
+                                                        <td>Institut Pertanian Bogor</td>
                                                     </tr>
                                                     <tr>
                                                         <td>9</td>
-                                                        <td>Institute of Technology Sepuluh November</td>
+                                                        <td>Institut Teknologi Sepuluh November</td>
                                                     </tr>
                                                     <tr>
                                                         <td>10</td>
-                                                        <td>Padjajaran University</td>
+                                                        <td>Universitas Padjajaran</td>
                                                     </tr>
                                                     <tr>
                                                         <td>11</td>
-                                                        <td>Andalas University</td>
+                                                        <td>Universitas Andalas</td>
                                                     </tr>
                                                     <tr>
                                                         <td>12</td>
-                                                        <td>Medan State University</td>
+                                                        <td>Universitas Negeri Medan</td>
                                                     </tr>
                                                     <tr>
                                                         <td>13</td>
-                                                        <td>Pendidikan Indonesia University</td>
+                                                        <td>Universitas Pendidikan Indonesia</td>
                                                     </tr>
                                                     <tr>
                                                         <td>14</td>
-                                                        <td>Sumatra Utara University</td>
+                                                        <td>Universitas Sumatera Utara</td>
                                                     </tr>
                                                     <tr>
                                                         <td>15</td>
-                                                        <td>Syah Kuala University</td>
+                                                        <td>Universitas Syah Kuala</td>
                                                     </tr>
                                                     <tr>
                                                         <td>16</td>
-                                                        <td>Bengkulu University</td>
+                                                        <td>Universitas Bengkulu</td>
                                                     </tr>
                                                     <tr>
                                                         <td>17</td>
-                                                        <td>Sriwijaya University</td>
+                                                        <td>Universitas Sriwijaya</td>
                                                     </tr>
                                                     <tr>
                                                         <td>18</td>
-                                                        <td>Riau University</td>
+                                                        <td>Universitas Riau</td>
                                                     </tr>
                                                     <tr>
                                                         <td>19</td>
-                                                        <td>Lampung University</td>
+                                                        <td>Universitas Lampung</td>
                                                     </tr>
                                                     <tr>
                                                         <td>20</td>
-                                                        <td>Semarang State University</td>
+                                                        <td>Universitas Negeri Semarang</td>
                                                     </tr>
                                                     <tr>
                                                         <td>21</td>
-                                                        <td>Malang State University</td>
+                                                        <td>Universitas Negeri Malang</td>
                                                     </tr>
                                                     <tr>
                                                         <td>22</td>
-                                                        <td>Surabaya State University</td>
+                                                        <td>Universitas Negeri Surabaya</td>
                                                     </tr>
                                                     <tr>
                                                         <td>23</td>
-                                                        <td>Semarang State University</td>
+                                                        <td>Universitas Negeri Semarang</td>
                                                     </tr>
                                                     <tr>
                                                         <td>24</td>
-                                                        <td>Yogyakarta State University</td>
+                                                        <td>Universitas Negeri Yogyakarta</td>
                                                     </tr>
                                                     <tr>
                                                         <td>25</td>
-                                                        <td>Manado State University</td>
+                                                        <td>Universitas Negeri Manado</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -256,110 +256,109 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>26</td>
-                                                        <td>Palangkaraya University</td>
+                                                        <td>Universitas Palangkaraya</td>
                                                     </tr>
                                                     <tr>
                                                         <td>27</td>
-                                                        <td>Jambi University</td>
+                                                        <td>Universitas Jambi</td>
                                                     </tr>
                                                     <tr>
                                                         <td>28</td>
-                                                        <td>Sultan Thaha Saifuddin Islamic University</td>
+                                                        <td>Universitas Islam Negeri Sultan Thaha Saifuddin</td>
                                                     </tr>
                                                     <tr>
                                                         <td>29</td>
-                                                        <td>Jember University</td>
+                                                        <td>Universitas Jember</td>
                                                     </tr>
                                                     <tr>
                                                         <td>30</td>
-                                                        <td>Muhammadiyah University of Jakarta</td>
+                                                        <td>Universitas Muhammadiyah Jakarta</td>
                                                     </tr>
                                                     <tr>
                                                         <td>31</td>
-                                                        <td>Hasanuddin University</td>
+                                                        <td>Universitas Hasanuddin</td>
                                                     </tr>
                                                     <tr>
                                                         <td>32</td>
-                                                        <td>Sultan Ageng Tirtayasa University</td>
+                                                        <td>Universitas Sultan Ageng Tirtayasa</td>
                                                     </tr>
                                                     <tr>
                                                         <td>33</td>
-                                                        <td>Halu Oleo University</td>
+                                                        <td>Universitas Halu Oleo</td>
                                                     </tr>
                                                     <tr>
                                                         <td>34</td>
-                                                        <td>Jakarta State University</td>
+                                                        <td>Universitas Negeri Jakarta</td>
                                                     </tr>
                                                     <tr>
                                                         <td>35</td>
-                                                        <td>Mulawarman University</td>
+                                                        <td>Universitas Mulawarman</td>
                                                     </tr>
                                                     <tr>
                                                         <td>36</td>
-                                                        <td>Jenderal Soedirman University</td>
+                                                        <td>Universitas Jenderal Soedirman</td>
                                                     </tr>
                                                     <tr>
                                                         <td>37</td>
-                                                        <td>Manado State University</td>
+                                                        <td>Universitas Negeri Manado</td>
                                                     </tr>
                                                     <tr>
                                                         <td>38</td>
-                                                        <td>Nusa Cendana University</td>
+                                                        <td>Universitas Nusa Cendana</td>
                                                     </tr>
                                                     <tr>
                                                         <td>39</td>
-                                                        <td>Udayana University</td>
+                                                        <td>Universitas Udayana</td>
                                                     </tr>
                                                     <tr>
                                                         <td>40</td>
-                                                        <td>Sam Ratulangi University</td>
+                                                        <td>Universitas Sam Ratulangi</td>
                                                     </tr>
                                                     <tr>
                                                         <td>41</td>
-                                                        <td>Lambung Mangkurat University</td>
+                                                        <td>Universitas Lambung Mangkurat</td>
                                                     </tr>
                                                     <tr>
                                                         <td>42</td>
-                                                        <td>Sunan Kalijaga State Islamic University</td>
+                                                        <td>Universitas Islam Negeri Sunan Kalijaga</td>
                                                     </tr>
                                                     <tr>
                                                         <td>43</td>
-                                                        <td>Indonesia Islamic University</td>
+                                                        <td>Universitas Islam Indonesia</td>
                                                     </tr>
                                                     <tr>
                                                         <td>44</td>
-                                                        <td>Bangka Belitung University</td>
+                                                        <td>Universitas Bangka Belitung</td>
                                                     </tr>
                                                     <tr>
                                                         <td>45</td>
-                                                        <td>Malikussaleh University</td>
+                                                        <td>Universitas Malikussaleh</td>
                                                     </tr>
                                                     <tr>
                                                         <td>46</td>
-                                                        <td>Tanjungpura University</td>
+                                                        <td>Universitas Tanjungpura</td>
                                                     </tr>
                                                     <tr>
                                                         <td>47</td>
-                                                        <td>Sumatera Institute of Technology</td>
+                                                        <td>Institut Teknologi Sumatera</td>
                                                     </tr>
                                                     <tr>
                                                         <td>48</td>
-                                                        <td>Syarif Hidayatullah State Islamic University, Jakarta</td>
+                                                        <td>UIN Syarif Hidayatullah, Jakarta</td>
                                                     </tr>
                                                     <tr>
                                                         <td>49</td>
-                                                        <td>Malik Maulana Ibrahim State Islamic University, Malang</td>
+                                                        <td>UIN Malik Maulana Ibrahim, Malang</td>
                                                     </tr>
                                                     <tr>
                                                         <td>50</td>
-                                                        <td>Pertahanan University</td>
+                                                        <td>Universitas Pertahanan</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
