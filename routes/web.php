@@ -27,6 +27,7 @@ Route::get('/', function () {
     ]);
 });
 
+
 Route::get('/rundown-icics2023', function () {
     return view('homepage.rundown', [
         'title' => 'Rundown ICICS 2023'
@@ -150,7 +151,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/upload-fulltext', [UploadFulltextController::class, 'upload']);
 });
 
-Route::get('/test', [UploadAbstractController::class, 'testEmail']);
-
-
+Route::get('/test', function () {
+    return view('test', [
+        'title' => 'Test'
+    ]);
+});
 require __DIR__ . '/auth.php';

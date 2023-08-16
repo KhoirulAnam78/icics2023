@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{{ url('') }}/assets/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url('') }}/assets/css/style.css" type="text/css">
     @livewireStyles
+    @yield('css')
 </head>
 
 <body>
