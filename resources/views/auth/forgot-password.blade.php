@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Contact Form Section Begin -->
-    <section class="contact-from-section spad" style="padding-top:0px">
+    <section class="contact-from-section spad" style="margin-top:100px" style="padding-top:0px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
