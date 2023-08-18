@@ -43,6 +43,10 @@
                                 <a class="nav-link {{ $title == 'Participant Have Paid' ? 'active' : '' }}"
                                     href="/participant-have-paid" style="font-size:16px">Participant</a>
                             </li>
+                            <li class="nav-item" style="width:100%">
+                                <a class="nav-link {{ $title == 'Change Password' ? 'active' : '' }}"
+                                    href="/change-password" style="font-size:16px">Change Password</a>
+                            </li>
                             <li class="nav-item" style="width:100%;">
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf

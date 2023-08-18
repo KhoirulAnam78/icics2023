@@ -149,6 +149,17 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/payment', [PaymentController::class, 'payment']);
     Route::get('/abstrak', [ParticipantController::class, 'abstract']);
     Route::get('/upload-fulltext', [UploadFulltextController::class, 'upload']);
+    Route::get('/change-password', function () {
+        if (auth::user()->role == 'administrator') {
+            return view('administrator.change-password', [
+                'title' => 'Change Password'
+            ]);
+        } else {
+            return view('participant.change-password', [
+                'title' => 'Change Password'
+            ]);
+        }
+    });
 });
 
 Route::get('/test', function () {
