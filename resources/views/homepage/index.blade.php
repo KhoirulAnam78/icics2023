@@ -18,12 +18,12 @@
                                     14-16
                                     November 2023, Swissbell-Hotel, Jambi
                                 </h3>
-                                <h3 style="color: white; font-size: 40px">Strengthening the Role of Chemistry as Basic
+                                <h3 style="color: white; font-size: 40px;text-shadow: 2px 2px 5px rgb(0, 0, 0);">
+                                    Strengthening the Role of Chemistry as Basic
                                     Science in Supporting the
                                     Downstreaming of Agro-Industrial Products</h3>
                                 <br>
                                 <a href="/register" class="primary-btn mb-3">Buy Ticket</a>
-
                             </div>
                             <div class="col-lg-5">
                                 <h3 class="primary-btn mb-3" style="font-size:20px">Opening Speech</h3>
@@ -32,8 +32,9 @@
                                             alt="">
                                     </div>
                                     <div class="col-7" style="padding-top: 12%">
-                                        <h5 style="color: white"> Prof. Drs. Sutrisno, Ph.D
-                                            <span>Rector of Jambi University</span>
+                                        <h5 style="color: white;text-shadow: 2px 2px 5px rgb(0, 0, 0);"> Prof. Drs.
+                                            Sutrisno, Ph.D
+                                            <span>Rector of Universitas Jambi</span>
                                         </h5>
                                     </div>
                                 </div>
@@ -42,7 +43,8 @@
                                             alt="">
                                     </div>
                                     <div class="col-7" style="padding-top: 12%">
-                                        <h5 style="color: white"> Dr. Sukro Muhab, M.Si
+                                        <h5 style="color: white;text-shadow: 2px 2px 5px rgb(0, 0, 0);"> Dr. Sukro Muhab,
+                                            M.Si
                                             <span>President of HKI</span>
                                         </h5>
                                     </div>
@@ -56,7 +58,7 @@
             </div>
             <div class="carousel-item">
                 <!-- Hero Section Begin -->
-                <section class="hero-section set-bg" data-setbg="{{ url('') }}/assets/img/home-gentala.jpg">
+                <section class="hero-section set-bg" data-setbg="{{ url('') }}/assets/img/home-unja.png">
                     <div class="container" style="padding-top:50px; padding-bottom:50px">
                         <div class="row">
                             <div class="col-lg-7">
@@ -64,12 +66,12 @@
                                     14-16
                                     November 2023, Swissbell-Hotel, Jambi
                                 </h3>
-                                <h3 style="color: white; font-size: 40px">Strengthening the Role of Chemistry as Basic
+                                <h3 style="color: white; font-size: 40px;text-shadow: 2px 2px 5px rgb(0, 0, 0);">
+                                    Strengthening the Role of Chemistry as Basic
                                     Science in Supporting the
                                     Downstreaming of Agro-Industrial Products</h3>
                                 <br>
                                 <a href="/register" class="primary-btn mb-3">Buy Ticket</a>
-
                             </div>
                             <div class="col-lg-5">
                                 <h3 class="primary-btn mb-3" style="font-size:20px">Opening Speech</h3>
@@ -78,8 +80,9 @@
                                             alt="">
                                     </div>
                                     <div class="col-7" style="padding-top: 12%">
-                                        <h5 style="color: white"> Prof. Drs. Sutrisno, Ph.D
-                                            <span>Rector of Jambi University</span>
+                                        <h5 style="color: white;text-shadow: 2px 2px 5px rgb(0, 0, 0);"> Prof. Drs.
+                                            Sutrisno, Ph.D
+                                            <span>Rector of Universitas Jambi</span>
                                         </h5>
                                     </div>
                                 </div>
@@ -88,7 +91,8 @@
                                             alt="">
                                     </div>
                                     <div class="col-7" style="padding-top: 12%">
-                                        <h5 style="color: white"> Dr. Sukro Muhab, M.Si
+                                        <h5 style="color: white;text-shadow: 2px 2px 5px rgb(0, 0, 0);"> Dr. Sukro Muhab,
+                                            M.Si
                                             <span>President of HKI</span>
                                         </h5>
                                     </div>
@@ -101,7 +105,7 @@
             </div>
             <div class="carousel-item">
                 <!-- Hero Section Begin -->
-                <section class="hero-section set-bg" data-setbg="{{ url('') }}/assets/img/home-gentala.jpg">
+                <section class="hero-section set-bg" data-setbg="{{ url('') }}/assets/img/home-rektorat.jpg">
                     <div class="container" style="padding-top:50px; padding-bottom:50px">
                         <div class="row">
                             <div class="col-lg-7">
@@ -109,12 +113,12 @@
                                     14-16
                                     November 2023, Swissbell-Hotel, Jambi
                                 </h3>
-                                <h3 style="color: white; font-size: 40px">Strengthening the Role of Chemistry as Basic
+                                <h3 style="color: white; font-size: 40px;text-shadow: 2px 2px 5px rgb(0, 0, 0);">
+                                    Strengthening the Role of Chemistry as Basic
                                     Science in Supporting the
                                     Downstreaming of Agro-Industrial Products</h3>
                                 <br>
                                 <a href="/register" class="primary-btn mb-3">Buy Ticket</a>
-
                             </div>
                             <div class="col-lg-5">
                                 <h3 class="primary-btn mb-3" style="font-size:20px">Opening Speech</h3>
@@ -123,8 +127,9 @@
                                             alt="">
                                     </div>
                                     <div class="col-7" style="padding-top: 12%">
-                                        <h5 style="color: white"> Prof. Drs. Sutrisno, Ph.D
-                                            <span>Rector of Jambi University</span>
+                                        <h5 style="color: white;text-shadow: 2px 2px 5px rgb(0, 0, 0);"> Prof. Drs.
+                                            Sutrisno, Ph.D
+                                            <span>Rector of Universitas Jambi</span>
                                         </h5>
                                     </div>
                                 </div>
@@ -133,7 +138,8 @@
                                             alt="">
                                     </div>
                                     <div class="col-7" style="padding-top: 12%">
-                                        <h5 style="color: white"> Dr. Sukro Muhab, M.Si
+                                        <h5 style="color: white;text-shadow: 2px 2px 5px rgb(0, 0, 0);"> Dr. Sukro Muhab,
+                                            M.Si
                                             <span>President of HKI</span>
                                         </h5>
                                     </div>
@@ -210,13 +216,13 @@
                         <ul>
                             <li><span class="icon_check"></span> Offline at Swissbell-Hotel, Jambi</li>
                             <li><span class="icon_check"></span> Online Zoom:</li>
-                        </ul>
-                        <ul>
-                            <li>Meeting ID: 284 802 1895
+                            <li style="text-indent: 20px">Meeting ID: 284 802 1895
                             </li>
-                            <li>Passcode: icics2023</li>
+                            <li style="text-indent: 20px">Passcode: icics2023</li>
+                            <li style="padding-top: 2%">
+                                <a href="https://zoom.us/join" class="primary-btn mb-3"> Open Zoom</a>
+                            </li>
                         </ul>
-                        <a href="https://zoom.us/join" class="primary-btn mb-3"> Open Zoom</a>
                     </div>
                 </div>
             </div>
@@ -239,36 +245,21 @@
         <div class="row justify-content-center">
             <div class="member-item set-bg" style="margin: 10px; border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/fgd-1.jpg">
-                {{-- <div class="mi-social">
-                    <div class="mi-social-inner bg-gradient">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div> --}}
-                <div class="mi-text">
+                <div class="mi-text" style="padding-right: 10px">
                     <h5>Prof. Drs. Roto, M.Eng, Ph.D</h5>
-                    <span>Gadjah Mada University</span>
+                    <span>Universitas Gadjah Mada</span>
                 </div>
             </div>
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/fgd-2.jpg">
-                {{-- <div class="mi-social">
-                    <div class="mi-social-inner bg-gradient">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div> --}}
-                <div class="mi-text">
+                <div class="mi-text" style="padding-right: 10px">
                     <h5>Prof. Anang WM Diah, M.Si., Ph.D</h5>
-                    <span>Tadulako University</span>
+                    <span>Universitas Tadulako</span>
                 </div>
             </div>
         </div>
         <br>
+        {{-- batas --}}
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -282,66 +273,35 @@
         <div class="row justify-content-center">
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/keynote-1.png">
-                {{-- <div class="mi-social">
-                    <div class="mi-social-inner bg-gradient">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div> --}}
-                <div class="mi-text">
+                <div class="mi-text" style="padding-right: 10px">
                     <h5>Prof. Sedat Ballikaya, Ph.D</h5>
                     <span>Istanbul University, Cerrapasha Turkey</span>
                 </div>
             </div>
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/keynote-2.jpg">
-                {{-- <div class="mi-social">
-                    <div class="mi-social-inner bg-gradient">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div> --}}
-                <div class="mi-text">
+                <div class="mi-text" style="padding-right: 10px">
                     <h5>Prof. Teruna Siahaan, Ph.D</h5>
-                    <span>Kansas University</span>
+                    <span>University of Kansas</span>
                 </div>
             </div>
             <div margin: 20px class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/keynote-3.jpg">
-                {{-- <div class="mi-social">
-                    <div class="mi-social-inner bg-gradient">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div> --}}
-                <div class="mi-text">
+                <div class="mi-text" style="padding-right: 10px">
                     <h5>Prof. Dr. Ir. Muh. Nurdin, M.Sc., IPU., ASEAN Eng.</h5>
-                    <span>Halu Oleo University & Muhammadiyah University of Kendari</span>
+                    <span>Universitas Muhammadiyah (UM) Kendari</span>
                 </div>
             </div>
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/keynote-4.jpg">
-                {{-- <div class="mi-social">
-                    <div class="mi-social-inner bg-gradient">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div> --}}
-                <div class="mi-text">
+                <div class="mi-text" style="padding-right: 10px">
                     <h5>Dr. Agus Haryono</h5>
                     <span>Indonesian National Research and Innovation Agency</span>
                 </div>
             </div>
         </div>
         <br>
+        {{-- batas --}}
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -355,62 +315,30 @@
         <div class="row justify-content-center">
             <div class="member-item set-bg" style="margin: 10px; border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/invited-1.jpg">
-                {{-- <div class="mi-social">
-                    <div class="mi-social-inner bg-gradient">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div> --}}
-                <div class="mi-text">
+                <div class="mi-text" style="padding-right: 10px">
                     <h5>Prof. Dr. Dyah Iswantini</h5>
                     <span>IPB University</span>
                 </div>
             </div>
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/invited-2.jpg">
-                {{-- <div class="mi-social">
-                    <div class="mi-social-inner bg-gradient">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div> --}}
-                <div class="mi-text">
+                <div class="mi-text" style="padding-right: 10px">
                     <h5>Nazarudin, S.Si., M.Si., Ph.D</h5>
                     <span>Universitas Jambi</span>
                 </div>
             </div>
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/invited-3.jpg">
-                {{-- <div class="mi-social">
-                    <div class="mi-social-inner bg-gradient">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div> --}}
-                <div class="mi-text">
+                <div class="mi-text" style="padding-right: 10px">
                     <h5>Prof. Yuli Rahmawati, Ph.D</h5>
-                    <span>Jakarta State University</span>
+                    <span>Universitas Negeri Jakarta</span>
                 </div>
             </div>
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/invited-4.jpg">
-                {{-- <div class="mi-social">
-                    <div class="mi-social-inner bg-gradient">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div> --}}
-                <div class="mi-text">
+                <div class="mi-text" style="padding-right: 10px">
                     <h5>Prof. Indriana Kartini, Ph.D</h5>
-                    <span>Gadjah Mada University</span>
+                    <span>Universitas Gadjah Mada</span>
                 </div>
             </div>
         </div>
