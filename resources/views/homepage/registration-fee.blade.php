@@ -42,7 +42,7 @@
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td>Student Participant</td>
+                                        <td>Participant</td>
                                         <td>IDR 350K / $24 USD</td>
                                         <td>IDR 100K / $7 USD</td>
                                     </tr>
