@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Schedule Table Section Begin -->
-    <section class="schedule-table-section spad" style="margin-top:120px">
+    <section class="schedule-table-section spad" style="margin-top:200px">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3">

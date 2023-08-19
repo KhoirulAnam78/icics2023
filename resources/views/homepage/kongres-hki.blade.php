@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Contact Form Section Begin -->
-    <section class="hero-section set-bg" style="margin-top:100px" data-setbg="{{ url('') }}/assets/img/kongres-hki.png">
+    <section class="hero-section set-bg" style="margin-top:200px" data-setbg="{{ url('') }}/assets/img/kongres-hki.png">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12" style="text-align: center;">
