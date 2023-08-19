@@ -22,4 +22,14 @@
             <p><strong>Information : </strong>you have not made a payment, add payment in payment menu</p>
         @endif
     </div>
+    <div class="row mx-3">
+        @if (Auth::user()->participant->participant_type !== 'participant')
+            <a href="/download-template-article" class="text-primary"><i class="fa fa-file-text-o"style="font-size:100px"
+                    aria-hidden="true"></i>
+                <br>
+                Template Article
+            </a>
+        @endif
+    </div>
+
 @endsection

@@ -44,7 +44,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Downloads</a>
+                            <a href="#">Download</a>
                             <ul class="dropdown" style="width:300px">
                                 <li><a href="/download-template-article">Template Article</a></li>
                             </ul>
