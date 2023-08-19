@@ -43,7 +43,12 @@
                                 <li><a href="/field-trip">Field Trip</a></li>
                             </ul>
                         </li>
-                        <li class="{{ $title == 'Download' ? 'active' : '' }}"><a href="/downloads">Download</a>
+                        <li class="{{ }}">
+                            <a href="#">Downloads</a>
+                            <ul class="dropdown" style="width:300px">
+                                <li><a href="/download-template-article">Template Article</a></li>
+                            </ul>
+                        </li>
                         </li>
                         <li class="{{ $title == 'Previously' ? 'active' : '' }}"><a href="#">Previously</a>
                             <ul class="dropdown" style="width:300px">

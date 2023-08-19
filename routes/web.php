@@ -1,14 +1,15 @@
 <?php
 
-use App\Http\Controllers\ParticipantController;
-use App\Http\Controllers\PaymentController;
+use App\Mail\SendMail;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\UploadAbstractController;
 use App\Http\Controllers\UploadFulltextController;
-use App\Mail\SendMail;
-use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -106,6 +107,8 @@ Route::get('/about-conference', function () {
         'title' => 'About'
     ]);
 });
+
+Route::get('/download-template-article', [DownloadController::class, 'downloadTemplate']);
 
 Route::get('/dashboard', function () {
     if (Auth::user()->role === 'administrator') {
