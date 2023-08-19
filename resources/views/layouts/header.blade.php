@@ -43,7 +43,7 @@
                                 <li><a href="/field-trip">Field Trip</a></li>
                             </ul>
                         </li>
-                        <li class="{{ }}">
+                        <li>
                             <a href="#">Downloads</a>
                             <ul class="dropdown" style="width:300px">
                                 <li><a href="/download-template-article">Template Article</a></li>
