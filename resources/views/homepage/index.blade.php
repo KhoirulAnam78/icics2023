@@ -22,6 +22,7 @@
                                     Strengthening the Role of Chemistry as Basic
                                     Science in Supporting the
                                     Downstreaming of Agro-Industrial Products</h3>
+
                                 <br>
                                 <a href="/register" class="primary-btn mb-3">Buy Ticket</a>
                             </div>
@@ -51,6 +52,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="justify-content-center" {{-- style="background-color: rgba(0,0,0,.5);
+                        color: #fff; border: 3px solid white; border-radius: 20px " --}}>
+                            <h3
+                                style="text-align: center ;color: red;font: 800 40px Arial; -webkit-text-fill-color: white; -webkit-text-stroke: 1px;font-style: italic">
+                                Hybrid Conference</h3>
+                        </div>
                     </div>
                 </section>
                 <!-- Hero Section End -->
@@ -60,43 +67,30 @@
                 <!-- Hero Section Begin -->
                 <section class="hero-section set-bg" data-setbg="{{ url('') }}/assets/img/home-unja.png">
                     <div class="container" style="padding-top:50px; padding-bottom:50px">
-                        <div class="row">
-                            <div class="col-lg-7">
-                                <h3 class="primary-btn mb-3" style="font-size:20px">
-                                    14-16
-                                    November 2023, Swissbell-Hotel, Jambi
+                        <div class="row justify-content-center"
+                            style="background-color: rgba(0,0,0,.7);
+                        color: #fff; border: 5px solid rgba(255, 255, 255, 0.798); border-radius: 20px ">
+                            <div class="col-lg-7" style="margin: auto; padding-left: 3%">
+                                <h3
+                                    style="padding-bottom: 5%; text-align: left;color: gold; font-size: 40px;text-shadow: 1px 1px 1px white">
+                                    11<sup>th</sup> International Conference of the Indonesian Chemical Society 2023
                                 </h3>
-                                <h3 style="color: white; font-size: 40px;text-shadow: 2px 2px 5px rgb(0, 0, 0);">
-                                    Strengthening the Role of Chemistry as Basic
-                                    Science in Supporting the
-                                    Downstreaming of Agro-Industrial Products</h3>
-                                <br>
-                                <a href="/register" class="primary-btn mb-3">Buy Ticket</a>
+                                <h4 style="color:rgb(46, 121, 241); font-size: 30px;padding-bottom: 3%">
+                                    Online Presentation</h4>
+                                <div style="text-indent: 3%">
+                                    <h4
+                                        style="padding-bottom: 3%;text-align: left;color: white;text-shadow: 2px 2px 5px rgb(0, 0, 0);">
+                                        Meeting ID : 284 802 1895</h4>
+                                    <h4
+                                        style="padding-bottom: 5%;text-align: left;color: white;text-shadow: 2px 2px 5px rgb(0, 0, 0);">
+                                        Passcode : icics2023</h4>
+                                </div>
+                                <a href="https://zoom.us/join" class="primary-btn mb-3"> Open
+                                    Zoom Here</a>
                             </div>
                             <div class="col-lg-5">
-                                <h3 class="primary-btn mb-3" style="font-size:20px">Opening Speech</h3>
-                                <div class="row">
-                                    <div class="col-5"><img src="{{ url('') }}/assets/img/opening-1.png"
-                                            alt="">
-                                    </div>
-                                    <div class="col-7" style="padding-top: 12%">
-                                        <h5 style="color: white;text-shadow: 2px 2px 5px rgb(0, 0, 0);"> Prof. Drs.
-                                            Sutrisno, Ph.D
-                                            <span>Rector of Universitas Jambi</span>
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-5"><img src="{{ url('') }}/assets/img/opening-2.png"
-                                            alt="">
-                                    </div>
-                                    <div class="col-7" style="padding-top: 12%">
-                                        <h5 style="color: white;text-shadow: 2px 2px 5px rgb(0, 0, 0);"> Dr. Sukro Muhab,
-                                            M.Si
-                                            <span>President of HKI</span>
-                                        </h5>
-                                    </div>
-                                </div>
+                                <img style="height: 450px" src="{{ url('') }}/assets/img/zoom-slide-2.png"
+                                    alt="">
                             </div>
                         </div>
                     </div>
