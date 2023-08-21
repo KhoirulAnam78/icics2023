@@ -5,7 +5,7 @@
         <ol class="carousel-indicators mb-3">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            {{-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> --}}
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -97,7 +97,7 @@
                 </section>
                 <!-- Hero Section End -->
             </div>
-            <div class="carousel-item">
+            {{-- <div class="carousel-item">
                 <!-- Hero Section Begin -->
                 <section class="hero-section set-bg" data-setbg="{{ url('') }}/assets/img/home-rektorat.jpg">
                     <div class="container" style="padding-top:50px; padding-bottom:50px">
@@ -143,7 +143,7 @@
                     </div>
                 </section>
                 <!-- Hero Section End -->
-            </div>
+            </div> --}}
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -203,20 +203,24 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="ha-text">
-                        <h3 style="font-weight: 600;padding-bottom:2%">Implementation</h3>
-                        <ul>
-                            <li><span class="icon_check"></span> Offline at Swissbell-Hotel, Jambi</li>
-                            <li><span class="icon_check"></span> Online Zoom:</li>
-                            <li style="text-indent: 20px">Meeting ID: 284 802 1895
-                            </li>
-                            <li style="text-indent: 20px">Passcode: icics2023</li>
-                            <li style="padding-top: 2%">
-                                <a href="https://zoom.us/join" class="primary-btn mb-3"> Open Zoom</a>
-                            </li>
-                        </ul>
+        </div>
+        <div class="container-fluid" style="background-color: wheat;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="ha-text">
+                            <h3 style="font-weight: 600;padding-bottom:2%">Implementation</h3>
+                            <ul>
+                                <li><span class="icon_check"></span> Offline at Swissbell-Hotel, Jambi</li>
+                                <li><span class="icon_check"></span> Online Zoom:</li>
+                                <li style="text-indent: 20px">Meeting ID: 284 802 1895
+                                </li>
+                                <li style="text-indent: 20px">Passcode: icics2023</li>
+                                <li style="padding-top: 2%">
+                                    <a href="https://zoom.us/join" class="primary-btn mb-3"> Open Zoom</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -350,7 +354,70 @@
                     </div>
                 </div>
             </div>
-            <ul class="list-group">
+            <div class="row">
+                <div class="col-lg-3 col-sm-4 mb-3">
+                    <div class="card">
+                        <div class="card-header bg-warning">
+                            <div class="section-title" style="margin:0px;padding:0px">
+                                <h5 class="text-white" style="font-weight: bold">Abstract Submission Deadline</h5>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <span style="font-size: 18px; padding:10px; color: white"
+                                class="badge bg-warning rounded-pill">16 September
+                                2023</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4 mb-3">
+                    <div class="card">
+                        <div class="card-header bg-secondary">
+                            <div class="section-title" style="margin:0px;padding:0px">
+                                <h5 class="text-white"style="font-weight: bold">Abstract Acceptance Notifications
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <span style="font-size: 18px; padding:10px; color: white"
+                                class="badge bg-secondary rounded-pill">20
+                                September
+                                2023</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4 mb-3">
+                    <div class="card">
+                        <div class="card-header bg-info">
+                            <div class="section-title" style="margin:0px;">
+                                <h5 class="py-2 text-white" style="font-weight: bold">Full Paper Submission
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <span style="font-size: 18px; padding:10px; color: white"
+                                class="badge bg-info rounded-pill">30 September
+                                2023</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4 mb-3">
+                    <div class="card">
+                        <div class="card-header bg-success">
+                            <div class="section-title" style="margin:0px;padding:0px">
+                                <h5 class="py-2 text-white" style="font-weight: bold">Conference
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <span style="font-size: 18px; padding:10px; color: white"
+                                class="badge bg-success rounded-pill">16 November
+                                2023</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {{-- <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center"
                     style="font-size: 115%; font-weight: 700">
                     Abstract Submission Deadline
@@ -375,7 +442,7 @@
                     <span style="font-size: 115%; color: white" class="badge bg-primary rounded-pill">16 November
                         2023</span>
                 </li>
-            </ul>
+            </ul> --}}
         </div>
     </section>
     <!-- Schedule Section End -->
