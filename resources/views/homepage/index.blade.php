@@ -140,6 +140,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="justify-content-center" {{-- style="background-color: rgba(0,0,0,.5);
+                        color: #fff; border: 3px solid white; border-radius: 20px " --}}>
+                            <h3
+                                style="text-align: center ;color: red;font: 800 40px Arial; -webkit-text-fill-color: white; -webkit-text-stroke: 1px;font-style: italic">
+                                Hybrid Conference</h3>
+                        </div>
                     </div>
                 </section>
                 <!-- Hero Section End -->
@@ -640,7 +646,7 @@
         </div>
     </section>
     <!-- Contact Section Begin -->
-    <section class="contact-section spad" style="margin-top:50px; padding:0px">
+    <section class="contact-section spad" style="margin-top:50px;margin-bottom:50px; padding:0px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
