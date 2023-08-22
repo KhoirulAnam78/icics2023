@@ -5,7 +5,7 @@
         <ol class="carousel-indicators mb-3">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            {{-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> --}}
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -97,7 +97,7 @@
                 </section>
                 <!-- Hero Section End -->
             </div>
-            {{-- <div class="carousel-item">
+            <div class="carousel-item">
                 <!-- Hero Section Begin -->
                 <section class="hero-section set-bg" data-setbg="{{ url('') }}/assets/img/home-rektorat.jpg">
                     <div class="container" style="padding-top:50px; padding-bottom:50px">
@@ -143,7 +143,7 @@
                     </div>
                 </section>
                 <!-- Hero Section End -->
-            </div> --}}
+            </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -355,26 +355,29 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-sm-4 mb-3">
+                <div class="col-lg-6 col-sm-6 mb-3">
                     <div class="card">
-                        <div class="card-header bg-warning">
+                        <div class="card-header bg-success">
                             <div class="section-title" style="margin:0px;padding:0px">
-                                <h5 class="text-white" style="font-weight: bold">Abstract Submission Deadline</h5>
+                                <h4 class="text-white" style="font-weight: bold">Abstract Submission Deadline</h4>
                             </div>
                         </div>
                         <div class="card-body text-center">
                             <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-warning rounded-pill">16 September
+                                class="badge bg-success rounded-pill">16 September
                                 2023</span>
+                            <h6 class="pt-3">Time Remaining : </h6>
+                            <p id="abstractSubmit" class="pt-2" style="font-size:18px"></p>
+
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-4 mb-3">
+                <div class="col-lg-6 col-sm-6 mb-3">
                     <div class="card">
                         <div class="card-header bg-secondary">
                             <div class="section-title" style="margin:0px;padding:0px">
-                                <h5 class="text-white"style="font-weight: bold">Abstract Acceptance Notifications
-                                </h5>
+                                <h4 class="text-white"style="font-weight: bold">Abstract Acceptance Notifications
+                                </h4>
                             </div>
                         </div>
                         <div class="card-body text-center">
@@ -382,40 +385,45 @@
                                 class="badge bg-secondary rounded-pill">20
                                 September
                                 2023</span>
+                            <h6 class="pt-3">Time Remaining : </h6>
+                            <p id="abstractAccept" class="pt-2" style="font-size:18px"></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-4 mb-3">
+                <div class="col-lg-6 col-sm-6 mb-3">
                     <div class="card">
                         <div class="card-header bg-info">
                             <div class="section-title" style="margin:0px;">
-                                <h5 class="py-2 text-white" style="font-weight: bold">Full Paper Submission
-                                </h5>
+                                <h4 class="py-2 text-white" style="font-weight: bold">Full Paper Submission
+                                </h4>
                             </div>
                         </div>
                         <div class="card-body text-center">
                             <span style="font-size: 18px; padding:10px; color: white"
                                 class="badge bg-info rounded-pill">30 September
                                 2023</span>
+                            <h6 class="pt-3">Time Remaining : </h6>
+                            <p id="fullPaper" class="pt-2" style="font-size:18px"></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-4 mb-3">
+                <div class="col-lg-6 col-sm-6 mb-3">
                     <div class="card">
                         <div class="card-header bg-success">
                             <div class="section-title" style="margin:0px;padding:0px">
-                                <h5 class="py-2 text-white" style="font-weight: bold">Conference
-                                </h5>
+                                <h4 class="py-2 text-white" style="font-weight: bold">Conference
+                                </h4>
                             </div>
                         </div>
                         <div class="card-body text-center">
                             <span style="font-size: 18px; padding:10px; color: white"
                                 class="badge bg-success rounded-pill">16 November
                                 2023</span>
+                            <h6 class="pt-3">Time Remaining : </h6>
+                            <p id="conference" class="pt-2" style="font-size:18px"></p>
                         </div>
                     </div>
                 </div>
-
             </div>
             {{-- <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center"
@@ -534,8 +542,105 @@
             </div>
         </div>
     </section>
-    <!-- Contact Section Begin -->
+
     <section class="contact-section spad">
+        <div class="container">
+            <div class="row">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ asset('assets/img/field-trip/gunung kerinci.jpg') }}"
+                                alt="Gunung Kerinci">
+                            <div class="carousel-caption d-none d-md-block text-white p-3"
+                                style="font-weight: bold; background-color:rgb(150, 150, 150);">
+                                <h4>Mount Kerinci</h4>
+                                <p>Mount Kerinci is an active stratovolcano and the highest mountain in Sumatra, Indonesia.
+                                    At 12,484 ft above sea level, it provides Sumatra with the fifth-highest maximum
+                                    elevation of any island in the world.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100 img-fluid"
+                                src="{{ asset('assets/img/field-trip/danau-gunung-tujuh.jpeg') }}" alt="Gunung Kerinci">
+                            <div class="carousel-caption d-none d-md-block text-white p-3"
+                                style="font-weight: bold; background-color:rgb(150, 150, 150);">
+                                <h4>Lake Gunung Tujuh</h4>
+                                <p>Lake Gunung Tujuh or The Seven Mountain Lake in English is a volcanic crater lake in the
+                                    province of Jambi, Indonesia, located at 1°42′23″S 101°24′42″E within Kerinci National
+                                    Park.
+                                    Although a young lake, in geologic terms, its surrounding volcano, Mount Tujuh, is old
+                                    and
+                                    not immediately obvious as such.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{ asset('assets/img/field-trip/pulau-berhala.jpeg') }}"
+                                alt="Gunung Kerinci">
+                            <div class="carousel-caption d-none d-md-block text-white p-3"
+                                style="font-weight: bold; background-color:rgb(150, 150, 150);">
+                                <h4>Berhala Island (Malacca Strait)</h4>
+                                <p>Berhala island is an island off Sumatra in Indonesia with an area of about 2.5 km2. It is
+                                    located in the Berhala Strait between Jambi and Singkep.
+                                    In the past, the island was at the center of a provincial disputed since 1982,
+                                    previously
+                                    between Jambi and Riau, including the regency Riau Islands. On 2002, these regency
+                                    divided
+                                    into new province and switched dispute cases between Riau Islands and Jambi. The matter
+                                    was
+                                    brought for adjudication to Supreme Court, and on 2012, the Court awarded the island to
+                                    Riau
+                                    Islands.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{ asset('assets/img/field-trip/Kebun-Teh-Kayu-Aro.jpg') }}"
+                                alt="Gunung Kerinci">
+                            <div class="carousel-caption d-none d-md-block text-white p-3"
+                                style="font-weight: bold; background-color:rgb(150, 150, 150);">
+                                <h4>Kayu Aro Tea Plantation</h4>
+                                <p>For lovers of the great outdoors, several other points of interest are located nearby,
+                                    such as Mount Kerinci, Lake Kerinci, and the Kerinci Seblat National Park. Getting to
+                                    Kayu Aro Tea Plantation follows the same route as the path to Mount Kerinci in the
+                                    direction of Sungai Penuh. The two closest airports to Sungai Penuh, capital city of
+                                    Kerinci District, are Jambi and Padang. Getting to Sungai Penuh from Jambi city takes
+                                    about 10 hours by car over a distance of approximately 500 KM.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{ asset('assets/img/field-trip/gunung-masurai.jpeg') }}"
+                                alt="Gunung Kerinci">
+                            <div class="carousel-caption d-none d-md-block text-white p-3"
+                                style="font-weight: bold; background-color:rgb(150, 150, 150);">
+                                <h4>Mount Matsurai</h4>
+                                <p>Mount Matsurai, natively known as Gunung Masurai, is a large complex of inactive
+                                    stratovolcanoes in Jambi, Sumatra, Indonesia. The volcano attains an elevation of 2,916
+                                    m above sea level</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section Begin -->
+    <section class="contact-section spad" style="margin-top:50px; padding:0px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -582,9 +687,10 @@
 @endsection
 
 @section('script')
+    {{-- COUNTDOWN AWAL --}}
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("Nov 16, 2023 10:00:00").getTime();
+        var countDownAbstract = new Date("Nov 16, 2023 10:00:00").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function() {
@@ -593,7 +699,7 @@
             var now = new Date().getTime();
 
             // Find the distance between now and the count down date
-            var distance = countDownDate - now;
+            var distance = countDownAbstract - now;
 
             // Time calculations for days, hours, minutes and seconds
             var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -615,7 +721,135 @@
             // If the count down is finished, write some text
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
+                document.getElementById("demo").innerHTML = "Sorry, the time is up.";
+            }
+        }, 1000);
+    </script>
+
+    {{-- COUNT DOWN ABSTRACT NOTIF --}}
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Sept 20, 2023 23:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("abstractAccept").innerHTML = days + " days " + hours + " hour " +
+                minutes + " minutes " + seconds + " second ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("abstractAccept").innerHTML = "Sorry, the time is up.";
+            }
+        }, 1000);
+    </script>
+
+    {{-- COUNTDOWN ABSTRACT SUBMIT --}}
+    <script>
+        // Set the date we're counting down to
+        var countDownSubmit = new Date("Sept 16, 2023 23:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownSubmit - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("abstractSubmit").innerHTML = days + " days " + hours + " hour " +
+                minutes + " minutes " + seconds + " second ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("abstractSubmit").innerHTML = "Sorry, the time is up.";
+            }
+        }, 1000);
+    </script>
+
+    {{-- COUNTDOWN Full Paper --}}
+    <script>
+        // Set the date we're counting down to
+        var countDownFullPaper = new Date("Sept 30, 2023 23:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownFullPaper - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("fullPaper").innerHTML = days + " days " + hours + " hour " +
+                minutes + " minutes " + seconds + " second ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("fullPaper").innerHTML = "Sorry, the time is up.";
+            }
+        }, 1000);
+    </script>
+
+    {{-- COUNTDOWN Conference --}}
+    <script>
+        // Set the date we're counting down to
+        var countDownConference = new Date("Nov 16, 2023 10:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownConference - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("conference").innerHTML = days + " days " + hours + " hour " +
+                minutes + " minutes " + seconds + " second ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("conference").innerHTML = "Sorry, the time is up.";
             }
         }, 1000);
     </script>
