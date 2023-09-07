@@ -559,6 +559,8 @@
                         <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
                         <li data-target="#carouselExampleIndicators2" data-slide-to="3"></li>
                         <li data-target="#carouselExampleIndicators2" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="5"></li>
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="6"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -570,6 +572,32 @@
                                 <p>Mount Kerinci is an active stratovolcano and the highest mountain in Sumatra, Indonesia.
                                     At 12,484 ft above sea level, it provides Sumatra with the fifth-highest maximum
                                     elevation of any island in the world.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{ asset('assets/img/field-trip/gentala.jpg') }}"
+                                alt="Gunung Kerinci">
+                            <div class="carousel-caption d-none d-md-block text-white p-3"
+                                style="font-weight: bold; background-color:rgb(150, 150, 150);">
+                                <h4>Gentala Arasy Bridge</h4>
+                                <p>Gentala Arasy bridge is one of the icons in Jambi. This bridge was built in 2012 and was
+                                    inaugurated by Mr. Jusuf Kalla as Vice President at that time. Actually there are two
+                                    objects in this location, the tower of Gentala Arasy and Pedestrian bridge. But most
+                                    people prefer to call Gentala Arasy bridge.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{ asset('assets/img/field-trip/candi.jpg') }}"
+                                alt="Gunung Kerinci">
+                            <div class="carousel-caption d-none d-md-block text-white p-3"
+                                style="font-weight: bold; background-color:rgb(150, 150, 150);">
+                                <h4>Muaro Jambi Temple Compounds</h4>
+                                <p>Muaro Jambi (Indonesian: Candi Muaro Jambi) is a Buddhist temple complex, in Muaro Jambi
+                                    Regency, Jambi province, Sumatra, Indonesia. It is situated 26 kilometers east from the
+                                    city of Jambi. The temple complex was built by the Melayu Kingdom, with its surviving
+                                    temples and other archaeological remains estimated to date from the 7th to 13th century
+                                    CE.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -586,6 +614,7 @@
                                     not immediately obvious as such.</p>
                             </div>
                         </div>
+
                         <div class="carousel-item">
                             <img class="d-block w-100" src="{{ asset('assets/img/field-trip/pulau-berhala.jpeg') }}"
                                 alt="Gunung Kerinci">
