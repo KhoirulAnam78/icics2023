@@ -41,6 +41,7 @@
                                 <li><a href="/kongres-hki">Kongres HKI</a></li>
                                 <li><a href="/forum-ketua-jurusan-kimia">Forum Ketua Jurusan Kimia</a></li>
                                 <li><a href="/field-trip">Field Trip</a></li>
+                                <li><a href="/international-scientific-poster">International Scientific Poster</a></li>
                             </ul>
                         </li>
                         <li>

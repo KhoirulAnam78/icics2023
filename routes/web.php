@@ -102,6 +102,13 @@ Route::get('/fgd-akreditasi-internasional', function () {
     ]);
 });
 
+
+Route::get('/international-scientific-poster', function () {
+    return view('homepage.poster', [
+        'title' => 'International Scientific Poster Competition'
+    ]);
+});
+
 Route::get('/about-conference', function () {
     return view('homepage.about', [
         'title' => 'About'
@@ -109,6 +116,7 @@ Route::get('/about-conference', function () {
 });
 
 Route::get('/download-template-article', [DownloadController::class, 'downloadTemplate']);
+Route::get('/download-guidebook-poster-competition-icics-2023', [DownloadController::class,'downloadGuidebook']);
 
 Route::get('/dashboard', function () {
     if (Auth::user()->role === 'administrator') {
