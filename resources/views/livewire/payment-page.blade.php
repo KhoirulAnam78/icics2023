@@ -102,14 +102,9 @@
                             {{ $proof_of_payment == null ? 'Choose' : $proof_of_payment->getClientOriginalName() }}
                         </label>
                     </div>
-                    @error('proof_of_payment')
-                        <span class="invalid-feedback">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
                 </div>
                 @error('proof_of_payment')
-                    <span class="invalid-feedback">
+                    <span style="font-size:12px; color:red">
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
