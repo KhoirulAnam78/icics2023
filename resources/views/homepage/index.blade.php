@@ -369,10 +369,14 @@
                             </div>
                         </div>
                         <div class="card-body text-center">
+                            <span style="font-size: 14px; padding:10px; color: white"
+                                class="badge bg-success rounded-pill mb-2"><del>16 September
+                                    2023</del></span> <br>
                             <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-success rounded-pill">16 September
-                                2023</span>
-                            <h6 class="pt-3">Time Remaining : </h6>
+                                class="badge bg-success rounded-pill">26 September
+                                    2023</span>
+                            
+                                    <h6 class="pt-3">Time Remaining : </h6>
                             <p id="abstractSubmit" class="pt-2" style="font-size:18px"></p>
 
                         </div>
@@ -387,8 +391,12 @@
                             </div>
                         </div>
                         <div class="card-body text-center">
-                            <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-secondary rounded-pill">20
+                            <span style="font-size: 14px; padding:10px; color: white"
+                                class="badge bg-secondary rounded-pill mb-2"><del>20
+                                    September</del>
+                                2023</span> <br>
+                                <span style="font-size: 18px; padding:10px; color: white"
+                                class="badge bg-secondary rounded-pill">30
                                 September
                                 2023</span>
                             <h6 class="pt-3">Time Remaining : </h6>
@@ -405,10 +413,14 @@
                             </div>
                         </div>
                         <div class="card-body text-center">
-                            <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-info rounded-pill">30 September
+                            <span style="font-size: 14px; padding:10px; color: white"
+                                class="badge bg-info rounded-pill mb-2"><del>30 September
+                                    2023</del></span> <br>
+                                <span style="font-size: 18px; padding:10px; color: white"
+                                class="badge bg-info rounded-pill">10 October
                                 2023</span>
-                            <h6 class="pt-3">Time Remaining : </h6>
+                            
+                                <h6 class="pt-3">Time Remaining : </h6>
                             <p id="fullPaper" class="pt-2" style="font-size:18px"></p>
                         </div>
                     </div>
@@ -764,10 +776,10 @@
     {{-- COUNT DOWN ABSTRACT NOTIF --}}
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("Sept 20, 2023 23:00:00").getTime();
+        var countDownDate = new Date("Sept 30, 2023 23:00:00").getTime();
 
         // Update the count down every 1 second
-        var x = setInterval(function() {
+        var i = setInterval(function() {
 
             // Get today's date and time
             var now = new Date().getTime();
@@ -787,7 +799,7 @@
 
             // If the count down is finished, write some text
             if (distance < 0) {
-                clearInterval(x);
+                clearInterval(i);
                 document.getElementById("abstractAccept").innerHTML = "Sorry, the time is up.";
             }
         }, 1000);
@@ -796,10 +808,10 @@
     {{-- COUNTDOWN ABSTRACT SUBMIT --}}
     <script>
         // Set the date we're counting down to
-        var countDownSubmit = new Date("Sept 16, 2023 23:00:00").getTime();
+        var countDownSubmit = new Date("Sept 26, 2023 23:00:00").getTime();
 
         // Update the count down every 1 second
-        var x = setInterval(function() {
+        var j = setInterval(function() {
 
             // Get today's date and time
             var now = new Date().getTime();
@@ -819,7 +831,7 @@
 
             // If the count down is finished, write some text
             if (distance < 0) {
-                clearInterval(x);
+                clearInterval(j);
                 document.getElementById("abstractSubmit").innerHTML = "Sorry, the time is up.";
             }
         }, 1000);
@@ -828,7 +840,7 @@
     {{-- COUNTDOWN Full Paper --}}
     <script>
         // Set the date we're counting down to
-        var countDownFullPaper = new Date("Sept 30, 2023 23:00:00").getTime();
+        var countDownFullPaper = new Date("Oct 10, 2023 23:00:00").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function() {
