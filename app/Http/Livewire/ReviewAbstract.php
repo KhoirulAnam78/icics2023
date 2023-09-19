@@ -153,7 +153,12 @@ class ReviewAbstract extends Component
             'participant_type' => $this->participant_type,
             'email' => $this->email
         ])->setPaper('a4', 'landscape');
-        // Storage::put('invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $invoice->output());
+        try {
+            Storage::put('invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $invoice->output());
+            //code...
+        } catch (\Throwable $th) {
+            dd($th);
+        }
         // $this->invoicePath = 'invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
 
         // UploadAbstract::where('id', $this->abstract_review)->update([
