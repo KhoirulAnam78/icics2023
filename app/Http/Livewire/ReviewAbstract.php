@@ -159,7 +159,7 @@ class ReviewAbstract extends Component
             $this->invoicePath = 'invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
             
     
-            $loa->save(storage_path().'/letter-of-acceptance','LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf');
+            $loa->save(storage_path().'/letter-of-acceptance/LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf');
             // Storage::put('letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $loa->output());
             // $this->loaPath = 'letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
         } catch (\Throwable $th) {
