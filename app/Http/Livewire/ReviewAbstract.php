@@ -145,7 +145,7 @@ class ReviewAbstract extends Component
             'institution' => $this->institution,
             'abstractTitle' => $this->abstractTitle
         ])->setPaper('a4', 'potrait');
-        // Storage::put('letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $loa->output());
+        Storage::put('letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $loa->output());
         // $this->loaPath = 'letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
         // $invoice = PDF::loadView('administrator.pdf.invoice', [
         //     'full_name' => $this->full_name,
