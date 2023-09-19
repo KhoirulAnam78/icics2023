@@ -145,57 +145,57 @@ class ReviewAbstract extends Component
             'institution' => $this->institution,
             'abstractTitle' => $this->abstractTitle
         ])->setPaper('a4', 'potrait');
-        Storage::put('letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $loa->output());
-        $this->loaPath = 'letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
-        $invoice = PDF::loadView('administrator.pdf.invoice', [
-            'full_name' => $this->full_name,
-            'fee' => $this->fee,
-            'participant_type' => $this->participant_type,
-            'email' => $this->email
-        ])->setPaper('a4', 'landscape');
-        Storage::put('invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $invoice->output());
-        $this->invoicePath = 'invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
+        // Storage::put('letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $loa->output());
+        // $this->loaPath = 'letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
+        // $invoice = PDF::loadView('administrator.pdf.invoice', [
+        //     'full_name' => $this->full_name,
+        //     'fee' => $this->fee,
+        //     'participant_type' => $this->participant_type,
+        //     'email' => $this->email
+        // ])->setPaper('a4', 'landscape');
+        // Storage::put('invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $invoice->output());
+        // $this->invoicePath = 'invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
 
-        UploadAbstract::where('id', $this->abstract_review)->update([
-            'status' => 'accepted',
-            'loa' => $this->loaPath,
-            'invoice' => $this->invoicePath,
-            'reviewed_by' => Auth::user()->email
-        ]);
+        // UploadAbstract::where('id', $this->abstract_review)->update([
+        //     'status' => 'accepted',
+        //     'loa' => $this->loaPath,
+        //     'invoice' => $this->invoicePath,
+        //     'reviewed_by' => Auth::user()->email
+        // ]);
 
-        $attachment = [
-            Storage::path('uploads/' . $this->loaPath),
-            Storage::path('uploads/' . $this->invoicePath),
-        ];
-        $linkLoa = "'https://icics2023.unja.ac.id/uploads/" . $this->loaPath . "'";
-        $linkInvoice = "'https://icics2023.unja.ac.id/uploads/" . $this->invoicePath . "'";
+        // $attachment = [
+        //     Storage::path('uploads/' . $this->loaPath),
+        //     Storage::path('uploads/' . $this->invoicePath),
+        // ];
+        // $linkLoa = "'https://icics2023.unja.ac.id/uploads/" . $this->loaPath . "'";
+        // $linkInvoice = "'https://icics2023.unja.ac.id/uploads/" . $this->invoicePath . "'";
 
-        Mail::to($this->email, $this->full_name)->send(new SendMail('ABSTRACT ACCEPTANCE', "<p>
-        Dear" . $this->full_name . ", <br>
-        Congratulation! We are happy to inform you that your abstract for The 11st International Conference of the
-        Indonesian
-        Chemical Society
-        (ICICS 2023) <br>
-        Title of abstract : <strong>" . $this->abstractTitle . "</strong> has been accepted. <br>
-        <a href=" . $linkLoa . ">Download LOA</a>
-        <br>
-        <a href=" . $linkInvoice . ">Download Invoice</a>
-        <br>  
-        <br>
-        It is our great pleasure therefore to request that you submit your full paper, no later than September 30th
-        2023 by following the template as attached in the website: <a href='icics2023.unja.ac.id'>icics2023.unja.ac.id</a>. <br>
-        In addition, you are requested to proceed with the payment of the registration fee (no later than September 16th
-        2023). <br> <br>
-        After finishing the payment, kindly send the receipt to the committee via website. Here is the bank information
-        detail: <br>
-        Account name : Perkumpulan Indonesian Chemical Society <br>
-        Account number : 698124931 <br>
-        Bank name : Bank Negara Indonesia (BNI) <br> <br>
-        For the purpose of the conference proceeding, we also require that you submit a detailed resume. Please kindly
-        acknowledge the receipt of this email, and do not hesitate to contact the organizing committee
-        (icics2023@.unja.ac.id) for any inquiry. Thank you for your attention. <br> <br>
-        Warm regards, <br><br><br><br>
-        Steering Committee ICICS 2023</p>"));
+        // Mail::to($this->email, $this->full_name)->send(new SendMail('ABSTRACT ACCEPTANCE', "<p>
+        // Dear" . $this->full_name . ", <br>
+        // Congratulation! We are happy to inform you that your abstract for The 11st International Conference of the
+        // Indonesian
+        // Chemical Society
+        // (ICICS 2023) <br>
+        // Title of abstract : <strong>" . $this->abstractTitle . "</strong> has been accepted. <br>
+        // <a href=" . $linkLoa . ">Download LOA</a>
+        // <br>
+        // <a href=" . $linkInvoice . ">Download Invoice</a>
+        // <br>  
+        // <br>
+        // It is our great pleasure therefore to request that you submit your full paper, no later than September 30th
+        // 2023 by following the template as attached in the website: <a href='icics2023.unja.ac.id'>icics2023.unja.ac.id</a>. <br>
+        // In addition, you are requested to proceed with the payment of the registration fee (no later than September 16th
+        // 2023). <br> <br>
+        // After finishing the payment, kindly send the receipt to the committee via website. Here is the bank information
+        // detail: <br>
+        // Account name : Perkumpulan Indonesian Chemical Society <br>
+        // Account number : 698124931 <br>
+        // Bank name : Bank Negara Indonesia (BNI) <br> <br>
+        // For the purpose of the conference proceeding, we also require that you submit a detailed resume. Please kindly
+        // acknowledge the receipt of this email, and do not hesitate to contact the organizing committee
+        // (icics2023@.unja.ac.id) for any inquiry. Thank you for your attention. <br> <br>
+        // Warm regards, <br><br><br><br>
+        // Steering Committee ICICS 2023</p>"));
 
         return redirect('/review-abstract')->with('message', 'Review succefully !');
     }
