@@ -205,9 +205,9 @@
         </div>
         <div class="modal-footer">
             @if (!$loa)
-                <button class="btn btn-danger" wire:click='reject()' wire:loading.attr="disabled">
-                    <span wire:loading.remove wire:target="reject">Reject</span>
-                    <span wire:loading wire:target="reject">Rejecting..</span>
+                <button class="btn btn-danger" wire:click='showReject()' wire:loading.attr="disabled">
+                    <span wire:loading.remove wire:target="showReject">Reject</span>
+                    <span wire:loading wire:target="showReject">Rejecting..</span>
                 </button>
                 <button class="btn btn-primary" wire:click='showValidate()'>Accept</button>
             @endif
@@ -290,6 +290,40 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="modalReject" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            role="dialog" wire:ignore.self aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEditTitle">Reject Abstract</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="text-center my-3">Send message to author</h4>
+                        <div class="form-group">
+                            <label for="rejectMessage">Message</label>
+                            <textarea class="form-control @error('rejectMessage') is-invalid @enderror" id="rejectMessage" rows="5"
+                                aria-describedby="emailHelp" name="rejectMessage" wire:model='rejectMessage'> </textarea>
+                            @error('rejectMessage')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button wire:click="reject()" class="btn btn-primary" wire:loading.attr="disabled">
+                            <span wire:loading.remove wire:target="reject">Send to {{ $email }}</span>
+                            <span wire:loading wire:target="reject">Sending to {{ $email }}..</span>
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     @endif
 
     @section('script')
@@ -300,6 +334,13 @@
             window.addEventListener('show-modal', event => {
                 // console.log('MASUK SINI');
                 $('#modalValidate').modal('show');
+            });
+            window.addEventListener('close-reject', event => {
+                $('#modalReject').modal('hide');
+            });
+            window.addEventListener('show-reject', event => {
+                // console.log('MASUK SINI');
+                $('#modalReject').modal('show');
             });
         </script>
     @endsection

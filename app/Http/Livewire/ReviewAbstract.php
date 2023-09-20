@@ -22,7 +22,7 @@ class ReviewAbstract extends Component
     //LOA
     public $full_name, $institution, $abstractTitle, $loa, $loaPath;
     //Invoice
-    public $email, $fee, $participant_type, $invoicePath;
+    public $email, $fee, $participant_type, $invoicePath, $rejectMessage;
 
     public function empty()
     {
@@ -205,6 +205,12 @@ class ReviewAbstract extends Component
         return redirect('/review-abstract')->with('message', 'Review succefully !');
     }
 
+    public function showReject(){
+        $participant = UploadAbstract::find($this->abstract_review)->participant;
+        $this->email = $participant->user->email;
+        $this->dispatchBrowserEvent('show-reject');
+    }
+
     public function reject()
     {
         $email = UploadAbstract::find($this->abstract_review)->participant->user->email;
@@ -214,7 +220,7 @@ class ReviewAbstract extends Component
             'reviewed_by' => Auth::user()->email
         ]);
         Mail::to($email)->send(new SendMail('Abstract Rejected', "Dear Author,
-        Sorry, your article " . $abstract . " has been rejected to be presented at the 11st ICICS 2023 Conference. Thank you for your submission , however we hope you will consider submitting again next time"));
+        Sorry, your article '" . $abstract . "' has been rejected to be presented at the 11st ICICS 2023 Conference. <br> <br>".$this->rejectMessage));
         session()->flash('message', 'Review succesfully !');
         return redirect('/review-abstract')->with('message', 'Review succefully !');
     }
