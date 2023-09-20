@@ -220,7 +220,7 @@ class ReviewAbstract extends Component
             'reviewed_by' => Auth::user()->email
         ]);
         Mail::to($email)->send(new SendMail('Abstract Rejected', "Dear Author,
-        Sorry, your article '" . $abstract . "' has been rejected to be presented at the 11st ICICS 2023 Conference. <br> <br>".$this->rejectMessage));
+        Sorry, your article ''" . $abstract . "'' has been rejected to be presented at the 11st ICICS 2023 Conference. <br> <br>".$this->rejectMessage));
         session()->flash('message', 'Review succesfully !');
         return redirect('/review-abstract')->with('message', 'Review succefully !');
     }
