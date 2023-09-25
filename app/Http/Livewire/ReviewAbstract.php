@@ -138,6 +138,7 @@ class ReviewAbstract extends Component
 
     public function accept()
     {
+        set_time_limit(0);
         $this->email = UploadAbstract::find($this->abstract_review)->participant->user->email;
 
         $loa = PDF::loadView('administrator.pdf.loa', [
