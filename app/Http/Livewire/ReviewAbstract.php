@@ -154,14 +154,16 @@ class ReviewAbstract extends Component
             'email' => $this->email
         ])->setPaper('a4', 'landscape');
         
-        dd("TEST");
-        Storage::put('invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $invoice->output());
+        $invoice->save('/home/icics2023/public_html/uploads/invoice/Invoice-ABS'. $this->abstract_review . '-' . $this->full_name . '.pdf');
+        // Storage::put('invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $invoice->output());
         $this->invoicePath = 'invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
         
 
         $loa->save('/home/icics2023/public_html/uploads/letter-of-acceptance/LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf');
         // Storage::put('letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $loa->output());
         $this->loaPath = 'letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
+
+        dd("SAVED");
 
         UploadAbstract::where('id', $this->abstract_review)->update([
             'status' => 'accepted',
