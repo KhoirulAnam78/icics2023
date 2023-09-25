@@ -156,7 +156,7 @@ class ReviewAbstract extends Component
         $loa->save('/home/icics2023/public_html/uploads/letter-of-acceptance/LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf');
         // Storage::put('letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $loa->output());
         $this->loaPath = 'letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
-        
+
         $invoice = PDF::loadView('administrator.pdf.invoice', [
             'full_name' => $this->full_name,
             'fee' => $this->fee,
@@ -167,8 +167,6 @@ class ReviewAbstract extends Component
         $invoice->save('/home/icics2023/public_html/uploads/invoice/Invoice-ABS'. $this->abstract_review . '-' . $this->full_name . '.pdf');
         
         $this->invoicePath = 'invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
-
-        dd("SAVED");
 
         UploadAbstract::where('id', $this->abstract_review)->update([
             'status' => 'accepted',
@@ -181,6 +179,7 @@ class ReviewAbstract extends Component
         //     Storage::path('uploads/' . $this->loaPath),
         //     Storage::path('uploads/' . $this->invoicePath),
         // ];
+        
         $linkLoa = "'https://icics2023.unja.ac.id/uploads/" . $this->loaPath . "'";
         $linkInvoice = "'https://icics2023.unja.ac.id/uploads/" . $this->invoicePath . "'";
 
