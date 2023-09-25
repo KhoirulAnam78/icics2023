@@ -156,6 +156,7 @@ class ReviewAbstract extends Component
     public function accept()
     {
         set_time_limit(0);
+        ini_set('memory_limit', '64M');
         $this->email = UploadAbstract::find($this->abstract_review)->participant->user->email;
 
         $loa = PDF::loadView('administrator.pdf.loa', [
@@ -182,10 +183,10 @@ class ReviewAbstract extends Component
             'reviewed_by' => Auth::user()->email
         ]);
 
-        $attachment = [
-            Storage::path('uploads/' . $this->loaPath),
-            Storage::path('uploads/' . $this->invoicePath),
-        ];
+        // $attachment = [
+        //     Storage::path('uploads/' . $this->loaPath),
+        //     Storage::path('uploads/' . $this->invoicePath),
+        // ];
         $linkLoa = "'https://icics2023.unja.ac.id/uploads/" . $this->loaPath . "'";
         $linkInvoice = "'https://icics2023.unja.ac.id/uploads/" . $this->invoicePath . "'";
 
