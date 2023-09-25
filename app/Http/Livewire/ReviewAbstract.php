@@ -2,10 +2,11 @@
 
 namespace App\Http\Livewire;
 
+use PDF;
 use App\Mail\SendMail;
 use Livewire\Component;
-use PDF;
 use Livewire\WithPagination;
+use Livewire\WithFileUploads;
 use App\Models\UploadAbstract;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\Storage;
 class ReviewAbstract extends Component
 {
     use WithPagination;
+    use WithFileUploads;
     protected $paginationTheme = 'bootstrap';
     public $review = false;
     public $topic, $type, $title, $authors, $institutions, $abstract, $keywords, $presenter;
@@ -158,7 +160,7 @@ class ReviewAbstract extends Component
         // Storage::put('invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $invoice->output());
         $this->invoicePath = 'invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
         
-        dd('success');
+        // dd('success');
         $loa->save('/home/icics2023/public_html/uploads/letter-of-acceptance/LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf');
         // Storage::put('letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $loa->output());
         $this->loaPath = 'letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
