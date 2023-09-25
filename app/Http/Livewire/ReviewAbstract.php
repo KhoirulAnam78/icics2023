@@ -138,6 +138,21 @@ class ReviewAbstract extends Component
         $this->dispatchBrowserEvent('to-top');
     }
 
+    public function invoiceSave(){
+        set_time_limit(0);
+        $invoice = PDF::loadView('administrator.pdf.invoice', [
+            'full_name' => $this->full_name,
+            'fee' => $this->fee,
+            'participant_type' => $this->participant_type,
+            'email' => $this->email
+        ])->setPaper('a4', 'landscape');
+        
+        $invoice->save('/home/icics2023/public_html/uploads/invoice/Invoice-ABS'. $this->abstract_review . '-' . $this->full_name . '.pdf');
+        
+        $this->invoicePath = 'invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
+        
+    }
+
     public function accept()
     {
         set_time_limit(0);
@@ -149,21 +164,14 @@ class ReviewAbstract extends Component
             'abstractTitle' => $this->abstractTitle
         ])->setPaper('a4', 'potrait');
         
-        $invoice = PDF::loadView('administrator.pdf.invoice', [
-            'full_name' => $this->full_name,
-            'fee' => $this->fee,
-            'participant_type' => $this->participant_type,
-            'email' => $this->email
-        ])->setPaper('a4', 'landscape');
-        
-        $invoice->save('/home/icics2023/public_html/uploads/invoice/Invoice-ABS'. $this->abstract_review . '-' . $this->full_name . '.pdf');
         // Storage::put('invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $invoice->output());
-        $this->invoicePath = 'invoice/' . 'Invoice-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
         
         // dd('success');
         $loa->save('/home/icics2023/public_html/uploads/letter-of-acceptance/LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf');
         // Storage::put('letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf', $loa->output());
         $this->loaPath = 'letter-of-acceptance/' . 'LOA-ABS' . $this->abstract_review . '-' . $this->full_name . '.pdf';
+
+        $this->invoiceSave();
 
         dd("SAVED");
 
