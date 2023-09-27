@@ -35,10 +35,10 @@
                                     style="font-size:16px">Uploaded
                                     Paper</a>
                             </li>
-                            {{-- <li class="nav-item" style="width:100%">
+                            <li class="nav-item" style="width:100%">
                                 <a class="nav-link {{ $title == 'Send Email' ? 'active' : '' }}" href="/send-email"
                                     style="font-size:16px">Send Email</a>
-                            </li> --}}
+                            </li>
                             <li class="nav-item" style="width:100%">
                                 <a class="nav-link {{ $title == 'Presenter Have Paid' ? 'active' : '' }}"
                                     href="/presenter-have-paid" style="font-size:16px">Presenter</a>

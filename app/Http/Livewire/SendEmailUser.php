@@ -16,7 +16,33 @@ class SendEmailUser extends Component
     public $sendTo,$email,$file,$receiver=[], $subject;
     use WithFileUploads;
 
+    public function rules()
+    {
+        return
+            [
+                'sendTo' => 'required',
+                'subject' =>'required',
+                'email' => 'required',
+            ];
+    }
+
+     //Reatime Validation
+     public function updated($propertyName)
+     {
+         $this->validateOnly($propertyName);
+     }
+
     public function sendEmail(){
+        if ($this->file) {
+            $this->validate([
+                'sendTo' => 'required',
+                'subject' =>'required',
+                'email' => 'required',
+                'file' => 'mimes:jpg,png,jpeg,gif,svg,pdf,docx',
+            ]);
+        } else{
+            $this->validate();
+        }
         if($this->sendTo=='all-registered'){
             $data = DB::table('participants as a')
             ->leftjoin('users as b','b.id','a.user_id')
@@ -59,8 +85,12 @@ class SendEmailUser extends Component
             Mail::to($r)->send(new FreeMail($this->subject,$this->email,$attach));
         }
 
-        
         session()->flash('message', 'Email sent!');
+        $this->dispatchBrowserEvent('to-top');
+        $this->file = null;
+        $this->senTo = '';
+        $this->subject = null;
+        $this->email = null;
     }
     public function render()
     {
