@@ -373,10 +373,10 @@
                                 class="badge bg-success rounded-pill mb-2"><del>16 September
                                     2023</del></span> <br>
                             <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-success rounded-pill">26 September
-                                    2023</span>
-                            
-                                    <h6 class="pt-3">Time Remaining : </h6>
+                                class="badge bg-success rounded-pill">06 October
+                                2023</span>
+
+                            <h6 class="pt-3">Time Remaining : </h6>
                             <p id="abstractSubmit" class="pt-2" style="font-size:18px"></p>
 
                         </div>
@@ -395,9 +395,9 @@
                                 class="badge bg-secondary rounded-pill mb-2"><del>20
                                     September</del>
                                 2023</span> <br>
-                                <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-secondary rounded-pill">30
-                                September
+                            <span style="font-size: 18px; padding:10px; color: white"
+                                class="badge bg-secondary rounded-pill">10
+                                October
                                 2023</span>
                             <h6 class="pt-3">Time Remaining : </h6>
                             <p id="abstractAccept" class="pt-2" style="font-size:18px"></p>
@@ -416,11 +416,11 @@
                             <span style="font-size: 14px; padding:10px; color: white"
                                 class="badge bg-info rounded-pill mb-2"><del>30 September
                                     2023</del></span> <br>
-                                <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-info rounded-pill">10 October
+                            <span style="font-size: 18px; padding:10px; color: white"
+                                class="badge bg-info rounded-pill">20 October
                                 2023</span>
-                            
-                                <h6 class="pt-3">Time Remaining : </h6>
+
+                            <h6 class="pt-3">Time Remaining : </h6>
                             <p id="fullPaper" class="pt-2" style="font-size:18px"></p>
                         </div>
                     </div>
@@ -776,7 +776,7 @@
     {{-- COUNT DOWN ABSTRACT NOTIF --}}
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("Sept 30, 2023 23:00:00").getTime();
+        var countDownDate = new Date("Oct 10, 2023 23:00:00").getTime();
 
         // Update the count down every 1 second
         var i = setInterval(function() {
@@ -808,7 +808,7 @@
     {{-- COUNTDOWN ABSTRACT SUBMIT --}}
     <script>
         // Set the date we're counting down to
-        var countDownSubmit = new Date("Sept 26, 2023 23:00:00").getTime();
+        var countDownSubmit = new Date("Oct 06, 2023 23:00:00").getTime();
 
         // Update the count down every 1 second
         var j = setInterval(function() {
@@ -840,7 +840,7 @@
     {{-- COUNTDOWN Full Paper --}}
     <script>
         // Set the date we're counting down to
-        var countDownFullPaper = new Date("Oct 10, 2023 23:00:00").getTime();
+        var countDownFullPaper = new Date("Oct 20, 2023 23:00:00").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function() {
