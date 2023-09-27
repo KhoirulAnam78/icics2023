@@ -27,4 +27,11 @@ class UploadFulltextController extends Controller
             'title' => 'Uploaded Paper'
         ]);
     }
+
+    public function sendEmail(){
+        $this->authorize('administrator');
+        return view('administrator.send-email',[
+            'title' => 'Send Email'
+        ]);
+    }
 }

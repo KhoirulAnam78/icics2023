@@ -155,6 +155,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/participant-have-paid', [PaymentController::class, 'participantPaid']);
     Route::get('/presenter-have-paid', [PaymentController::class, 'presenterPaid']);
     Route::get('/uploaded-paper', [UploadFulltextController::class, 'uploadedPaper']);
+    Route::get('/send-email', [UploadFulltextController::class,'sendEmail']);
 
     //PARTICIPANT   
     Route::get('/payment', [PaymentController::class, 'payment']);
