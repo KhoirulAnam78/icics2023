@@ -33,6 +33,7 @@ class SendEmailUser extends Component
      }
 
     public function sendEmail(){
+        set_time_limit(0);
         if ($this->file) {
             $this->validate([
                 'sendTo' => 'required',
