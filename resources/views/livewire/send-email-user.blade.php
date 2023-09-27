@@ -79,8 +79,8 @@
             </div>
         </div>
         <button type="submit" class="btn btn-primary" wire:target="save" wire:loading.attr="disabled">
-            <span wire:loading.remove wire:target="save">Register</span>
-            <span wire:loading wire:target="save">Registering..</span>
+            <span wire:loading.remove wire:target="save">Send</span>
+            <span wire:loading wire:target="save">Sending..</span>
         </button>
     </form>
 </div>
