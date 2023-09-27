@@ -47,16 +47,16 @@ class SendEmailUser extends Component
             array_push($this->receiver,$this->sendTo);
         }
 
-        $attach = '';
+        $attach = [];
         if($this->file){
             $path = Storage::put('email/'.$this->file->getClientOriginalName(),$this->file);
             // $path = $this->file->store('/home/icics2023/public_html/uploads/email');
             // dd($path);
-            $attach = '/home/icics2023/public_html/uploads/'.$path;
+            $attach = ['/home/icics2023/public_html/uploads/'.$path];
         }
 
         foreach ($this->receiver as $r) {
-            Mail::to($r)->send(new FreeMail($this->subject,$this->email,[$attach]));
+            Mail::to($r)->send(new FreeMail($this->subject,$this->email,$attach));
         }
 
         
