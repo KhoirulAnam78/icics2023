@@ -28,6 +28,7 @@ class PaidParticipantExport extends DefaultValueBinder implements FromCollection
             'H' => NumberFormat::FORMAT_TEXT,
             'I' => NumberFormat::FORMAT_TEXT,
             'J' => NumberFormat::FORMAT_TEXT,
+            'K' => NumberFormat::FORMAT_TEXT,
         ];
     }
 
@@ -59,6 +60,7 @@ class PaidParticipantExport extends DefaultValueBinder implements FromCollection
             $participant->full_name1,
             $participant->full_name2,
             $participant->participant_type,
+            $participant->attendance,
             $participant->institution,
             $participant->address,
             $participant->hki_id,
@@ -69,6 +71,6 @@ class PaidParticipantExport extends DefaultValueBinder implements FromCollection
 
     public function headings(): array
     {
-        return ['Email', 'Email Velidation', 'Full Name', 'Full Name (with academic title)', 'Participant Type', 'Institution', 'Address', 'HKI ID', 'Status HKI Member', 'Phone'];
+        return ['Email', 'Email Velidation', 'Full Name', 'Full Name (with academic title)', 'Participant Type','Attendance', 'Institution', 'Address', 'HKI ID', 'Status HKI Member', 'Phone'];
     }
 }
