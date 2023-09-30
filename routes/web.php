@@ -1,6 +1,7 @@
 <?php
 
 use App\Mail\SendMail;
+use App\Models\Participant;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -120,9 +121,17 @@ Route::get('/download-guidebook-poster-competition-icics-2023', [DownloadControl
 
 Route::get('/dashboard', function () {
     if (Auth::user()->role === 'administrator') {
-        return view('administrator.dashboard', [
-            'title' => 'Dashboard'
-        ]);
+        $regon = Participant::where('attendance','online')->count();
+        $regof = Participant::where('attendance','offline')->count();
+        $profon = Participant::where('participant_type','professional presenter')->where('attendance','online')->count();
+        $profof = Participant::where('participant_type','professional presenter')->where('attendance','offline')->count();
+        $studon = Participant::where('participant_type','student presenter')->where('attendance','online')->count();
+        $studof = Participant::where('participant_type','student presenter')->where('attendance','offline')->count();
+        $parton = Participant::where('participant_type','participant')->where('attendance','online')->count();
+        $partof = Participant::where('participant_type','participant')->where('attendance','offline')->count();
+        
+        $title = "Dashboard";
+        return view('administrator.dashboard', compact('title','regon','regof','profon','profof','studon','studof','parton','partof'));
     } else {
         return view('participant.dashboard', [
             'title' => 'Dashboard'

@@ -12,12 +12,12 @@ class RegisteredParticipant extends Component
 {
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
-    public $search2 = '';
+    public $search2 = '', $attendance = '', $participant_type='';
 
     public function render()
     {
         return view('livewire.registered-participant', [
-            'participants' => Participant::where('full_name1', 'like', '%' . $this->search2 . '%')->orderBy('full_name1')->paginate(10)
+            'participants' => Participant::where('full_name1', 'like', '%' . $this->search2 . '%')->where('attendance','like','%'.$this->attendance.'%')->where('participant_type','like','%'.$this->participant_type.'%')->orderBy('full_name1')->paginate(10)
         ]);
     }
 

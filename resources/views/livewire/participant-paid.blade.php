@@ -2,8 +2,8 @@
     <div class="row mb-2">
         <div class="col-lg-6">
             <button wire:click="export()" class="btn btn-success" wire:loading.attr="disabled">
-                <span wire:loading.remove>Export</span>
-                <span wire:loading>Exporting..</span>
+                <span wire:loading.remove wire:target="export">Export</span>
+                <span wire:loading wire:target="export">Exporting..</span>
             </button>
         </div>
     </div>
@@ -13,6 +13,18 @@
                 <label for="search2">Search</label>
                 <input type="text" class="form-control" id="search2" name="search2"
                     wire:model.debounce.500ms="search2" placeholder="Search by full name">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="participant">
+                    Attendance
+                </label>
+                <select class="custom-select" id="attendance" name="attendance" wire:model.debounce.500ms='attendance'>
+                    <option value="">All</option>
+                    <option value="online">Online</option>
+                    <option value="offline">Offline</option>
+                </select>
             </div>
         </div>
     </div>
@@ -62,6 +74,7 @@
                     </tbody>
                 </table>
             </div>
+            <span>Total : {{ $participants->total() }}</span>
             <ul class="pagination pagination-sm mt-3 float-right ">
                 @if (count($participants) != 0)
                     {{ $participants->links() }}
