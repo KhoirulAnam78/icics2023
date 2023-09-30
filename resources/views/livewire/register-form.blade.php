@@ -1,7 +1,7 @@
 <div>
 
-    <h2 style="text-align:center;">Sorry, registration has closed !</h2>
-    {{-- <form wire:submit.prevent="save">
+
+    <form wire:submit.prevent="save">
         <div class="form-group">
             <label for="full_name1">Full Name</label>
             <input type="text" class="form-control @error('full_name1') is-invalid @enderror"
@@ -64,7 +64,9 @@
             <select class="custom-select @error('attendance') is-invalid @enderror" id="attendance" name="attendance"
                 wire:model.debounce.500ms='attendance'>
                 <option value="">Choose One</option>
-                <option value="online">Online</option>
+                @if ($participant_type == 'participant')
+                    <option value="online">Online</option>
+                @endif
                 <option value="offline">Offline</option>
             </select>
             @error('attendance')
@@ -72,6 +74,7 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
+            <span style="font-size:12px">Registration for online presenter has closed !</span>
         </div>
 
         <div class="form-group">
@@ -181,5 +184,5 @@
             <span wire:loading.remove wire:target="save">Register</span>
             <span wire:loading wire:target="save">Registering..</span>
         </button>
-    </form> --}}
+    </form>
 </div>
