@@ -44,6 +44,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
+                                <th>Email Register</th>
                                 <th scope="col">Presenter</th>
                                 <th scope="col">Title</th>
                                 <th scope="col">Status</th>
@@ -64,7 +65,8 @@
                                 <tr>
                                     <td>{{ ($abstracts->currentpage() - 1) * $abstracts->perpage() + $loop->index + 1 }}
                                     </td>
-                                    <td>{{ $item->participant->full_name1 }}</td>
+                                    <td>{{ $item->participant->user->email }}</td>
+                                    <td>{{ $item->presenter }}</td>
                                     <td>{{ $item->title }}</td>
                                     <td>{{ $item->status }}</td>
                                     <td>{{ $item->reviewed_by }}</td>

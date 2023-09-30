@@ -142,7 +142,7 @@ class ReviewAbstract extends Component
     {
         set_time_limit(0);
         ini_set('memory_limit', '64M');
-        $this->email = UploadAbstract::find($this->abstract_review)->participant->user->email;
+        // $this->email = UploadAbstract::find($this->abstract_review)->participant->user->email;
 
         $loa = PDF::loadView('administrator.pdf.loa', [
             'full_name' => $this->full_name,
