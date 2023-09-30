@@ -178,10 +178,20 @@
             </div>
         </div>
     </section>
-    <!-- Counter Section End -->
 
+    <!-- Counter Section End -->
+    <section class="counter-section bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Sorry, registration has closed (30 September 2023)</h2>
+                    <p>The target number of participants has been reached.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Home About Section Begin -->
-    <section class="home-about-section" style="padding-bottom: 2%">
+    <section class="home-about-section" style="padding-bottom: 2%; margin:0">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
