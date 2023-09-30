@@ -1,5 +1,7 @@
 <div>
-    <form wire:submit.prevent="save">
+
+    <h2 style="text-align:center;">Sorry, registration has closed !</h2>
+    {{-- <form wire:submit.prevent="save">
         <div class="form-group">
             <label for="full_name1">Full Name</label>
             <input type="text" class="form-control @error('full_name1') is-invalid @enderror"
@@ -179,5 +181,5 @@
             <span wire:loading.remove wire:target="save">Register</span>
             <span wire:loading wire:target="save">Registering..</span>
         </button>
-    </form>
+    </form> --}}
 </div>
