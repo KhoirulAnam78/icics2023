@@ -185,7 +185,7 @@
             <div class="row">
                 <div class="col">
                     <h2 style="color:red">ONLINE CLOSED</h2>
-                    <h3>Sorry, registration has closed (30 September 2023)</h3>
+                    <h3>Sorry, registration for online presenter has closed (30 September 2023)</h3>
                     <p>Full quota for online presenter.</p>
                 </div>
             </div>
