@@ -184,8 +184,9 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2>Sorry, registration has closed (30 September 2023)</h2>
-                    <p>The target number of participants has been reached.</p>
+                    <h2 style="color:red">ONLINE CLOSED</h2>
+                    <h3>Sorry, registration has closed (30 September 2023)</h3>
+                    <p>Full quota for online presenter.</p>
                 </div>
             </div>
         </div>
