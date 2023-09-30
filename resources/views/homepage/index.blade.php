@@ -727,7 +727,8 @@
                         </ul>
                         <div class="ct-links">
                             <span>Website:</span>
-                            <p>https://icics2023unja.ac.id</p>
+                            <p><a href="https://icics2023.unja.ac.id" style="color:blue">https://icics2023.unja.ac.id</a>
+                            </p>
                         </div>
                     </div>
                 </div>
