@@ -236,6 +236,16 @@
                             @enderror
                         </div>
                         <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control @error('email') is-invalid @enderror"
+                                id="email" aria-describedby="emailHelp" name="email" wire:model='email'>
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
                             <label for="institution">Institution</label>
                             <textarea class="form-control @error('institution') is-invalid @enderror" id="institution"
                                 aria-describedby="emailHelp" name="institution" wire:model='institution'> </textarea>
