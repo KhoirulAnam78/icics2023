@@ -204,13 +204,11 @@
             @enderror
         </div>
         <div class="modal-footer">
-            @if (!$loa)
-                <button class="btn btn-danger" wire:click='showReject()' wire:loading.attr="disabled">
-                    <span wire:loading.remove wire:target="showReject">Reject</span>
-                    <span wire:loading wire:target="showReject">Rejecting..</span>
-                </button>
-                <button class="btn btn-primary" wire:click='showValidate()'>Accept</button>
-            @endif
+            <button class="btn btn-danger" wire:click='showReject()' wire:loading.attr="disabled">
+                <span wire:loading.remove wire:target="showReject">Reject</span>
+                <span wire:loading wire:target="showReject">Rejecting..</span>
+            </button>
+            <button class="btn btn-primary" wire:click='showValidate()'>Accept</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal"
                 wire:click="back()">Cancel</button>
         </div>
