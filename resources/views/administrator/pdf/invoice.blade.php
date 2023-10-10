@@ -94,7 +94,7 @@
                         <td style="padding:5px">{{ $fee }}</td>
                         <td style="padding:5px">698124931</td>
                         <td style="padding:5px">{{ date('d F Y') }}</td>
-                        <td style="padding:5px">20 October 2023</td>
+                        <td style="padding:5px">30 October 2023</td>
                     </tr>
                     <tr>
                         <td colspan="8" style="padding-top:20px" align="center">

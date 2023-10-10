@@ -384,7 +384,7 @@
                                 class="badge bg-success rounded-pill mb-2"><del>16 September
                                     2023</del></span> <br>
                             <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-success rounded-pill">06 October
+                                class="badge bg-success rounded-pill">20 October
                                 2023</span>
 
                             <h6 class="pt-3">Time Remaining : </h6>
@@ -407,7 +407,7 @@
                                     September</del>
                                 2023</span> <br>
                             <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-secondary rounded-pill">10
+                                class="badge bg-secondary rounded-pill">25
                                 October
                                 2023</span>
                             <h6 class="pt-3">Time Remaining : </h6>
@@ -428,7 +428,7 @@
                                 class="badge bg-info rounded-pill mb-2"><del>30 September
                                     2023</del></span> <br>
                             <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-info rounded-pill">20 October
+                                class="badge bg-info rounded-pill">30 October
                                 2023</span>
 
                             <h6 class="pt-3">Time Remaining : </h6>
@@ -454,32 +454,6 @@
                     </div>
                 </div>
             </div>
-            {{-- <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center"
-                    style="font-size: 115%; font-weight: 700">
-                    Abstract Submission Deadline
-                    <span style="font-size: 115%; color: white" class="badge bg-primary rounded-pill">16 September
-                        2023</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center"
-                    style="font-size: 115%;font-weight: 700">
-                    Abstract Acceptance Notifications
-                    <span style="font-size: 115%; color: white" class="badge bg-primary rounded-pill">20 September
-                        2023</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center"
-                    style="font-size: 115%;font-weight: 700">
-                    Full Paper Submission
-                    <span style="font-size: 115%; color: white" class="badge bg-primary rounded-pill">30 September
-                        2023</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center"
-                    style="font-size: 115%;font-weight: 700">
-                    Conference
-                    <span style="font-size: 115%; color: white" class="badge bg-primary rounded-pill">16 November
-                        2023</span>
-                </li>
-            </ul> --}}
         </div>
     </section>
     <!-- Schedule Section End -->
@@ -788,7 +762,7 @@
     {{-- COUNT DOWN ABSTRACT NOTIF --}}
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("Oct 10, 2023 23:00:00").getTime();
+        var countDownDate = new Date("Oct 25, 2023 23:00:00").getTime();
 
         // Update the count down every 1 second
         var i = setInterval(function() {
@@ -820,7 +794,7 @@
     {{-- COUNTDOWN ABSTRACT SUBMIT --}}
     <script>
         // Set the date we're counting down to
-        var countDownSubmit = new Date("Oct 06, 2023 23:00:00").getTime();
+        var countDownSubmit = new Date("Oct 20, 2023 23:00:00").getTime();
 
         // Update the count down every 1 second
         var j = setInterval(function() {
@@ -852,7 +826,7 @@
     {{-- COUNTDOWN Full Paper --}}
     <script>
         // Set the date we're counting down to
-        var countDownFullPaper = new Date("Oct 20, 2023 23:00:00").getTime();
+        var countDownFullPaper = new Date("Oct 30, 2023 23:00:00").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function() {
