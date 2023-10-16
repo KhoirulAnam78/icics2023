@@ -78,6 +78,8 @@ class PaymentValidation extends Component
             'amount' => 'required',
             'for_payment_of' => 'required'
         ]);
+        set_time_limit(0);
+        ini_set('memory_limit', '64M');
         $participant_id = Payment::find($this->paymentValidate)->participant_id;
         // $email = Participant::find($participant_id)->user->email;
         $receipt = PDF::loadView('administrator.pdf.receipt', [
