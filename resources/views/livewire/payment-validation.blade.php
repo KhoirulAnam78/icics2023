@@ -176,8 +176,8 @@
                     <span wire:loading.remove wire:target="invalid">Invalid</span>
                     <span wire:loading wire:target="invalid">Validating..</span>
                 </button>
-                <button class="btn btn-primary" wire:click='showValidate()'>Valid</button>
             @endif
+            <button class="btn btn-primary" wire:click='showValidate()'>Valid</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal"
                 wire:click="back()">Cancel</button>
         </div>
