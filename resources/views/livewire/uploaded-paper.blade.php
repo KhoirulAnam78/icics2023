@@ -4,7 +4,7 @@
             <div class="form-group">
                 <label for="search2">Search</label>
                 <input type="text" class="form-control" id="search2" name="search2" wire:model.debounce.500ms="search2"
-                    placeholder="Search by title">
+                    placeholder="Search by title or full name">
             </div>
         </div>
     </div>
@@ -25,7 +25,8 @@
                             <th scope="col">#</th>
                             <th scope="col">Title</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Presenter Type</th>
+                            <th>Full Name</th>
+                            <th scope="col" class="text-nowrap">Presenter Type</th>
                             <th scope="col">Status</th>
                             <th scope="col">Validated By</th>
                             <th scope="col">Action</th>
@@ -44,6 +45,7 @@
                                 </td>
                                 <td>{{ $item->title }}</td>
                                 <td>{{ $item->payment->participant->user->email }}</td>
+                                <td>{{ $item->payment->participant->full_name1 }}</td>
                                 <td>{{ $item->payment->participant->participant_type }}</td>
                                 <td>{{ $item->validation }}</td>
                                 <td>{{ $item->validated_by }}</td>

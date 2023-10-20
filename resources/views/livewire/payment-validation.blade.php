@@ -48,6 +48,7 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Email</th>
+                                <th>Full Name</th>
                                 <th scope="col">Total Bill</th>
                                 <th scope="col">Invoice For</th>
                                 <th scope="col">Status</th>
@@ -68,6 +69,7 @@
                                     </td>
                                     <td>{{ $item->created_at }}</td>
                                     <td>{{ $item->participant->user->email }}</td>
+                                    <td>{{ $item->participant->full_name1 }}</td>
                                     <td>{{ $item->total_bill }}</td>
                                     <td>{{ $item->upload_abstract_id == null ? 'participant' : $item->uploadAbstract->title }}
                                     </td>
