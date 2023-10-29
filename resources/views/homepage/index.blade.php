@@ -384,7 +384,7 @@
                                 class="badge bg-success rounded-pill mb-2"><del>16 September
                                     2023</del></span> <br>
                             <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-success rounded-pill">20 October
+                                class="badge bg-success rounded-pill">06 November
                                 2023</span>
 
                             <h6 class="pt-3">Time Remaining : </h6>
@@ -407,8 +407,7 @@
                                     September</del>
                                 2023</span> <br>
                             <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-secondary rounded-pill">25
-                                October
+                                class="badge bg-secondary rounded-pill">10 November
                                 2023</span>
                             <h6 class="pt-3">Time Remaining : </h6>
                             <p id="abstractAccept" class="pt-2" style="font-size:18px"></p>
@@ -428,7 +427,7 @@
                                 class="badge bg-info rounded-pill mb-2"><del>30 September
                                     2023</del></span> <br>
                             <span style="font-size: 18px; padding:10px; color: white"
-                                class="badge bg-info rounded-pill">30 October
+                                class="badge bg-info rounded-pill">10 November
                                 2023</span>
 
                             <h6 class="pt-3">Time Remaining : </h6>
@@ -762,7 +761,7 @@
     {{-- COUNT DOWN ABSTRACT NOTIF --}}
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("Oct 25, 2023 23:00:00").getTime();
+        var countDownDate = new Date("Nov 10, 2023 23:00:00").getTime();
 
         // Update the count down every 1 second
         var i = setInterval(function() {
@@ -794,7 +793,7 @@
     {{-- COUNTDOWN ABSTRACT SUBMIT --}}
     <script>
         // Set the date we're counting down to
-        var countDownSubmit = new Date("Oct 20, 2023 23:00:00").getTime();
+        var countDownSubmit = new Date("Nov 06, 2023 23:00:00").getTime();
 
         // Update the count down every 1 second
         var j = setInterval(function() {
@@ -826,7 +825,7 @@
     {{-- COUNTDOWN Full Paper --}}
     <script>
         // Set the date we're counting down to
-        var countDownFullPaper = new Date("Oct 30, 2023 23:00:00").getTime();
+        var countDownFullPaper = new Date("Nov 10, 2023 23:00:00").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function() {
