@@ -272,6 +272,14 @@
                     <span>Universitas Tadulako</span>
                 </div>
             </div>
+            <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/fgd-3.jpg">
+                <div class="mi-text" style="padding-right: 10px">
+                    <h5>Prof. Dr. Mohamad Rafi, M.Si</h5>
+                    <span>IPB University</span>
+                </div>
+            </div>
+            
         </div>
         <br>
         {{-- batas --}}
@@ -307,11 +315,27 @@
                     <span>Universitas Muhammadiyah (UM) Kendari</span>
                 </div>
             </div>
+        </div>
+        <div class="row justify-content-center">
             <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
                 data-setbg="{{ url('') }}/assets/img/team-member/keynote-4.jpg">
                 <div class="mi-text" style="padding-right: 10px">
                     <h5>Dr. Agus Haryono</h5>
                     <span>Indonesian National Research and Innovation Agency</span>
+                </div>
+            </div>
+            <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/keynote-5.jpg">
+                <div class="mi-text" style="padding-right: 10px">
+                    <h5>Dr. (Cand). Suharman, M.Sc.</h5>
+                    <span>Tsukuba University</span>
+                </div>
+            </div>
+            <div class="member-item set-bg" style="margin: 10px;border: 3px solid black"
+                data-setbg="{{ url('') }}/assets/img/team-member/keynote-6.jpg">
+                <div class="mi-text" style="padding-right: 10px">
+                    <h5>DR. SITI MUNIRAH BINTI SAHARIN</h5>
+                    <span>Universiti Malaya</span>
                 </div>
             </div>
         </div>
