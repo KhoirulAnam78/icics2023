@@ -16,7 +16,8 @@
                 <div class="col-lg-8">
                     <div class="card">
                         <div class="card-body">
-                            <livewire:register-form />
+                            <h2 align="center">Sorry, registration has closed.</h2>
+                            {{-- <livewire:register-form /> --}}
                         </div>
                     </div>
                 </div>
