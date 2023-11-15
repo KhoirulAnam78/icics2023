@@ -118,6 +118,7 @@ Route::get('/about-conference', function () {
 
 Route::get('/download-template-article', [DownloadController::class, 'downloadTemplate']);
 Route::get('/download-guidebook-poster-competition-icics-2023', [DownloadController::class,'downloadGuidebook']);
+Route::get('/download-program-abstract-book-icics2023', [DownloadController::class, 'downloadAbstractBook']);
 
 Route::get('/dashboard', function () {
     if (Auth::user()->role === 'administrator') {

@@ -47,7 +47,8 @@
                         <li>
                             <a href="#">Download</a>
                             <ul class="dropdown" style="width:300px">
-                                <li><a href="/download-template-article">Template Article</a></li>
+                                <li><a href="/download-template-article">Template Article.docx</a></li>
+                                <li><a href="/download-program-abstract-book-icics2023">Program and Abstract Book of ICICS 2023.pdf</a></li>
                             </ul>
                         </li>
                         </li>

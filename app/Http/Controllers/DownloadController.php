@@ -17,4 +17,8 @@ class DownloadController extends Controller
     {
         return response()->download(public_path('uploads/downloads/International Scientific Poster_ICICS_2023.pdf'));
     }
+
+    public function downloadAbstractBook(){
+        return response()->download(public_path('uploads/downloads/Program and Abstract Book of ICICS 2023.pdf'));
+    }
 }
