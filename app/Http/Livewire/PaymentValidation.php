@@ -152,6 +152,8 @@ class PaymentValidation extends Component
 
     public function export()
     {
+        set_time_limit(0);
+        ini_set('memory_limit', '2048M');
         return Excel::download(new PaymentExport(), 'All Payment ICICS 2023.xlsx');
     }
 

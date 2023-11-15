@@ -23,6 +23,8 @@ class RegisteredParticipant extends Component
 
     public function export()
     {
+        set_time_limit(0);
+        ini_set('memory_limit', '2048M');
         return Excel::download(new RegisteredExport(), 'All registered user.xlsx');
     }
 }

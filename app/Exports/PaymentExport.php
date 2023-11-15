@@ -26,6 +26,8 @@ class PaymentExport extends DefaultValueBinder implements FromCollection, WithMa
             'E' => NumberFormat::FORMAT_TEXT,
             'F' => NumberFormat::FORMAT_TEXT,
             'G' => NumberFormat::FORMAT_TEXT,
+            'H' => NumberFormat::FORMAT_TEXT,
+            'I' => NumberFormat::FORMAT_TEXT,
         ];
     }
 
@@ -53,6 +55,7 @@ class PaymentExport extends DefaultValueBinder implements FromCollection, WithMa
             $payment->created_at,
             $payment->participant->user->email,
             $payment->participant->full_name1,
+            $payment->upload_abstract_id == null ? '' :  $payment->uploadAbstract->presenter,
             $payment->total_bill,
             $payment->upload_abstract_id == null ? 'participant' : $payment->uploadAbstract->title,
             $payment->validation,
@@ -62,6 +65,6 @@ class PaymentExport extends DefaultValueBinder implements FromCollection, WithMa
 
     public function headings(): array
     {
-        return ['Date', 'Email', 'Total Bill', 'Invoice For', 'Status', 'Validated By'];
+        return ['Date', 'Email','Full Name','Presenter', 'Total Bill', 'Invoice For', 'Status', 'Validated By'];
     }
 }
